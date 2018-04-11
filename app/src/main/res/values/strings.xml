@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_id">ca-app-pub-5782047288878600~5343570417</string>
+    <string name="ad_unit_id">ca-app-pub-5782047288878600/4414755259</string>
+    <string name="ad_unit_id_interstitial">ca-app-pub-5782047288878600/7337948400</string>
+    <string name="ad_unit_id_reward">ca-app-pub-5782047288878600/3040035778</string>
+
+    <string name="app_name">9 Letter Jumble</string>
+    <string name="play_game">Play 9 Letter Jumble</string>
+
+    <string name="settings">Settings</string>
+    <string name="preference_about">Version</string>
+    <string name="preference_ads">Rewarded ads</string>
+    <string name="preference_ads_about">Offer clue-tokens in exchange for watching ads</string>
+
+    <string name="txt_no_email">No email application found</string>
+    <string name="enjoying_game">Are you enjoying the game?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="rate_us_request">Play Store ratings make a difference. Please review the game.</string>
+    <string name="rate_us_title">Rate the game</string>
+    <string name="review">Review</string>
+    <string name="later">Later</string>
+    <string name="never">never</string>
+    <string name="exit">exit</string>
+    <string name="file_read_error">File Read Error</string>
+
+    <string name="button_enter">enter</string>
+    <string name="button_backspace">backspace</string>
+
+    <string name="prompt_no_words">You have not found any words yet</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="title_activity_select">SelectActivity</string>
+    <string name="title_activity_intro">IntroActivity</string>
+
+    <string name="invite_friends">Invite friends</string>
+    <string name="share">Share</string>
+    <string name="share_message">Challenge your friends to see if they can find more words than you.</string>
+
+    <string name="remove_ads">Remove ads</string>
+    <string name="ads_title">Bothered by the ads?</string>
+    <string name="ads_msg">Ads allow us to release free games.
+        \nIf ads bother you and you would like to remove them, you can do so below.
+    </string>
+
+    <string name="feedback">Feedback</string>
+    <string name="feedback_message">Your bug reports, suggestions and feature requests are highly valued.
+    </string>
+    <string name="email_us">Email us</string>
+
+
+    <string name="button_play">Play</string>
+    <string name="button_challenge">Daily Challenge</string>
+    <string name="button_howto">How To</string>
+    <string name="button_store">Store</string>
+    <string name="button_ads">Why Ads</string>
+
+    <string name="game_invalid_guess">%s is not a valid word</string>
+    <string name="game_short_guess">Minimum of four letters required</string>
+    <string name="game_repeated_guess">%s already recorded</string>
+    <string name="game_traditional_guess">Middle letter required: %s</string>
+
+    <string name="game_dispute">dispute</string>
+    <string name="game_dispute_subject">9 Letter Jumble dispute: Add %1$s to %2$s.</string>
+    <string name="game_dispute_body">"My suggested definition: "</string>
+
+    <string name="game_image_description">GameItemImage</string>
+    <string name="game_image_select">Select this game</string>
+    <string name="game_default_name">Alfa</string>
+    <string name="game_default_score">0/0</string>
+    <string name="game_display_score">Score: %s</string>
+    <string name="game_display_name">- %s -</string>
+    <string name="game_display_clues_used">%d clues used</string>
+    <string name="game_display_one_clue_used">1 clue used</string>
+
+    <string name="game_stats_screen">Statistics</string>
+    <string name="game_stats_4">4-letter words:\t\t%1$d/%2$d</string>
+    <string name="game_stats_5">5-letter words:\t\t%1$d/%2$d</string>
+    <string name="game_stats_6">6-letter words:\t\t%1$d/%2$d</string>
+    <string name="game_stats_7">7-letter words:\t\t%1$d/%2$d</string>
+    <string name="game_stats_8">8-letter words:\t\t%1$d/%2$d</string>
+    <string name="game_stats_9">9-letter words:\t\t%1$d/%2$d</string>
+
+
+    <string name="definitions">Definitions</string>
+
+    <string name="clues">Clues</string>
+    <string name="clue_gained_one">1 clue token gained</string>
+    <string name="clue_gained">%d clue tokens gained</string>
+    <string name="clues_available_tokens">Available clue tokens: %1$d</string>
+    <string name="clues_message">%s
+                                \nClue tokens used: %d</string>
+    <string name="clues_message_no_tokens">Find 15 words to gain a clue token,
+                                            or visit the store and pick up a clue pack.\n</string>
+    <string name="clues_use">Get clue</string>
+    <string name="clues_old">View clues</string>
+
+    <string name="clue_new">New clue</string>
+    <string name="clue_new_message">"%1$s\nFirst letter: %2$s"</string>
+    <string name="clue_solved_message">"%1$s\nSolved: %2$s"</string>
+
+    <string name="unlock_title">Unlock %s</string>
+    <string name="unlock_message">Find 50%% of the words in %s to unlock this level.</string>
+    <string name="unlocked_title">Level unlocked</string>
+    <string name="unlocked_message">Congratulations! You\'ve unlocked %s.</string>
+    <string name="unlocked_keep_going">Gain 3 bonus clue tokens when you complete the level.</string>
+
+    <string name="clue_tip_title">Score</string>
+    <string name="clue_tip_description">Find 15 words to gain a clue token</string>
+    <string name="share_tip_title">Gain a clue token</string>
+    <string name="share_tip_description">Share the game on social media</string>
+
+    <string name="intro_title_1">Welcome to\n9 Letter Jumble</string>
+    <string name="intro_title_2">Rules of the game</string>
+    <string name="intro_title_3">How to get clues</string>
+    <string name="intro_desc_1">Find words of four letters or more by using the letters in the grid.</string>
+    <string name="intro_desc_2">Each letter can only be used once, and every word must contain the center letter.
+                                Every level has at least one 9 letter word.</string>
+    <string name="intro_desc_3">Gain a clue token for every 15 words that you find, and 3 bonus clue tokens
+                                when you complete a level.</string>
+
+    <string name="start_time">02:00</string>
+    <string name="challenge_message">Gain a clue token by finding the correct 6&#160;letter word before the time runs out.</string>
+    <string name="challenge_wrong_guess">Incorrect, try again</string>
+    <string name="challenge_solved">Well done!\n\nOne clue token gained.</string>
+    <string name="challenge_failed">Time\'s up. Come back tomorrow for another challenge.</string>
+    <string name="challenge_come_again">You have already completed the daily challenge today.
+        Come back tomorrow for another challenge.</string>
+    <string name="challenge_exit_title">End challenge?</string>
+    <string name="challenge_exit_message">You will not be able to play another challenge until tomorrow.</string>
+
+    <string name="reward_title">Rewarded ads</string>
+    <string name="reward_message">Watch an ad to gain a clue token.</string>
+
+
+    <string name="purchase_cancelled">Purchase cancelled</string>
+    <string name="alert_already_purchased">Item is already purchased</string>
+    <string name="button_buy">Buy</string>
+    <string name="button_own">Owned</string>
+    <string name="error_no_skus">We didn\'t find any SKUs to display… Check your internet
+        connection and make sure your Google Developer Console was setup correctly.</string>
+    <string name="error_billing_unavailable">Billing unavailable. Make sure your Google Play app
+        is up to date</string>
+    <string name="error_billing_default">Billing unavailable. Please check your device.</string>
+    <string name="content_description_app_loading_image">App loading image</string>
+
+</resources>

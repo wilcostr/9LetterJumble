@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <SwitchPreference
+        android:key="offer_rewarded_ads"
+        android:defaultValue="true"
+        android:title="@string/preference_ads"
+        android:summary="@string/preference_ads_about"/>
+
+    <Preference
+        android:key="simple_text_about"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/preference_about"
+        android:summary="0"/>
+
+</PreferenceScreen>
