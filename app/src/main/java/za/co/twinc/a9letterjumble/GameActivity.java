@@ -93,9 +93,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         final SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
 
         // No banner ad if premium
+        // Also don't show an ad in the daily challenge
         AdView adView = findViewById(R.id.adView);
         MobileAds.initialize(this, getString(R.string.app_id));
-        if (!mainLog.getBoolean("premium", false)){
+        if (!mainLog.getBoolean("premium", false) && !isChallenge){
             // Load add
             adView.setVisibility(View.VISIBLE);
             AdRequest adRequest = new AdRequest.Builder()
@@ -374,7 +375,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                 if (countDownTimer != null)
                     countDownTimer.cancel();
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle(R.string.button_challenge)
+                builder.setTitle(R.string.challenge_solved_title)
                         .setMessage(R.string.challenge_solved)
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
@@ -820,8 +821,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
     private void timedOut(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.button_challenge)
-                .setMessage(R.string.challenge_failed)
+        builder.setTitle(R.string.challenge_failed_title)
+                .setMessage(getString(R.string.challenge_failed, challengeSolution.toUpperCase()))
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -843,9 +844,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
         if (!settingsPref.getBoolean(SettingsActivity.KEY_PREF_REWARD, true))
             return;
-        if (gameNum == 0 && score < 80)
+        if (gameNum == 0 && score < 31)
             return;
-        if (score < 27)
+        if (score < 16)
             return;
         if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 7*60*1000)
             return;
@@ -958,7 +959,6 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
 
 
-
     // Required to reward the user.
     @Override
     public void onRewarded(RewardItem reward) {
@@ -987,8 +987,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     public void onRewardedVideoAdOpened() {    }
     @Override
     public void onRewardedVideoStarted() {    }
-
-
+    @Override
+    public void onRewardedVideoCompleted() {    }
 
 
     private class MyExpandableListAdapter implements ExpandableListAdapter {

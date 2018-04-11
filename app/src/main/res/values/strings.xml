@@ -106,7 +106,7 @@
 
     <string name="clue_tip_title">Score</string>
     <string name="clue_tip_description">Find 15 words to gain a clue token</string>
-    <string name="share_tip_title">Gain a clue token</string>
+    <string name="share_tip_title">Gain three bonus clue tokens</string>
     <string name="share_tip_description">Share the game on social media</string>
 
     <string name="intro_title_1">Welcome to\n9 Letter Jumble</string>
@@ -121,8 +121,10 @@
     <string name="start_time">02:00</string>
     <string name="challenge_message">Gain a clue token by finding the correct 6&#160;letter word before the time runs out.</string>
     <string name="challenge_wrong_guess">Incorrect, try again</string>
-    <string name="challenge_solved">Well done!\n\nOne clue token gained.</string>
-    <string name="challenge_failed">Time\'s up. Come back tomorrow for another challenge.</string>
+    <string name="challenge_solved_title">Well done</string>
+    <string name="challenge_solved">One clue token gained. Come back tomorrow for another challenge.</string>
+    <string name="challenge_failed_title">Time\'s up</string>
+    <string name="challenge_failed">Answer: %s.</string>
     <string name="challenge_come_again">You have already completed the daily challenge today.
         Come back tomorrow for another challenge.</string>
     <string name="challenge_exit_title">End challenge?</string>

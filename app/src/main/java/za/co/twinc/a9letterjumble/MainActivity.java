@@ -311,12 +311,12 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
                 SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
                 if (mainLog.getBoolean("give_share_reward", true)){
                     int clueCount = mainLog.getInt("clue_count", 0);
-                    clueCount++;
+                    clueCount += 3;
                     SharedPreferences.Editor editor = mainLog.edit();
                     editor.putInt("clue_count", clueCount);
                     editor.putBoolean("give_share_reward", false);
                     editor.apply();
-                    Snackbar.make(findViewById(R.id.activity_main_layout), getString(R.string.clue_gained_one),
+                    Snackbar.make(findViewById(R.id.activity_main_layout), getString(R.string.clue_gained,3),
                             Snackbar.LENGTH_LONG).show();
                 }
             }
