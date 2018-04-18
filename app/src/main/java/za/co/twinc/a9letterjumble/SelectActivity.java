@@ -57,14 +57,24 @@ public class SelectActivity extends AppCompatActivity {
     private void initList(){
         GameGrid gameGrid = new GameGrid(this, numGames);
         listView.setAdapter(gameGrid);
+
+        final SharedPreferences mainLog = this.getSharedPreferences(MainActivity.MAIN_PREFS,0);
+        listView.post(new Runnable() {
+            @Override
+            public void run() {
+                int pos = mainLog.getInt("games_unlocked", 0);
+                if (mainLog.getString(String.format(Locale.US, "score_%d", pos), "0").equals("0"))
+                    pos --;
+                if (pos<0)
+                    pos = 0;
+                listView.setSelection(pos);
+            }
+        });
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
-
-                SharedPreferences mainLog = view.getContext().getSharedPreferences(MainActivity.MAIN_PREFS,0);
-                int unlockedPosition = mainLog.getInt("games_unlocked", 0);
-
-                if (pos <= unlockedPosition) {
+                if (pos <= mainLog.getInt("games_unlocked", 0)) {
                     Intent intent = new Intent(view.getContext(), GameActivity.class);
                     intent.putExtra("gameNum", pos);
                     intent.putExtra("gameLetters", gameList[pos]);

@@ -18,6 +18,7 @@ public class SettingsActivity extends Activity {
 
     private static final String KEY_PREF_ABOUT =    "simple_text_about";
     public static final String KEY_PREF_REWARD =    "offer_rewarded_ads";
+    public static final String KEY_PREF_CHALLENGE =    "challenge_reminders";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

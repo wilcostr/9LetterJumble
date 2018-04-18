@@ -347,7 +347,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
 
     }
 
-    private void openStore(){
+    public void openStore(){
         if (mAcquireFragment == null) {
             mAcquireFragment = new AcquireFragment();
         }

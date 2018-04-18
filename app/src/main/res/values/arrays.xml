@@ -16,4 +16,10 @@
         <item>jpirecude</item>
     </string-array>
 
+    <string-array name="sorting">
+        <item>@string/sorting_default</item>
+        <item>Alphabetical</item>
+        <item>Chronological</item>
+    </string-array>
+
 </resources>

@@ -8,6 +8,19 @@
         android:title="@string/preference_ads"
         android:summary="@string/preference_ads_about"/>
 
+    <SwitchPreference
+        android:key="challenge_reminders"
+        android:defaultValue="true"
+        android:title="@string/preference_challenge"
+        android:summary="@string/preference_challenge_about"/>
+
+    <ListPreference
+        android:key="sorting_preference"
+        android:defaultValue="@string/sorting_default"
+        android:entries="@array/sorting"
+        android:entryValues="@array/sorting"
+        android:title="@string/preference_sorting" />
+
     <Preference
         android:key="simple_text_about"
         android:selectAllOnFocus="true"
