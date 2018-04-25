@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -48,6 +49,11 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Check for dark mode in settings
+        SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
+        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, true))
+            setTheme(R.style.AppThemeDark);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -109,6 +115,12 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         super.onResume();
         if (mInterstitialAd.isLoaded())
             mInterstitialAd.show();
+        //Check for dark mode background image
+        SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
+        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, true))
+            mScreenMain.setBackground(getResources().getDrawable(R.drawable.alphabet_dark));
+        else
+            mScreenMain.setBackground(getResources().getDrawable(R.drawable.alphabet));
     }
 
     @Override

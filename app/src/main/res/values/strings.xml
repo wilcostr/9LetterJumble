@@ -10,9 +10,10 @@
     <string name="settings">Settings</string>
     <string name="preference_about">Version</string>
     <string name="preference_ads">Rewarded ads</string>
-    <string name="preference_ads_about">Offer clue tokens in exchange for watching ads</string>
-    <string name="preference_challenge">Daily challenge reminders</string>
-    <string name="preference_challenge_about">Notification reminders to complete the daily challenge</string>
+    <string name="preference_ads_about">Get clue tokens when watching ads</string>
+    <string name="preference_challenge">Notifications</string>
+    <string name="preference_challenge_about">Daily challenge reminder</string>
+    <string name="dark_mode">Dark mode</string>
     <string name="preference_sorting">Word order</string>
     <string name="sorting_default">Smart alphabetical</string>
 

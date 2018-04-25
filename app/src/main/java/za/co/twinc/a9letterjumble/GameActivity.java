@@ -86,6 +86,11 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Check for dark mode in settings
+        SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
+        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, true))
+            setTheme(R.style.AppThemeDark);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 

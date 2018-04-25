@@ -1,11 +1,13 @@
 package za.co.twinc.a9letterjumble;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.preference.SwitchPreference;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
@@ -16,14 +18,19 @@ import android.view.View;
 
 public class SettingsActivity extends Activity {
 
-    private static final String KEY_PREF_ABOUT =    "simple_text_about";
-    public static final String KEY_PREF_REWARD =    "offer_rewarded_ads";
-    public static final String KEY_PREF_CHALLENGE =    "challenge_reminders";
+    private static final String KEY_PREF_ABOUT      = "simple_text_about";
+    public static final String KEY_PREF_REWARD      = "offer_rewarded_ads";
+    public static final String KEY_PREF_CHALLENGE   = "challenge_reminders";
+    public static final String KEY_PREF_DARK        = "dark_mode";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        //Check for dark mode in settings
+        SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
+        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, true))
+            setTheme(R.style.AppThemeDark);
 
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         Toolbar bar = findViewById(R.id.toolbar);
         bar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -41,6 +48,20 @@ public class SettingsActivity extends Activity {
 
 
     public static class SettingsFragment extends PreferenceFragment {
+
+        final SharedPreferences.OnSharedPreferenceChangeListener listener =
+                new SharedPreferences.OnSharedPreferenceChangeListener() {
+                    @Override
+                    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+                        if (s.equals(KEY_PREF_DARK)){
+                            if (((SwitchPreference)findPreference(s)).isChecked())
+                                getActivity().setTheme(R.style.AppThemeDark);
+                            else
+                                getActivity().setTheme(R.style.AppTheme);
+                            getActivity().recreate();
+                        }
+                    }
+                };
 
 
         @Override
@@ -62,6 +83,20 @@ public class SettingsActivity extends Activity {
             }
             if (p != null)
                 p.setSummary(versionName);
+        }
+
+        @Override
+        public void onResume() {
+            super.onResume();
+            getPreferenceManager().getSharedPreferences()
+                    .registerOnSharedPreferenceChangeListener(listener);
+        }
+
+        @Override
+        public void onPause() {
+            super.onPause();
+            getPreferenceManager().getSharedPreferences()
+                    .unregisterOnSharedPreferenceChangeListener(listener);
         }
 
     }
