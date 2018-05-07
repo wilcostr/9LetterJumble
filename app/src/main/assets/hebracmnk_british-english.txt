@@ -21,6 +21,7 @@ char;partially burn so as to blacken the surface.
 barn;a large farm building used for storing grain, hay, or straw or for housing livestock.
 ranch;a large farm, especially in North America or Australia, where cattle or other animals are bred.
 arch;a curved symmetrical structure spanning an opening and typically supporting the weight of a bridge, roof, or wall above it.
+bream;a greenish-bronze deep-bodied freshwater fish native to Europe. - OR - Clear (a ship or its bottom) of weeds, shells, or other accumulated matter by burning and scraping it.
 mane;a growth of long hair on the neck of a horse, lion, or other mammal.
 embark;go on board a ship or aircraft.
 acne;a skin condition characterized by red pimples on the skin, especially on the face, due to inflamed or infected sebaceous glands and prevalent chiefly among adolescents.

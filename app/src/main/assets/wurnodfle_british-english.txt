@@ -65,6 +65,7 @@ loner ; a person who prefers not to associate with others.
 wonderful ; inspiring delight, pleasure, or admiration.
 dour ; relentlessly severe, stern, or gloomy in manner or appearance.
 fouled ; (in sport) commit a foul against (an opponent).
+lour ; look angry or sullen, scowl.
 felon ; a person who has committed a felony.
 floe ; a sheet of floating ice.
 woeful ; characterized by, expressive of, or causing sorrow or misery.
@@ -74,6 +75,7 @@ lorn ; lonely and abandoned (adj).
 fonder ; having an affection or liking for (comparative adj).
 downer ; a dispiriting or depressing experience or factor.
 fondle ; stroke or caress lovingly or erotically.
+loured ; look angry or sullen, scowl (past tense).
 enfold ; to surround.
 rewound ; past and past participle of rewind.
 fondue ; a dish in which small pieces of food are dipped into a hot sauce or a hot cooking medium such as oil or broth.

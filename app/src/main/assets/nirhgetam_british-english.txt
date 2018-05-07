@@ -57,6 +57,7 @@ reaming;widen (a hole) with a special tool.
 grain;wheat or any other cultivated cereal used as food.
 night;the period from sunset to sunrise in each twenty-four hours.
 harming;physically injure.
+righten;make (something) right, correct or straight.
 gaiter;a protective covering of cloth or leather for the ankle and lower leg.
 hang;suspend or be suspended from above with the lower part dangling free.
 garment;an item of clothing.

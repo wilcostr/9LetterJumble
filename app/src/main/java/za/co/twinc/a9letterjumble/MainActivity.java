@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
     protected void onCreate(Bundle savedInstanceState) {
         //Check for dark mode in settings
         SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
-        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, true))
+        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, false))
             setTheme(R.style.AppThemeDark);
 
         super.onCreate(savedInstanceState);
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
             mInterstitialAd.show();
         //Check for dark mode background image
         SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
-        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, true))
+        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, false))
             mScreenMain.setBackground(getResources().getDrawable(R.drawable.alphabet_dark));
         else
             mScreenMain.setBackground(getResources().getDrawable(R.drawable.alphabet));

@@ -8,7 +8,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.DataSetObserver;
-import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -46,6 +45,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
@@ -71,7 +71,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     private Set<String> wordsIn;
     private Set<String> wordsClues;
 
-    private int gameNum, numLevels;
+    private int gameNum, numLevels, sorting;
     private String gameName, gameLetters;
 
     private int score;
@@ -88,17 +88,26 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     protected void onCreate(Bundle savedInstanceState) {
         //Check for dark mode in settings
         SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
-        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, true))
+        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, false))
             setTheme(R.style.AppThemeDark);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        // Load sorting order from settings
+        try{
+            sorting = Integer.parseInt(settingsPref.getString(SettingsActivity.KEY_PREF_SORT, "0"));
+        } catch (NumberFormatException e) {
+            sorting = 0;
+        }
+
 
         // Create main share preference log
         final SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
 
         // No banner ad if premium
         // Also don't show an ad in the daily challenge
+        isChallenge = gameNum < 0;
         AdView adView = findViewById(R.id.adView);
         MobileAds.initialize(this, getString(R.string.app_id));
         if (!mainLog.getBoolean("premium", false) && !isChallenge){
@@ -149,24 +158,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         gameNum = startGameIntent.getIntExtra("gameNum",0);
         numLevels = startGameIntent.getIntExtra("numLevels",1);
         gameLetters = startGameIntent.getStringExtra("gameLetters");
-        isChallenge = gameNum < 0;
         gameName = isChallenge ? getString(R.string.button_challenge) : GameGrid.gameNames[gameNum];
         textViewGuess = findViewById(R.id.text_guess);
-
-        // Save the guessed words as a whole string to shared preferences when updating
-        textViewList = findViewById(R.id.word_list);
-        textViewList.setText(mainLog.getString(String.format(Locale.US,"wordstring_%d", gameNum),
-                getString(R.string.prompt_no_words)));
-        textViewList.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                saveStringToPrefs("wordstring", charSequence.toString());
-            }
-            @Override
-            public void afterTextChanged(Editable editable) {}
-        });
 
         // Save the score to SharedPreferences when updated
         textViewScore = findViewById(R.id.score);
@@ -195,6 +188,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             wordsIn.addAll(prefSet);
             score = prefSet.size();
         }
+
+        // Save the guessed words as a whole string to shared preferences when updating
+        textViewList = findViewById(R.id.word_list);
+        updateWordList();
 
         // Get previous clues
         wordsClues = new LinkedHashSet<>();
@@ -240,6 +237,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                 if (i == 4 && !isChallenge)
                     view.setBackground(getResources().getDrawable(R.drawable.button_round_grey));
                 buttonStack.push(i);
+                if (sorting==0) updateWordList();
             }
         });
 
@@ -348,6 +346,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             textViewGuess.setText(guess.subSequence(0, guess.length()-1));
         else
             setGameNameDisplay();
+
+        if (sorting==0) updateWordList();
     }
 
     public void onButtonBackspaceLongClick() {
@@ -355,6 +355,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         setGameNameDisplay();
         gridAdapter.setAllClickableTrue();
         gridAdapter.notifyDataSetChanged();
+        if (sorting==0) updateWordList();
     }
 
     public void onButtonEnterClick(View v){
@@ -362,6 +363,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         setGameNameDisplay();
         gridAdapter.setAllClickableTrue();
         gridAdapter.notifyDataSetChanged();
+        if (sorting==0) updateWordList();
 
         // Check for daily challenge
         if (isChallenge){
@@ -448,6 +450,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             return;
         }
 
+        // Entered word is correct input
         // Animate the cardview when guessing correctly
         ObjectAnimator pulse = ObjectAnimator.ofPropertyValuesHolder(
                 cardView,
@@ -491,14 +494,58 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         if (score == 13 && gameNum == 0)
             showStatsTip();
 
-        wordsIn.add(guess.toString());
+        addWord(guess.toString());
+    }
+
+    private void addWord(String newWord){
+        wordsIn.add(newWord);
         saveStringSetToPrefs("words", wordsIn);
 
-        String list = textViewList.getText().toString();
-        if (list.equalsIgnoreCase(getString(R.string.prompt_no_words)))
-            textViewList.setText(guess);
+        String list = getStringFromPrefs("wordstring", " ");
+        if (list.equalsIgnoreCase(" "))
+            list = newWord;
         else
-            textViewList.setText(String.format("%s, %s", guess, list));
+            list = String.format("%s, %s", newWord, list);
+
+        saveStringToPrefs("wordstring", list);
+        updateWordList();
+    }
+
+    private void updateWordList(){
+        // Nothing to be done in challenge mode
+        if (isChallenge)
+            return;
+        String list = "";
+        switch (sorting) {
+            case 0:
+                String guess = textViewGuess.getText().toString();
+                List<String> smartList;
+                if (guess.indexOf('-')==0)
+                    smartList = new ArrayList<String>(wordsIn);
+                else
+                    smartList = new ArrayList<String>();
+                    for (String s : wordsIn){
+                        if (s.startsWith(guess))
+                            smartList.add(s);
+                    }
+                Collections.sort(smartList);
+                list = smartList.toString();
+                list = list.substring(1, list.length()-1);
+                break;
+            case 1:
+                List<String> listSort = new ArrayList<String>(wordsIn);
+                Collections.sort(listSort);
+                list = listSort.toString();
+                list = list.substring(1, list.length()-1);
+                break;
+            case 2:
+                list = getStringFromPrefs("wordstring", getString(R.string.prompt_no_words));
+                break;
+        }
+
+        if (list.equals("") && wordsIn.size()==0)
+            list = getString(R.string.prompt_no_words);
+        textViewList.setText(list);
     }
 
     private void getWords(List<String> words, List<String> definitions){
@@ -683,6 +730,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     }
 
     private void unlockNext(){
+        // Quick return if we are playing an old level with newly added words
+        if (getIntFromPrefs("games_unlocked", 0) > gameNum)
+            return;
         saveIntToPrefs("games_unlocked", gameNum + 1);
 
         // Return if this is the last available level

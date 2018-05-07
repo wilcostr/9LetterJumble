@@ -1,121 +1,128 @@
-ones ; the lowest cardinal number (plural).
-also ; in addition.
-does ; third person singular present of do.
-doing ; perform (an action, the precise nature of which is often unspecified).
-long ; measuring a great distance from end to end.
-longed ; have a strong wish or desire (past tense).
-longs ; have a strong wish or desire (third person).
 noes ; a negative answer or decision, as in voting (plural).
-goes ; third person singular present of go.
-gods ; the creator and ruler of the universe and source of all moral authority (plural).
-done ; past participle of do.
-along ; moving in a constant direction on (a path or any more or less horizontal surface).
-alone ; having no one else present.
-oils ; a viscous liquid derived from petroleum, especially for use as a fuel or lubricant (plural).
-gone ; past participle of go.
-gold ; a yellow precious metal, valued especially for use in jewelry and decoration, and to guarantee the value of currencies.
-golds ; a yellow precious metal, valued especially for use in jewelry and decoration, and to guarantee the value of currencies (plural).
-soil ; the upper layer of earth in which plants grow.
-goal ; the object of a person's ambition or effort.
-goals ; the object of a person's ambition or effort (plural).
-solid ; firm and stable in shape.
-load ; a heavy or bulky thing that is being carried or is about to be carried.
-sold ; give or hand over (something) in exchange for money (past tense).
-dogs ; a domesticated carnivorous mammal of the canis genus (plural).
-lose ; be deprived of or cease to have or retain (something).
-losing ; be deprived of or cease to have or retain (something).
-noise ; a sound, especially one that is loud or unpleasant or that causes disturbance.
-noised ; talk about or make known publicly (past tense).
-song ; a short poem or other set of words set to music or meant to be sung.
-dose ; a quantity of a medicine or drug taken or recommended to be taken at a particular time.
-golden ; colored or shining with a bright yellow hue.
-dong ; sound made by a brass bell, when rung.
-dongs ; sound made by a brass bell, when rung (plural).
-snog ; kiss and cuddle amorously.
-dongle ; a small piece of hardware that connects to another device to provide it with additional functionality
-dongles ; a small piece of hardware that connects to another device to provide it with additional functionality (plural).
-nose ; the part projecting above the mouth on the face of a person or animal, containing the nostrils and used for breathing and smelling.
-dons ; put on (an item of clothing) (third person).
-loan ; a thing that is borrowed, especially a sum of money that is expected to be paid back with interest.
-loaned ; borrow (a sum of money or item of property) (past tense).
-loans ; a thing that is borrowed, especially a sum of money that is expected to be paid back with interest (plural).
-ions ; an atom or molecule with a net electric charge due to the loss or gain of one or more electrons (plural).
-logs ; a part of the trunk or a large branch of a tree that has fallen or been cut off (plural).
-node ; a point at which lines or pathways intersect or branch.
-nodes ; a point at which lines or pathways intersect or branch (plural).
-egos ; a person's sense of self-esteem or self-importance (plural).
-sole ; a marine flatfish of almost worldwide distribution, important as a food fish.
-loading ; the application of a mechanical load or force to something.
-lesion ; a region in an organ or tissue that has suffered damage through injury or disease, such as a wound, ulcer, abscess, tumor, etc.
-loads ; a heavy or bulky thing that is being carried or is about to be carried (plural).
-lodge ; a small house at the gates of a park or in the grounds of a large house, typically occupied by a gatekeeper, gardener, or other employee.
-lodges ; a small house at the gates of a park or in the grounds of a large house, typically occupied by a gatekeeper, gardener, or other employee (plural).
-lion ; a large tawny-colored cat that lives in prides, found in Africa and northwestern India.
-lions ; a large tawny-colored cat that lives in prides, found in Africa and northwestern India (plural).
-dosage ; the size or frequency of a dose of a medicine or drug.
-dosing ; administer a dose to (a person or animal).
-gasoline ; refined petroleum used as fuel for internal combustion engines.
-agonies ; extreme physical or mental suffering (plural).
-soda ; carbonated water (originally made with sodium bicarbonate).
-lone ; having no companions, solitary or single.
-nods ; lower and raise one's head slightly and briefly, especially in greeting, assent, or understanding, or to give someone a signal.
-soling ; put a new sole onto (a shoe).
-legion ; a unit of 3,000–6,000 men in the ancient Roman army.
-legions ; a unit of 3,000–6,000 men in the ancient Roman army (plural).
-slogan ; a short and striking or memorable phrase used in advertising.
-anode ; the positively charged electrode by which the electrons leave a device.
-salon ; an establishment where a hairdresser, beautician, or couturier conducts business.
-idol ; an image or representation of a god used as an object of worship.
-idols ; an image or representation of a god used as an object of worship (plural).
-diagnose ; identify the nature of (an illness or other problem) by examination of the symptoms.
-noel ; Christmas, especially as a refrain in carols and on Christmas cards.
-noels ; Christmas, especially as a refrain in carols and on Christmas cards (plural).
-odes ; a lyric poem in the form of an address to a particular subject, often elevated in style or manner and written in varied or irregular meter (plural).
-nodal ; denoting a point in a network or diagram at which lines or pathways intersect or branch.
-doings ; the activities in which a particular person engages.
-dole ; benefit paid by the government to the unemployed.
-doles ; distribute shares of something (third person).
-soiled ; make dirty (past tense).
-nosed ; having a nose or projecting part of a specified kind.
-oiled ; lubricate or coat (something) with oil (past tense).
-olden ; relating to former times.
-loin ; the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones.
-loins ; the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones (plural).
-silo ; a tower or pit on a farm used to store grain.
-lingo ; a foreign language or local dialect.
-lingoes ; a foreign language or local dialect (plural).
-lode ; a vein of metal ore in the earth.
-lodes ; a vein of metal ore in the earth (plural).
-goad ; provoke or annoy (someone) so as to stimulate some action or reaction.
-goads ; provoke or annoy (someone) so as to stimulate some action or reaction (third person).
-sago ; edible starch that is obtained from a palm and is a staple food in parts of the tropics.
-gonad ; an organ that produces gametes.
-gonads ; an organ that produces gametes (plural).
-aloe ; a succulent plant, typically having a rosette of toothed fleshy leaves and bell-shaped or tubular flowers on long stems.
-doling ; distribute shares of something (continuous).
-ogle ; stare at in a lecherous manner.
-ogled ; stare at in a lecherous manner (past tense).
-ogles ; stare at in a lecherous manner (third person).
-sidelong ; directed to or from one side.
-soli ; plural form of solo.
-soled ; put a new sole onto (a shoe) (past tense).
-aeon ; an indefinite and very long period of time, often a period exaggerated for humorous or rhetorical effect.
-aeons ; an indefinite and very long period of time, often a period exaggerated for humorous or rhetorical effect (plural).
 goalie ; informal term for goaltender or goalkeeper.
-goalies ; informal term for goaltender or goalkeeper (plural).
-dingo ; a wild or half-domesticated dog with a sandy-colored coat, found in Australia. It is believed to have been introduced by early Aboriginal immigrants.
-dingoes ; a wild or half-domesticated dog with a sandy-colored coat, found in Australia. It is believed to have been introduced by early Aboriginal immigrants (plural).
-aloes ; a succulent plant, typically having a rosette of toothed fleshy leaves and bell-shaped or tubular flowers on long stems (plural).
+dong ; sound made by a brass bell, when rung.
+diagnose ; identify the nature of (an illness or other problem) by examination of the symptoms.
+legions ; a unit of 3,000–6,000 men in the ancient Roman army (plural).
+loaned ; borrow (a sum of money or item of property) (past tense).
+gonads ; an organ that produces gametes (plural).
+nose ; the part projecting above the mouth on the face of a person or animal, containing the nostrils and used for breathing and smelling.
+lesion ; a region in an organ or tissue that has suffered damage through injury or disease, such as a wound, ulcer, abscess, tumor, etc.
+golden ; colored or shining with a bright yellow hue.
+dole ; benefit paid by the government to the unemployed.
+sidelong ; directed to or from one side.
+longed ; have a strong wish or desire (past tense).
+lingo ; a foreign language or local dialect.
+ogled ; stare at in a lecherous manner (past tense).
+soda ; carbonated water (originally made with sodium bicarbonate).
+nosed ; having a nose or projecting part of a specified kind.
+aloe ; a succulent plant, typically having a rosette of toothed fleshy leaves and bell-shaped or tubular flowers on long stems.
+sloe ; another term for blackthorn.
+gold ; a yellow precious metal, valued especially for use in jewelry and decoration, and to guarantee the value of currencies.
+dose ; a quantity of a medicine or drug taken or recommended to be taken at a particular time.
+agonise ; undergo great mental anguish through worrying about something.
+alone ; having no one else present.
+login ; the information you use to sign into a computer or online service.
 loge ; a private box or enclosure in a theater.
 alongside ; close to the side of.
-loges ; a private box or enclosure in a theater (plural).
-slog ; work hard over a period of time.
-agonised ; undergo great mental anguish through worrying about something (past tense).
-sloe ; another term for blackthorn.
-insole ; a removable sole worn in a shoe for warmth, as a deodorizer, or to improve the fit.
+snog ; kiss and cuddle amorously.
+lido ; a public open-air swimming pool or bathing beach.
+loads ; a heavy or bulky thing that is being carried or is about to be carried (plural).
+aeon ; an indefinite and very long period of time, often a period exaggerated for humorous or rhetorical effect.
+lingoes ; a foreign language or local dialect (plural).
+loins ; the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones (plural).
+long ; measuring a great distance from end to end.
+lodes ; a vein of metal ore in the earth (plural).
+lidos ; a public open-air swimming pool or bathing beach (plural).
+dongles ; a small piece of hardware that connects to another device to provide it with additional functionality (plural).
+noise ; a sound, especially one that is loud or unpleasant or that causes disturbance.
 anodes ; the positively charged electrode by which the electrons leave a device (plural).
-oldie ; an old song, film, or television program that is still well known or popular.
-dogie ; a motherless or neglected calf.
-oldies ; an old song, film, or television program that is still well known or popular (plural).
-agonise ; undergo great mental anguish through worrying about something.
+noels ; Christmas, especially as a refrain in carols and on Christmas cards (plural).
+loading ; the application of a mechanical load or force to something.
+sole ; a marine flatfish of almost worldwide distribution, important as a food fish.
+noised ; talk about or make known publicly (past tense).
+dongs ; sound made by a brass bell, when rung (plural).
+logs ; a part of the trunk or a large branch of a tree that has fallen or been cut off (plural).
+gods ; the creator and ruler of the universe and source of all moral authority (plural).
+noil ; short strands and knots combed out of wool fibre before spinning.
+loan ; a thing that is borrowed, especially a sum of money that is expected to be paid back with interest.
+solid ; firm and stable in shape.
+doings ; the activities in which a particular person engages.
+goad ; provoke or annoy (someone) so as to stimulate some action or reaction.
+dosage ; the size or frequency of a dose of a medicine or drug.
+dons ; put on (an item of clothing) (third person).
+sago ; edible starch that is obtained from a palm and is a staple food in parts of the tropics.
+dingo ; a wild or half-domesticated dog with a sandy-colored coat, found in Australia. It is believed to have been introduced by early Aboriginal immigrants.
+legion ; a unit of 3,000–6,000 men in the ancient Roman army.
+lose ; be deprived of or cease to have or retain (something).
+longs ; have a strong wish or desire (third person).
+gonad ; an organ that produces gametes.
 dogies ; a motherless or neglected calf (plural).
+ions ; an atom or molecule with a net electric charge due to the loss or gain of one or more electrons (plural).
+golds ; a yellow precious metal, valued especially for use in jewelry and decoration, and to guarantee the value of currencies (plural).
+insole ; a removable sole worn in a shoe for warmth, as a deodorizer, or to improve the fit.
+aloes ; a succulent plant, typically having a rosette of toothed fleshy leaves and bell-shaped or tubular flowers on long stems (plural).
+soling ; put a new sole onto (a shoe).
+aeons ; an indefinite and very long period of time, often a period exaggerated for humorous or rhetorical effect (plural).
+soil ; the upper layer of earth in which plants grow.
+soled ; put a new sole onto (a shoe) (past tense).
+doling ; distribute shares of something (continuous).
+oldie ; an old song, film, or television program that is still well known or popular.
+lions ; a large tawny-colored cat that lives in prides, found in Africa and northwestern India (plural).
+oils ; a viscous liquid derived from petroleum, especially for use as a fuel or lubricant (plural).
+lodge ; a small house at the gates of a park or in the grounds of a large house, typically occupied by a gatekeeper, gardener, or other employee.
+oiled ; lubricate or coat (something) with oil (past tense).
+lode ; a vein of metal ore in the earth.
+gaol ; chiefly British and fairly archaic alternative spelling of 'jail' (pronounced the same).
+gasoline ; refined petroleum used as fuel for internal combustion engines.
+ogle ; stare at in a lecherous manner.
+idols ; an image or representation of a god used as an object of worship (plural).
+loin ; the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones.
+slog ; work hard over a period of time.
+goalies ; informal term for goaltender or goalkeeper (plural).
+agonised ; undergo great mental anguish through worrying about something (past tense).
+does ; third person singular present of do.
+node ; a point at which lines or pathways intersect or branch.
+olden ; relating to former times.
+loans ; a thing that is borrowed, especially a sum of money that is expected to be paid back with interest (plural).
+gone ; past participle of go.
+noils ; short strands and knots combed out of wool fibre before spinning (plural).
+doing ; perform (an action, the precise nature of which is often unspecified).
+loges ; a private box or enclosure in a theater (plural).
+along ; moving in a constant direction on (a path or any more or less horizontal surface).
+egos ; a person's sense of self-esteem or self-importance (plural).
+losing ; be deprived of or cease to have or retain (something).
+gaols ; chiefly British and fairly archaic alternative spelling of 'jail' (pronounced the same) (plural).
+also ; in addition.
+nodes ; a point at which lines or pathways intersect or branch (plural).
+goes ; third person singular present of go.
+done ; past participle of do.
+silo ; a tower or pit on a farm used to store grain.
+lion ; a large tawny-colored cat that lives in prides, found in Africa and northwestern India.
+dongle ; a small piece of hardware that connects to another device to provide it with additional functionality
+slogan ; a short and striking or memorable phrase used in advertising.
+noel ; Christmas, especially as a refrain in carols and on Christmas cards.
+lodges ; a small house at the gates of a park or in the grounds of a large house, typically occupied by a gatekeeper, gardener, or other employee (plural).
+idol ; an image or representation of a god used as an object of worship.
+dogs ; a domesticated carnivorous mammal of the canis genus (plural).
+ones ; the lowest cardinal number (plural).
+goads ; provoke or annoy (someone) so as to stimulate some action or reaction (third person).
+anode ; the positively charged electrode by which the electrons leave a device.
+dosing ; administer a dose to (a person or animal).
+nods ; lower and raise one's head slightly and briefly, especially in greeting, assent, or understanding, or to give someone a signal.
+load ; a heavy or bulky thing that is being carried or is about to be carried.
+odes ; a lyric poem in the form of an address to a particular subject, often elevated in style or manner and written in varied or irregular meter (plural).
+sold ; give or hand over (something) in exchange for money (past tense).
+nodal ; denoting a point in a network or diagram at which lines or pathways intersect or branch.
+ogles ; stare at in a lecherous manner (third person).
+salon ; an establishment where a hairdresser, beautician, or couturier conducts business.
+soiled ; make dirty (past tense).
+song ; a short poem or other set of words set to music or meant to be sung.
+doles ; distribute shares of something (third person).
+dingoes ; a wild or half-domesticated dog with a sandy-colored coat, found in Australia. It is believed to have been introduced by early Aboriginal immigrants (plural).
+oldies ; an old song, film, or television program that is still well known or popular (plural).
+dogie ; a motherless or neglected calf.
+lone ; having no companions, solitary or single.
+goal ; the object of a person's ambition or effort.
+agonies ; extreme physical or mental suffering (plural).
+goals ; the object of a person's ambition or effort (plural).
+soli ; plural form of solo.

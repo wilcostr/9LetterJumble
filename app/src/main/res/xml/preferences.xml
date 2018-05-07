@@ -8,11 +8,6 @@
         android:title="@string/preference_ads"
         android:summary="@string/preference_ads_about"/>
 
-    <SwitchPreference
-        android:key="challenge_reminders"
-        android:defaultValue="true"
-        android:title="@string/preference_challenge"
-        android:summary="@string/preference_challenge_about"/>
 
     <SwitchPreference
         android:key="dark_mode"
@@ -21,9 +16,10 @@
 
     <ListPreference
         android:key="sorting_preference"
-        android:defaultValue="@string/sorting_default"
+        android:defaultValue="0"
+        android:summary="%s"
         android:entries="@array/sorting"
-        android:entryValues="@array/sorting"
+        android:entryValues="@array/sorting_int"
         android:title="@string/preference_sorting" />
 
     <Preference

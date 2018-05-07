@@ -20,6 +20,7 @@ diner;a person who is eating, typically a customer in a restaurant.
 mire;a stretch of swampy or boggy ground.
 emir;a title of various Muslim (mainly Arab) rulers.
 denim;a hard-wearing cotton twill fabric, typically blue and used for jeans and other clothing.
+minder;a person whose job it is to look after someone or something.
 need;require (something) because it is essential or very important rather than just desirable.
 reed;a tall, slender-leaved plant of the grass family, which grows in water or on marshy ground.
 rued;bitterly regret (something one has done or allowed to happen) and wish it undone (past tense).
@@ -35,6 +36,7 @@ endure;suffer (something painful or difficult) patiently.
 ruined;reduce (a building or place) to a state of decay, collapse, or disintegration (adj).
 dune;a mound or ridge of sand or other loose sediment formed by the wind, especially on the sea coast or in a desert.
 emend;make corrections and revisions to (a text).
+murine;relating to or affecting mice or related rodents.
 mined;obtain (coal or other minerals) from a mine (past tense).
 inner;situated inside or further in.
 mine;used to refer to a thing or things belonging to or associated with the speaker.

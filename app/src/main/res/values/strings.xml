@@ -117,7 +117,7 @@
 
     <string name="intro_title_1">Welcome to\n9 Letter Jumble</string>
     <string name="intro_title_2">Rules of the game</string>
-    <string name="intro_title_3">How to get clues</string>
+    <string name="intro_title_3">Clue tokens</string>
     <string name="intro_desc_1">Find words of four letters or more by using the letters in the grid.</string>
     <string name="intro_desc_2">Each letter can only be used once, and every word must contain the center letter.
                                 Every level has at least one 9 letter word.</string>
@@ -141,7 +141,7 @@
 
 
     <string name="purchase_cancelled">Purchase cancelled</string>
-    <string name="alert_already_purchased">Item is already purchased</string>
+    <string name="alert_already_purchased">Item has already been purchased</string>
     <string name="button_buy">Buy</string>
     <string name="button_own">Owned</string>
     <string name="error_no_skus">We didn\'t find any SKUs to display… Check your internet

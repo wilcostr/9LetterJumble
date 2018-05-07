@@ -14,6 +14,7 @@ cant;hypocritical and sanctimonious talk, typically of a moral, religious, or po
 decant;gradually pour (wine, port, or another liquid) from one container into another, typically in order to separate out sediment.
 canoe;a light, narrow boat with pointed ends and no keel, propelled with a paddle or paddles.
 cation;a positively charged ion, i.e. one that would be attracted to the cathode in electrolysis.
+actioned;take action on, deal with.
 coated;provide with a layer or covering of something (past tense).
 auction;a public sale in which goods or property are sold to the highest bidder.
 donate;give (money or goods) for a good cause, for example to a charity.
@@ -21,6 +22,7 @@ daunt;make (someone) feel intimidated or apprehensive.
 canted;talk hypocritically and sanctimoniously about something (past tense).
 aide;an assistant to an important person, especially a political leader.
 toucan;a tropical American fruit-eating bird with a massive bill and typically brightly coloured plumage.
+adit;a nearly horizontal passage from the surface in a mine.
 canoed;travel in or paddle a canoe (past tense).
 anti;opposed to - against.
 anted;put up an amount as an ante in poker or brag and similar games.
