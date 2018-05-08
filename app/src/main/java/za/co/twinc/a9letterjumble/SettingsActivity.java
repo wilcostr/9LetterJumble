@@ -16,18 +16,11 @@ import android.view.View;
  * 9LetterJumble
  */
 
-
-//    <SwitchPreference
-//            android:key="challenge_reminders"
-//            android:defaultValue="true"
-//            android:title="@string/preference_challenge"
-//            android:summary="@string/preference_challenge_about"/>
-
 public class SettingsActivity extends Activity {
 
     private static final String KEY_PREF_ABOUT      = "simple_text_about";
     public static final String KEY_PREF_REWARD      = "offer_rewarded_ads";
-    //public static final String KEY_PREF_CHALLENGE   = "challenge_reminders";
+    public static final String KEY_PREF_CHALLENGE   = "challenge_reminders";
     public static final String KEY_PREF_SORT        = "sorting_preference";
     public static final String KEY_PREF_DARK        = "dark_mode";
 
@@ -67,6 +60,12 @@ public class SettingsActivity extends Activity {
                             else
                                 getActivity().setTheme(R.style.AppTheme);
                             getActivity().recreate();
+                        }
+                        else if (s.equals(KEY_PREF_CHALLENGE)){
+                            if (((SwitchPreference)findPreference(s)).isChecked())
+                                MainActivity.setNotification(getActivity());
+                            else
+                                MainActivity.cancelNotification(getActivity());
                         }
                     }
                 };

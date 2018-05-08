@@ -105,9 +105,12 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         // Create main share preference log
         final SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
 
+        Intent startGameIntent = getIntent();
+        gameNum = startGameIntent.getIntExtra("gameNum",0);
+        isChallenge = gameNum < 0;
+
         // No banner ad if premium
         // Also don't show an ad in the daily challenge
-        isChallenge = gameNum < 0;
         AdView adView = findViewById(R.id.adView);
         MobileAds.initialize(this, getString(R.string.app_id));
         if (!mainLog.getBoolean("premium", false) && !isChallenge){
@@ -154,8 +157,6 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         // Initialise back stack for backspace
         buttonStack = new Stack<>();
 
-        Intent startGameIntent = getIntent();
-        gameNum = startGameIntent.getIntExtra("gameNum",0);
         numLevels = startGameIntent.getIntExtra("numLevels",1);
         gameLetters = startGameIntent.getStringExtra("gameLetters");
         gameName = isChallenge ? getString(R.string.button_challenge) : GameGrid.gameNames[gameNum];

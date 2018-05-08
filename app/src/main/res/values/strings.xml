@@ -5,7 +5,7 @@
     <string name="ad_unit_id_reward">ca-app-pub-5782047288878600/3040035778</string>
 
     <string name="app_name">9 Letter Jumble</string>
-    <string name="play_game">Play 9 Letter Jumble</string>
+    <string name="play_game">Select a level</string>
 
     <string name="settings">Settings</string>
     <string name="preference_about">Version</string>
@@ -135,6 +135,7 @@
         Come back tomorrow for another challenge.</string>
     <string name="challenge_exit_title">End challenge?</string>
     <string name="challenge_exit_message">You will not be able to play another challenge until tomorrow.</string>
+    <string name="challenge_reminder">Complete the daily challenge.</string>
 
     <string name="reward_title">Rewarded ads</string>
     <string name="reward_message">Watch an ad to gain a clue token.</string>

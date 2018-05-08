@@ -22,6 +22,12 @@
         android:entryValues="@array/sorting_int"
         android:title="@string/preference_sorting" />
 
+    <SwitchPreference
+        android:key="challenge_reminders"
+        android:defaultValue="true"
+        android:title="@string/preference_challenge"
+        android:summary="@string/preference_challenge_about"/>
+
     <Preference
         android:key="simple_text_about"
         android:selectAllOnFocus="true"

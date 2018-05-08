@@ -1,5 +1,6 @@
 package za.co.twinc.a9letterjumble;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
     private AcquireFragment mAcquireFragment;
     private MainViewController mViewController;
     private View mScreenWait, mScreenMain;
+
+    private static AlarmReceiver alarmReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +110,9 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
                 editor.apply();
             }
         }
+
+        // Set alarmReceiver for notifications
+        setNotification();
 
     }
 
@@ -394,6 +400,28 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         }catch (IOException e){
             Toast.makeText(this, R.string.file_read_error, Toast.LENGTH_LONG).show();
         }
+    }
+
+
+    public static void setNotification(Context ctx){
+        // Check if alarmReceiver is initiated
+        if (alarmReceiver == null) alarmReceiver = new AlarmReceiver();
+
+        // Return if Notifications switched off in settings
+        SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(ctx);
+        boolean notify = settingsPref.getBoolean(SettingsActivity.KEY_PREF_CHALLENGE, true);
+        if (!notify)
+            return;
+
+        alarmReceiver.setAlarm(ctx);
+    }
+
+    // Overload method for non-static calls
+    private void setNotification(){ setNotification(this);}
+
+    // Clear a notification
+    public static void cancelNotification(Context ctx){
+        alarmReceiver.cancelAlarm();
     }
 
 }

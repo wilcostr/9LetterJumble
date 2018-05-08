@@ -34,6 +34,9 @@
             android:name=".SettingsActivity"
             android:label="@string/settings"
             android:theme="@style/AppTheme" />
+
+        <receiver android:name=".AlarmReceiver" />
+
     </application>
 
 </manifest>
