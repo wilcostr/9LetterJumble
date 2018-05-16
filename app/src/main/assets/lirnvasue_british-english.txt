@@ -16,6 +16,7 @@ virus ; an infective agent that typically consists of a nucleic acid molecule in
 varies ; differ in size, amount, degree, or nature from something else of the same general class.
 navies ; the branch of a nation's armed services that conducts military operations at sea (plural).
 vein ; any of the tubes forming part of the blood circulation system of the body, carrying in most cases oxygen-depleted blood toward the heart.
+laver ; a basin or similar container used for washing oneself.
 veins ; any of the tubes forming part of the blood circulation system of the body, carrying in most cases oxygen-depleted blood toward the heart (plural).
 vain ; having or showing an excessively high opinion of one's appearance, abilities, or worth.
 rival ; a person or thing competing with another for the same objective or for superiority in the same field of activity.
@@ -27,6 +28,7 @@ naiver ; (of a person or action) showing a lack of experience, wisdom, or judgme
 veil ; a piece of fine material worn by women to protect or conceal the face.
 veils ; a piece of fine material worn by women to protect or conceal the face (plural).
 raven ; a large heavily built crow with mainly black plumage, feeding chiefly on carrion.
+lavers ; a basin or similar container used for washing oneself (plural).
 ravens ; a large heavily built crow with mainly black plumage, feeding chiefly on carrion (plural).
 vies ; compete eagerly with someone in order to do or achieve something.
 vine ; a climbing or trailing woody-stemmed plant of the grape family.

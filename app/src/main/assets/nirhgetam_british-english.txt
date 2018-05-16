@@ -63,6 +63,7 @@ hang;suspend or be suspended from above with the lower part dangling free.
 garment;an item of clothing.
 rage;violent uncontrollable anger.
 ting;a sharp, clear ringing sound, such as that made when a glass is struck by a metal object.
+magi;a magician, sorcerer, or astrologer (plural).
 game;a form of competitive activity or sport played according to rules.
 gent;a gentleman.
 magnet;a piece of iron or other material which has its component atoms so ordered that the material exhibits properties of magnetism, such as attracting other iron-containing objects.

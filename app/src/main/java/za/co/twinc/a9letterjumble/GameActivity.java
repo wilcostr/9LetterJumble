@@ -33,8 +33,10 @@ import android.widget.Toast;
 import com.andremion.counterfab.CounterFab;
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetView;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
@@ -57,6 +59,9 @@ import nl.dionsegijn.konfetti.models.Shape;
 import nl.dionsegijn.konfetti.models.Size;
 
 public class GameActivity extends AppCompatActivity implements RewardedVideoAdListener {
+
+    private InterstitialAd mInterstitialAd;
+    private boolean justCreated;
 
     private RewardedVideoAd rewardAd;
     private ImageButton rewardImage;
@@ -101,6 +106,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             sorting = 0;
         }
 
+        justCreated = true;
 
         // Create main share preference log
         final SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
@@ -109,10 +115,16 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         gameNum = startGameIntent.getIntExtra("gameNum",0);
         isChallenge = gameNum < 0;
 
-        // No banner ad if premium
-        // Also don't show an ad in the daily challenge
+        // Initialise banner and MobileAds
         AdView adView = findViewById(R.id.adView);
         MobileAds.initialize(this, getString(R.string.app_id));
+
+        // Initialise interstitial ad
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getString(R.string.ad_unit_id_interstitial_resume));
+
+        // No banner ad if premium
+        // Also don't show an ad in the daily challenge
         if (!mainLog.getBoolean("premium", false) && !isChallenge){
             // Load add
             adView.setVisibility(View.VISIBLE);
@@ -287,6 +299,26 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                         }
                     }).create().show();
         }
+
+        else if (rewardAd.isLoaded()){
+            new AlertDialog.Builder(this)
+                    .setTitle(R.string.reward_title)
+                    .setMessage(R.string.reward_message)
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            rewardAd.show();
+                        }
+                    })
+                    .setNegativeButton(R.string.exit, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            GameActivity.super.onBackPressed();
+                        }
+                    })
+                    .create()
+                    .show();
+        }
         else
             super.onBackPressed();
     }
@@ -322,7 +354,14 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             else
                 startTimer();
         }
+
         rewardAd.resume(this);
+
+        if (!justCreated && mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
+
+        justCreated = false;
         super.onResume();
     }
 
@@ -402,6 +441,13 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         // Load video ad if appropriate
         loadRewardedAd();
 
+        // Load interstitial if not already loaded
+        if (!getBooleanFromPrefs("premium", false) && !mInterstitialAd.isLoaded()){
+            mInterstitialAd.loadAd(new AdRequest.Builder()
+                    .addTestDevice("5F2995EE0A8305DEB4C48C77461A7362")
+                    .build());
+        }
+
         // Check for empty guess
         if (guess.toString().equals(getString(R.string.game_display_name, gameName)))
             return;
@@ -466,9 +512,17 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         score += 1;
         updateScore();
 
-        // Hand out clues every 15 words
-        if (score%15 == 0) {
-            increaseCounterFab();
+        // Special treatment in ALFA
+        if (gameNum == 0){
+            // Hand out clues every 15 words
+            if (score%15 == 0)
+                increaseCounterFab();
+            // Show a tapTarget for getting clues after the first 8 words
+            else if (score == 8)
+                showClueTip();
+            // Show a tapTarget for stats screen after the first 13 words
+            else if (score == 13)
+                showStatsTip();
         }
 
         // 3 Clue tokens when completing the level
@@ -480,20 +534,16 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             throwConfetti();
         }
 
+        // Clue for getting a 9 letter word
+        if (guess.length() == 9)
+            increaseCounterFab();
+
         // Unlock next level after half the words
         int unlockRequirement = wordsDict.size()/2;
         if (wordsDict.size()%2 > 0)
             unlockRequirement++;
         if (score == unlockRequirement)
             unlockNext();
-
-        // Show a tapTarget for getting clues after the first 8 words in alfa
-        if (score == 8 && gameNum == 0)
-            showClueTip();
-
-        // Show a tapTarget for stats screen after the first 13 words in alfa
-        if (score == 13 && gameNum == 0)
-            showStatsTip();
 
         addWord(guess.toString());
     }
@@ -915,9 +965,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             return;
         if (gameNum == 0 && score < 31)
             return;
-        if (score < 16)
+        if (score < 13)
             return;
-        if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 6*60*1000)
+        // Load after 2 minutes, play every 5
+        if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 2*60*1000)
             return;
 
         // Start loading the video ad
@@ -926,6 +977,13 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                     new AdRequest.Builder()
                             .addTestDevice("5F2995EE0A8305DEB4C48C77461A7362")
                             .build());
+        }
+        else { // Ad is already loaded
+            // Still don't show ad until 5 minutes
+            if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 5*60*1000)
+                return;
+
+            rewardImage.setVisibility(View.VISIBLE);
         }
     }
 
@@ -944,8 +1002,6 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                 .setNegativeButton(android.R.string.cancel, null);
         builder.create().show();
     }
-
-
 
 
     private void increaseCounterFab() {
@@ -1042,7 +1098,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
     @Override
     public void onRewardedVideoAdLoaded() {
-        rewardImage.setVisibility(View.VISIBLE);
+        // Don't show rewardImage here, as we are now preloading ads before we want to show them.
     }
     @Override
     public void onRewardedVideoAdOpened() {    }

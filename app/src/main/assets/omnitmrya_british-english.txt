@@ -12,6 +12,7 @@ trim ; make (something) neat or of the required size or form by cutting away irr
 riot ; a violent disturbance of the peace by a crowd.
 troy ; a system of weights used mainly for precious metals and gems, with a pound of 12 ounces or 5,760 grains.
 omit ; leave out or exclude (someone or something), either intentionally or forgetfully.
+rota ; a list or roster showing when each of a number of people has to do a particular job.
 mint ; a place where money is coined, especially under state authority.
 minty ; smelling or tasting of mint
 ration ; a fixed amount of a commodity officially allowed to each person during a time of shortage, as in wartime.

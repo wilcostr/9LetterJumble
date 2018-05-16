@@ -2,6 +2,7 @@
     <string name="app_id">ca-app-pub-5782047288878600~5343570417</string>
     <string name="ad_unit_id">ca-app-pub-5782047288878600/4414755259</string>
     <string name="ad_unit_id_interstitial">ca-app-pub-5782047288878600/7337948400</string>
+    <string name="ad_unit_id_interstitial_resume">ca-app-pub-5782047288878600/1784411736</string>
     <string name="ad_unit_id_reward">ca-app-pub-5782047288878600/3040035778</string>
 
     <string name="app_name">9 Letter Jumble</string>
@@ -94,7 +95,7 @@
     <string name="clues_available_tokens">Available clue tokens: %1$d</string>
     <string name="clues_message">%s
                                 \nClue tokens used: %d</string>
-    <string name="clues_message_no_tokens">Find 15 words to gain a clue token,
+    <string name="clues_message_no_tokens">Keep playing to collect clue tokens,
                                             or visit the store and pick up a clue pack.\n</string>
     <string name="clues_use">Get clue</string>
     <string name="clues_old">View clues</string>
@@ -110,7 +111,7 @@
     <string name="unlocked_keep_going">Gain 3 bonus clue tokens when you complete the level.</string>
 
     <string name="clue_tip_title">Score</string>
-    <string name="clue_tip_description">Find 15 words to gain a clue token</string>
+    <string name="clue_tip_description">Find 15 words to gain your first clue token</string>
     <string name="share_tip_title">Gain three bonus clue tokens</string>
     <string name="share_tip_description">Share the game on social media</string>
     <string name="stats_tip_description">Tap the word list to view level stats</string>
@@ -120,8 +121,8 @@
     <string name="intro_title_3">Clue tokens</string>
     <string name="intro_desc_1">Find words of four letters or more by using the letters in the grid.</string>
     <string name="intro_desc_2">Each letter can only be used once, and every word must contain the center letter.
-                                Every level has at least one 9 letter word.</string>
-    <string name="intro_desc_3">Gain a clue token for every 15 words that you find, and 3 bonus clue tokens
+                                Every level has at least one 9&#160;letter word.</string>
+    <string name="intro_desc_3">Gain a clue token for every 9&#160;letter word you find, and 3&#160;bonus clue tokens
                                 when you complete a level.</string>
 
     <string name="start_time">02:00</string>
@@ -138,7 +139,7 @@
     <string name="challenge_reminder">Complete the daily challenge.</string>
 
     <string name="reward_title">Rewarded ads</string>
-    <string name="reward_message">Watch an ad to gain a clue token.</string>
+    <string name="reward_message">Watch an ad to gain a clue token?</string>
 
 
     <string name="purchase_cancelled">Purchase cancelled</string>

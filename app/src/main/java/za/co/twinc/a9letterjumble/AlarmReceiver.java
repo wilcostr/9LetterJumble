@@ -58,13 +58,12 @@ public class AlarmReceiver extends BroadcastReceiver {
         PendingIntent openMainPendingIntent = stackBuilder.getPendingIntent(0,
                 PendingIntent.FLAG_ONE_SHOT);
 
-        // TODO: Test icons on latest android
         // Give a notification here
         Notification noti = new Notification.Builder(context)
                 .setContentTitle(context.getString(R.string.app_name))
                 .setContentText(context.getString(R.string.challenge_reminder))
                 .setContentIntent(openMainPendingIntent)
-                .setSmallIcon(R.drawable.ic_icon_game1)
+                .setSmallIcon(R.drawable.nine)
                 .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))
                 .setAutoCancel(true)
                 .setVibrate(new long[]{1000, 200, 100, 200})
