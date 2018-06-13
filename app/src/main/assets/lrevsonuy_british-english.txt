@@ -1,6 +1,5 @@
 sure;completely confident that one is right.
 rouse;cause to stop sleeping.
-nervously;in an anxious or apprehensive manner.
 sloven;a person who is habitually untidy or careless.
 revs;revolutions of an engine per minute.
 lures;something that tempts or is used to tempt a person or animal to do something (plural).
@@ -35,6 +34,7 @@ rues;bitterly regret (something one has done or allowed to happen) and wish it u
 sour;having an acid taste like lemon or vinegar.
 ruse;an action intended to deceive someone - a trick.
 snore;a snorting or grunting sound in a person's breathing while they are asleep.
+nevus;a birthmark or a mole on the skin, especially a birthmark in the form of a raised red patch (US spelling).
 sole;a marine flatfish of almost worldwide distribution, important as a food fish.
 slue;turn or slide violently or uncontrollably.
 louvers;each of a set of angled slats fixed or hung at regular intervals in a door, shutter, or screen to allow air or light to pass through (both possible spellings accepted).
@@ -45,6 +45,7 @@ lyres;a stringed instrument like a small U-shaped harp with strings fixed to a c
 runs;move at a speed faster than a walk, never having both or all the feet on the ground at the same time (third person).
 urns;a tall, rounded vase with a stem and base, especially one used for storing the ashes of a cremated person (plural).
 nurse;a person trained to care for the sick or infirm, especially in a hospital.
+nervously;in an anxious or apprehensive manner.
 velours;a plush woven fabric resembling velvet, used for soft furnishings, casual clothing,and hats (plural).
 enrols;officially register as a member of an institution or a student on a course.
 loves;a strong feeling of affection (plural).

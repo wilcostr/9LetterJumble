@@ -15,6 +15,7 @@ tine;a prong or sharp point, such as that on a fork or antler.
 loin;the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones.
 lint;short, fine fibres which separate from the surface of cloth or yarn during processing.
 vile;extremely unpleasant.
+unlit;not having been ignited.
 line;a long, narrow mark or band.
 unveil;remove a veil or covering from, especially uncover (a new monument or work of art) as part of a public ceremony.
 lion;a large tawny-colored cat that lives in prides, found in Africa and northwestern India.
@@ -22,12 +23,14 @@ toil;work extremely hard or incessantly.
 voile;a thin, semi-transparent fabric of cotton, wool, or silk.
 lieu;instead.
 viol;a violin-like instrument.
+ovine;relating to or resembling sheep.
 liven;make or become more lively or interesting.
 live;remain living.
 olive;a small oval fruit with a hard stone and bitter flesh used as food and as a source of oil.
 evolution;the process by which different kinds of living organism are believed to have developed from earlier forms during the history of the earth.
 vein;any of the tubes forming part of the blood circulation system of the body, carrying in most cases oxygen-depleted blood toward the heart.
 unite;come or bring together for a common purpose or action.
+volution;a single turn of a spiral or coil.
 lite;denoting a low-fat or low-sugar version of a manufactured food or drink product.
 unit;an individual thing or person regarded as single and complete but which can also form an individual component of a larger or more complex whole.
 lien;a right to keep possession of property belonging to another person until a debt owed by that person is discharged.

@@ -29,6 +29,7 @@ juicer;an appliance for extracting juice from fruit and vegetables.
 ride;sit on and control the movement of (an animal, typically a horse).
 deuce;a thing representing, or represented by, the number two, in particular.
 pieced;assemble something from parts or pieces.
+dicer;a device used for dicing food.
 deice;to free of ice - prevent or remove ice formation.
 eider;a northern sea duck, of which the male is mainly black-and-white with a coloured head, and the female brown.
 epic;a long poem, typically one derived from ancient oral tradition, narrating the deeds and adventures of heroic or legendary figures or the past history of a nation.
@@ -54,6 +55,7 @@ pedicure;a cosmetic treatment of the feet and toenails.
 riced;force (cooked potatoes or other vegetables) through a sieve or ricer.
 pried;enquire too inquisitively into a person's private affairs.
 dire;extremely serious or urgent.
+duper;one who deceives or tricks another.
 price;the amount of money expected, required, or given in payment for something.
 rupee;the basic monetary unit of India, Pakistan, Sri Lanka, Nepal, Mauritius, and the Seychelles.
 deicer;a device or a chemical substance for preventing or removing ice.

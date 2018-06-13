@@ -64,6 +64,7 @@ geld;castrate (a male animal).
 laid;past and past participle of lay.
 raid;a rapid surprise attack on an enemy by troops, aircraft, or other armed forces.
 fired;discharge a gun or other weapon in order to propel (a bullet or projectile).
+redial;dial (a telephone number) again.
 dear;regarded with deep affection.
 dare;have the courage to do something.
 gaudier;extravagantly bright or showy, typically so as to be tasteless.
@@ -81,3 +82,4 @@ alder;a widely distributed tree of the birch family which has toothed leaves and
 lurid;unpleasantly bright in colour, especially so as to create a harsh or unnatural effect.
 grid;a framework of spaced bars that are parallel to or cross each other.
 dual;consisting of two parts, elements, or aspects.
+regild;gild (something) again.

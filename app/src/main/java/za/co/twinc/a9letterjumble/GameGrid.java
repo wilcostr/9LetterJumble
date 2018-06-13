@@ -24,7 +24,9 @@ public class GameGrid extends BaseAdapter {
     private int numGames;
     public static String [] gameNames = {"Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India",
             "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra",
-            "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"};
+            "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu", "Alpha", "Beta","Gamma",
+            "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi",
+            "Omicron", "Pi", "Rho", "Sigma", "Tau", "Upsilon", "Phi", "Chi", "Psi", "Omega"};
     private int [] gameImages = {R.drawable.ic_icon_game1, R.drawable.ic_icon_game2, R.drawable.ic_icon_game3,
             R.drawable.ic_icon_game4, R.drawable.ic_icon_game5, R.drawable.ic_icon_game6, R.drawable.ic_icon_game7};
 

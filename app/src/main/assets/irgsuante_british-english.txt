@@ -28,6 +28,7 @@ nurse;a person trained to care for the sick or infirm, especially in a hospital.
 guest;a person who is invited to visit someone's home or attend a particular social occasion.
 saute;fried quickly in a little hot fat.
 insure;arrange for compensation in the event of damage to or loss of (property), or injury to or the death of (someone), in exchange for regular payments to a company or to the state.
+airgun;a gun which fires pellets using compressed air.
 runes;a letter of an ancient Germanic alphabet, related to the Roman alphabet (plural).
 trug;a shallow oblong basket made of strips of wood, traditionally used for carrying garden flowers and produce.
 gutsier;having or showing courage, determination, and spirit (comparative adj).
@@ -41,6 +42,7 @@ urge;try earnestly or persistently to persuade (someone) to do something.
 tuner;a person who tunes musical instruments, especially pianos.
 suet;the hard white fat on the kidneys and loins of cattle, sheep, and other animals, used to make foods such as puddings, pastry, and mincemeat.
 aunt;the sister of one's father or mother or the wife of one's uncle.
+airguns;a gun which fires pellets using compressed air (plural).
 unrest;a state of dissatisfaction, disturbance, and agitation, typically involving public demonstrations or disorder.
 true;in accordance with fact or reality.
 guitars;a stringed musical instrument, with a fretted fingerboard, typically incurved sides, and six or twelve strings, played by plucking or strumming with the fingers or a plectrum (plural).
@@ -108,3 +110,4 @@ tugs;pull (something) hard or suddenly (third person).
 urgent;requiring immediate action or attention.
 gustier;characterized by or blowing in gusts.
 usage;the action of using something or the fact of being used.
+sauteing;fried quickly in a little hot fat (present participle).

@@ -58,3 +58,4 @@ anode;the positively charged electrode by which the electrons leave an electrica
 tuna;a large and active predatory schooling fish of warm seas, extensively fished commercially and popular as a game fish.
 dance;move rhythmically to music, typically following a set sequence of steps.
 ocean;a very large expanse of sea, in particular each of the main areas into which the sea is divided geographically.
+uncoated;not covered with a coating of a particular substance.

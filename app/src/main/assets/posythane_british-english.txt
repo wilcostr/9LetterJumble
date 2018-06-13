@@ -17,6 +17,7 @@ pent;(of emotions, energy, etc.) unable to be expressed or released.
 they;used to refer to two or more people or things previously mentioned or easily identified.
 ethos;the characteristic spirit of a culture, era, or community as manifested in its attitudes and aspirations.
 paths;a way or track laid down for walking or made by continual treading (plural).
+stope;(in mining) excavate a series of steps or layers in (the ground or rock).
 pest;a destructive insect or other animal that attacks crops, food, livestock, etc (plural).
 sent;past and past participle of send.
 east;the direction towards the point of the horizon where the sun rises at the equinoxes.
@@ -25,6 +26,7 @@ than;introducing the second element in a comparison.
 heat;to make warm or hot.
 pots;a rounded or cylindrical container, typically of metal, used for cooking (plural).
 stony;covered with or full of small pieces of rock.
+oast;a usually conical kiln used for drying hops, malt, or tobacco.
 notes;a brief record of points or ideas written down as an aid to memory (plural).
 toys;an object for a child to play with (plural).
 panty;legless underpants worn by women and girls.
@@ -38,6 +40,7 @@ spot;a small round or roundish mark, differing in colour or texture from the sur
 atone;make amends or reparation.
 pant;breathe with short, quick breaths, typically from exertion or excitement.
 peat;a brown material consisting of partly decomposed vegetable matter.
+oaten;of or relating to oats, oat straw, or oatmeal.
 poets;a person who writes poems (plural).
 hate;feel intense dislike for.
 pants;trousers.
@@ -92,5 +95,6 @@ pasty;a folded pastry case with a savoury filling, typically of seasoned meat an
 antes;a stake put up by a player in poker or brag before receiving cards (plural).
 stye;an inflamed swelling on the edge of an eyelid, caused by bacterial infection of the gland at the base of an eyelash.
 pantyhose;women's thin nylon tights.
+peaty;of, pertaining to, resembling, or containing the substance peat.
 nest;a structure or place made or chosen by a bird for laying eggs and sheltering its young.
 tops;exceed an amount, level, or number (third person).

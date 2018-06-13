@@ -27,6 +27,7 @@ lent;past and past participle of lend.
 late;doing something or taking place after the expected, proper, or usual time.
 rattles;make or cause to make a rapid succession of short, sharp knocking sounds (third person).
 aslant;at an angle or in a sloping direction.
+latte;a type of coffee made with espresso and hot steamed milk, milkier than a cappuccino.
 later;doing something or taking place after the expected, proper, or usual time (comparative adj).
 slate;a fine-grained grey, green, or bluish-purple metamorphic rock easily split into smooth, flat plates.
 salt;a white crystalline substance which gives seawater its characteristic taste and is used for seasoning or preserving food.
@@ -54,6 +55,7 @@ last;coming after all others in time or order.
 earl;a British nobleman ranking above a viscount and below a marquess.
 alters;change in character or composition, typically in a comparatively small but significant way (third person).
 lean;be in or move into a sloping position.
+lattes;a type of coffee made with espresso and hot steamed milk, milkier than a cappuccino (plural).
 tales;a fictitious or true narrative or story, especially one that is imaginatively recounted (plural).
 slant;slope or lean in a particular direction OR diverge or cause to diverge from the vertical or horizontal.
 alert;quick to notice any unusual and potentially dangerous or difficult circumstances.
@@ -65,3 +67,4 @@ seal;a device or substance that is used to join two things together so as to pre
 rentals;a rented house or car (plural).
 altars;the table in a Christian church at which the bread and wine are consecrated in communion services (plural).
 atlas;a book of maps or charts.
+teals;a dark greenish-blue colour (plural).

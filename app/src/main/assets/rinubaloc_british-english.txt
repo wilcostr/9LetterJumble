@@ -21,9 +21,11 @@ burial;the action or practice of burying a dead body.
 cabin;a private room or compartment on a ship.
 born;existing as a result of birth.
 club;an association dedicated to a particular interest or activity.
+burl;a knot or lump in thread or cloth.
 curb;a check or restraint on something.
 bran;pieces of grain husk separated from flour after milling.
 brain;an organ that serves as the center of the nervous system in all vertebrate and most invertebrate animals.
 urban;in, relating to, or characteristic of a town or city.
 baron;a member of the lowest order of the British nobility OR an important or powerful person in a specified business or industry.
 boar;a tusked wild pig from which domestic pigs are descended.
+carob;a brown floury powder extracted from a, used as a substitute for chocolate.

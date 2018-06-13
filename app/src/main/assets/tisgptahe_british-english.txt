@@ -15,6 +15,7 @@ heap;an untidy collection of objects placed haphazardly on top of each other.
 past;gone by in time and no longer existing.
 septa;plural form of septum.
 pita;flat, hollow, slightly leavened bread which can be split open to hold a filling.
+piste;a ski run of compacted snow.
 aptest;appropriate or suitable in the circumstances (superlative adj).
 phase;a distinct period or stage in a process of change or forming part of something's development.
 gapes;be or become wide open (third person).

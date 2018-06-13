@@ -19,8 +19,12 @@ vein ; any of the tubes forming part of the blood circulation system of the body
 laver ; a basin or similar container used for washing oneself.
 veins ; any of the tubes forming part of the blood circulation system of the body, carrying in most cases oxygen-depleted blood toward the heart (plural).
 vain ; having or showing an excessively high opinion of one's appearance, abilities, or worth.
-rival ; a person or thing competing with another for the same objective or for superiority in the same field of activity.
-rivals ; a person or thing competing with another for the same objective or for superiority in the same field of activity (plural).
+rival ; a person competing with another for the same objective or for superiority in the same field of activity.
+rivals ; a person competing with another for the same objective or for superiority in the same field of activity (plural).
+naevi ; a birthmark or a mole on the skin, especially a birthmark in the form of a raised red patch (plural) (both spellings accepted).
+nevi ; a birthmark or a mole on the skin, especially a birthmark in the form of a raised red patch (plural) (both spellings accepted).
+naevus ; a birthmark or a mole on the skin, especially a birthmark in the form of a raised red patch (both spellings accepted).
+nevus ; a birthmark or a mole on the skin, especially a birthmark in the form of a raised red patch (both spellings accepted).
 revs ; revolutions of an engine per minute.
 viral ; of the nature of, caused by, or relating to a virus or viruses.
 naive ; (of a person or action) showing a lack of experience, wisdom, or judgment.
@@ -67,6 +71,7 @@ aver ; state or assert to be the case.
 avers ; state or assert to be the case (third person).
 ravel ; untangle or unravel something.
 ravels ; untangle or unravel something (third person).
+valuer ; a person whose job is to estimate the value of something that is to be purchased.
 venal ; showing or motivated by susceptibility to bribery.
 valise ; a small traveling bag or suitcase.
 unveil ; remove a veil or covering from, especially uncover (a new monument or work of art) as part of a public ceremony.
