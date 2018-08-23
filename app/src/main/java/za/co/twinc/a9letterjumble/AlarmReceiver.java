@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.v4.app.TaskStackBuilder;
 
@@ -59,19 +60,24 @@ public class AlarmReceiver extends BroadcastReceiver {
                 PendingIntent.FLAG_ONE_SHOT);
 
         // Give a notification here
-        Notification noti = new Notification.Builder(context)
+        Notification.Builder notiBuilder = new Notification.Builder(context)
                 .setContentTitle(context.getString(R.string.app_name))
                 .setContentText(context.getString(R.string.challenge_reminder))
                 .setContentIntent(openMainPendingIntent)
                 .setSmallIcon(R.drawable.nine)
                 .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))
                 .setAutoCancel(true)
-                .setVibrate(new long[]{1000, 200, 100, 200})
-                .build();
+                .setVibrate(new long[]{1000, 200, 100, 200});
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
+            notiBuilder.setSmallIcon(R.drawable.nine_png);
+
+        Notification noti = notiBuilder.build();
 
         // Issue notification
         NotificationManager mNotifyMgr = (NotificationManager)context.getSystemService(NOTIFICATION_SERVICE);
-        mNotifyMgr.notify(0, noti);
+        if (mNotifyMgr != null)
+            mNotifyMgr.notify(0, noti);
 
     }
 
