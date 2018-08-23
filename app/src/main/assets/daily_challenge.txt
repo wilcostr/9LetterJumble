@@ -43,7 +43,6 @@ though ; gohuht
 remote ; mtoeer
 sought ; ugsoht
 castle ; elcsta
-berlin ; elribn
 repair ; erpari
 nearly ; nylear
 format ; mrftao
@@ -87,14 +86,12 @@ animal ; amnila
 dollar ; roaldl
 decade ; cddeae
 seller ; selerl
-soviet ; tsivoe
 option ; pnooti
 living ; inligv
 number ; murenb
 copper ; pcrpeo
 chance ; nacche
 formal ; rlfamo
-French ; ncFreh
 manner ; manenr
 access ; escsca
 finger ; egfnri
@@ -126,11 +123,9 @@ should ; ohdslu
 golden ; gldone
 device ; cieevd
 plenty ; ltpyen
-miller ; leilmr
 mobile ; olbemi
 rescue ; ceruse
 follow ; olwfol
-wright ; wthirg
 filing ; liifgn
 indeed ; dendie
 behalf ; lbefah
@@ -146,7 +141,6 @@ nobody ; bnydoo
 before ; erobef
 beauty ; aeuytb
 parent ; nrptae
-joseph ; ophejs
 island ; ldsain
 listen ; lsient
 author ; oarhut
@@ -339,7 +333,6 @@ strain ; tnairs
 bottom ; mobtot
 handle ; dhlean
 likely ; lykeil
-morris ; rrmsio
 advise ; easidv
 always ; aslywa
 afford ; fdfora

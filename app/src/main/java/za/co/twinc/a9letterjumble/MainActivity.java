@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.getkeepsafe.taptargetview.TapTarget;
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
         if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, false))
             setTheme(R.style.AppThemeDark);
+        else
+            setTheme(R.style.AppTheme);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -267,6 +270,11 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.rate_request, null);
+        SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
+        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, false)) {
+            TextView textViewMessage = dialogView.findViewById(R.id.rate_request_message);
+            textViewMessage.setTextColor(this.getResources().getColor(android.R.color.white));
+        }
         builder.setView(dialogView)
                 .setPositiveButton(R.string.review, new DialogInterface.OnClickListener() {
                     @Override
@@ -345,6 +353,11 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.share_request, null);
+        SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
+        if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, false)) {
+            TextView textViewMessage = dialogView.findViewById(R.id.share_request_message);
+            textViewMessage.setTextColor(this.getResources().getColor(android.R.color.white));
+        }
         builder.setView(dialogView)
                 .setPositiveButton(R.string.share, new DialogInterface.OnClickListener() {
                     @Override

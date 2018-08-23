@@ -75,3 +75,4 @@ ride;sit on and control the movement of (an animal, typically a horse).
 spider;an eight-legged predatory arachnid with an unsegmented body consisting of a fused head and thorax and a rounded abdomen.
 diners;a person who is eating, typically a customer in a restaurant (plural).
 rein;a long, narrow strap attached at one end to a horse's bit, typically used in pairs to guide or check a horse in riding or driving.
+pilsner;a lager beer with a strong hop flavour.

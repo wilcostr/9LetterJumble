@@ -60,3 +60,4 @@ price;the amount of money expected, required, or given in payment for something.
 rupee;the basic monetary unit of India, Pakistan, Sri Lanka, Nepal, Mauritius, and the Seychelles.
 deicer;a device or a chemical substance for preventing or removing ice.
 deer;a hoofed grazing or browsing animal, with branched bony antlers that are shed annually and typically borne only by the male.
+juried;to judge or evaluate by means of a jury.

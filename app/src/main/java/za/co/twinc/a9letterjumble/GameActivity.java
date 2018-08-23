@@ -22,6 +22,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.LinearInterpolator;
 import android.widget.AdapterView;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
@@ -33,7 +34,6 @@ import android.widget.Toast;
 import com.andremion.counterfab.CounterFab;
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetView;
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
@@ -251,6 +251,18 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                     view.setBackground(getResources().getDrawable(R.drawable.button_round_grey));
                 buttonStack.push(i);
                 if (sorting==0) updateWordList();
+
+                // Shake the enter button
+                if (gameNum==0 && score==0 && textViewGuess.getText().length()==4){
+                    ObjectAnimator shake = ObjectAnimator.ofFloat(findViewById(R.id.button_enter),
+                            "rotation",
+                            0, -15, 15, -15, 15);
+                    shake.setDuration(250);
+                    shake.setRepeatCount(1);
+                    shake.setRepeatMode(ObjectAnimator.REVERSE);
+                    shake.setInterpolator(new LinearInterpolator());
+                    shake.start();
+                }
             }
         });
 
@@ -371,6 +383,19 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         textViewGuess.setText(getString(R.string.game_display_name, gameName));
     }
 
+    public void onButtonShuffleClick(View v){
+        gridAdapter.shuffleLetters();
+        onButtonBackspaceLongClick();
+
+        // Rotate the shuffle button
+        ObjectAnimator rotate = ObjectAnimator.ofFloat(findViewById(R.id.button_shuffle),
+                "rotation",
+                0, 180);
+        rotate.setDuration(250);
+        rotate.setInterpolator(new LinearInterpolator());
+        rotate.start();
+    }
+
     public void onButtonBackspaceClick(View v){
         String guess = textViewGuess.getText().toString();
         // Check for default display and return
@@ -404,6 +429,23 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         gridAdapter.setAllClickableTrue();
         gridAdapter.notifyDataSetChanged();
         if (sorting==0) updateWordList();
+
+
+        //TODO: Include some animation here when getting the guess wrong
+//
+//        if (android.os.Build.VERSION.SDK_INT >= 21) {
+//            ObjectAnimator flash = ObjectAnimator.ofArgb(cardView,
+//                    "CardBackgroundColor",
+//                    this.getResources().getColor(R.color.colorPrimary),
+//                    this.getResources().getColor(R.color.altColor));
+//            flash.setDuration(300);
+//            flash.setRepeatCount(1);
+//            flash.setRepeatMode(ObjectAnimator.REVERSE);
+//            flash.setInterpolator(new FastOutSlowInInterpolator());
+//            flash.start();
+//        }
+
+
 
         // Check for daily challenge
         if (isChallenge){
@@ -501,8 +543,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         // Animate the cardview when guessing correctly
         ObjectAnimator pulse = ObjectAnimator.ofPropertyValuesHolder(
                 cardView,
-                PropertyValuesHolder.ofFloat("scaleX", 1.1f),
-                PropertyValuesHolder.ofFloat("scaleY", 1.1f));
+                PropertyValuesHolder.ofFloat("scaleX", 1.15f),
+                PropertyValuesHolder.ofFloat("scaleY", 1.15f));
         pulse.setDuration(250);
         pulse.setRepeatCount(1);
         pulse.setRepeatMode(ObjectAnimator.REVERSE);
@@ -535,8 +577,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         }
 
         // Clue for getting a 9 letter word
-        if (guess.length() == 9)
+        if (guess.length() == 9) {
             increaseCounterFab();
+            throwConfetti();
+        }
 
         // Unlock next level after half the words
         int unlockRequirement = wordsDict.size()/2;
@@ -963,11 +1007,11 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
         if (!settingsPref.getBoolean(SettingsActivity.KEY_PREF_REWARD, true))
             return;
-        if (gameNum == 0 && score < 31)
+        if (gameNum == 0 && score < 18)
             return;
-        if (score < 13)
+        if (score < 7)
             return;
-        // Load after 2 minutes, play every 5
+        // Load after 2 minutes, play every 3
         if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 2*60*1000)
             return;
 
@@ -979,8 +1023,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                             .build());
         }
         else { // Ad is already loaded
-            // Still don't show ad until 5 minutes
-            if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 5*60*1000)
+            // Still don't show ad until 3 minutes
+            if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 3*60*1000)
                 return;
 
             rewardImage.setVisibility(View.VISIBLE);

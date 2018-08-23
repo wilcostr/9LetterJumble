@@ -42,4 +42,6 @@ butyric;acid contained in foods such as butter, ghee, raw milk and parmesan chee
 curbs;a check or restraint on something (plural).
 city;a large town.
 stoic;a person who can endure pain or hardship without showing their feelings or complaining.
+coirs;fibre from the outer husk of the coconut, used in potting compost and for making ropes and matting (plural).
 toric;having the form of a torus or part of a torus.
+coir;fibre from the outer husk of the coconut, used in potting compost and for making ropes and matting.

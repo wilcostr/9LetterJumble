@@ -41,3 +41,4 @@ lean;be in or move into a sloping position.
 mean;intend to convey or refer to (a particular thing).
 loan;a thing that is borrowed, especially a sum of money that is expected to be paid back with interest.
 near;at or to a short distance away.
+elan;a combination of style and energetic confidence, especially in performances or manner.

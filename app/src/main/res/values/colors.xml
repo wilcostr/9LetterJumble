@@ -4,8 +4,8 @@
     <color name="colorPrimaryDark">#00695C</color>
     <color name="colorAccent">#80cbc4</color>
 
-    <color name="background">#ECEFF1</color>
-    <color name="background_dark">#1d2429</color>
+    <color name="background">#EAEAEA</color>
+    <color name="background_dark">#303030</color>
 
     <color name="gameItemText">#616161</color>
     <color name="rippleColor">#c2e0dd</color>
@@ -13,7 +13,7 @@
 
     <!-- Colors from billing library -->
     <color name="list_bg_color">#eeeeee</color>
-    <color name="row_header_bg_color">#ffffff</color>
-    <color name="row_bg_color">#ffffff</color>
+    <color name="row_header_bg_color">#fafafa</color>
+    <color name="row_bg_color">#fafafa</color>
 
 </resources>

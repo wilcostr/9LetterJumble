@@ -29,3 +29,4 @@ urban;in, relating to, or characteristic of a town or city.
 baron;a member of the lowest order of the British nobility OR an important or powerful person in a specified business or industry.
 boar;a tusked wild pig from which domestic pigs are descended.
 carob;a brown floury powder extracted from a, used as a substitute for chocolate.
+bruin;a name for any bear in fable and folklore.

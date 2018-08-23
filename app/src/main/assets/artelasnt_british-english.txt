@@ -68,3 +68,4 @@ rentals;a rented house or car (plural).
 altars;the table in a Christian church at which the bread and wine are consecrated in communion services (plural).
 atlas;a book of maps or charts.
 teals;a dark greenish-blue colour (plural).
+elan;a combination of style and energetic confidence, especially in performances or manner.

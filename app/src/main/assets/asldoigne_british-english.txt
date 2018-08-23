@@ -1,13 +1,17 @@
-noes ; a negative answer or decision, as in voting (plural).
-goalie ; informal term for goaltender or goalkeeper.
-dong ; sound made by a brass bell, when rung.
-diagnose ; identify the nature of (an illness or other problem) by examination of the symptoms.
-legions ; a unit of 3,000–6,000 men in the ancient Roman army (plural).
+alone ; having no one else present.
+login ; the information you use to sign into a computer or online service.
 loaned ; borrow (a sum of money or item of property) (past tense).
 gonads ; an organ that produces gametes (plural).
 nose ; the part projecting above the mouth on the face of a person or animal, containing the nostrils and used for breathing and smelling.
 lesion ; a region in an organ or tissue that has suffered damage through injury or disease, such as a wound, ulcer, abscess, tumor, etc.
 golden ; colored or shining with a bright yellow hue.
+long ; measuring a great distance from end to end.
+onside ; (of a player, especially in soccer, rugby, or hockey) occupying a position where playing the ball or puck is allowed.
+noes ; a negative answer or decision, as in voting (plural).
+goalie ; informal term for goaltender or goalkeeper.
+dong ; sound made by a brass bell, when rung.
+diagnose ; identify the nature of (an illness or other problem) by examination of the symptoms.
+legions ; a unit of 3,000–6,000 men in the ancient Roman army (plural).
 dole ; benefit paid by the government to the unemployed.
 sidelong ; directed to or from one side.
 longed ; have a strong wish or desire (past tense).
@@ -20,8 +24,6 @@ sloe ; another term for blackthorn.
 gold ; a yellow precious metal, valued especially for use in jewelry and decoration, and to guarantee the value of currencies.
 dose ; a quantity of a medicine or drug taken or recommended to be taken at a particular time.
 agonise ; undergo great mental anguish through worrying about something.
-alone ; having no one else present.
-login ; the information you use to sign into a computer or online service.
 loge ; a private box or enclosure in a theater.
 alongside ; close to the side of.
 snog ; kiss and cuddle amorously.
@@ -31,8 +33,6 @@ aeon ; an indefinite and very long period of time, often a period exaggerated fo
 lingoes ; a foreign language or local dialect (plural) (both possible spellings accepted).
 lingos ; a foreign language or local dialect (plural) (both possible spellings accepted).
 loins ; the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones (plural).
-long ; measuring a great distance from end to end.
-onside ; (of a player, especially in soccer, rugby, or hockey) occupying a position where playing the ball or puck is allowed.
 lodes ; a vein of metal ore in the earth (plural).
 lidos ; a public open-air swimming pool or bathing beach (plural).
 dongles ; a small piece of hardware that connects to another device to provide it with additional functionality (plural).
@@ -129,3 +129,6 @@ goal ; the object of a person's ambition or effort.
 agonies ; extreme physical or mental suffering (plural).
 goals ; the object of a person's ambition or effort (plural).
 soli ; plural form of solo.
+geoid ; a hypothetical surface related to the shape of the earth that corresponds to mean sea level.
+dialog ; a conversation between two or more people as a feature of a book, play, or film (American spelling).
+dialogs ; a conversation between two or more people as a feature of a book, play, or film (American spelling) (plural).

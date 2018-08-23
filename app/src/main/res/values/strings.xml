@@ -32,6 +32,7 @@
 
     <string name="button_enter">enter</string>
     <string name="button_backspace">backspace</string>
+    <string name="button_shuffle">shuffle</string>
 
     <string name="prompt_no_words">You have not found any words yet</string>
     <string name="title_activity_game">GameActivity</string>

@@ -84,11 +84,11 @@
 
                 <ImageButton
                     android:id="@+id/buttonRate"
-                    android:onClick="onRateClicked"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:padding="8dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="onRateClicked"
+                    android:padding="8dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@android:drawable/btn_star_big_on" />
             </FrameLayout>
