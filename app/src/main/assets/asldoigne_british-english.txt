@@ -75,7 +75,7 @@ oils ; a viscous liquid derived from petroleum, especially for use as a fuel or 
 lodge ; a small house at the gates of a park or in the grounds of a large house, typically occupied by a gatekeeper, gardener, or other employee.
 oiled ; lubricate or coat (something) with oil (past tense).
 lode ; a vein of metal ore in the earth.
-gaol ; chiefly British and fairly archaic alternative spelling of 'jail' (pronounced the same).
+gaol ; chiefly British alternative spelling of 'jail' (pronounced the same).
 gasoline ; refined petroleum used as fuel for internal combustion engines.
 ogle ; stare at in a lecherous manner.
 idols ; an image or representation of a god used as an object of worship (plural).
@@ -94,9 +94,10 @@ loges ; a private box or enclosure in a theater (plural).
 along ; moving in a constant direction on (a path or any more or less horizontal surface).
 egos ; a person's sense of self-esteem or self-importance (plural).
 losing ; be deprived of or cease to have or retain (something).
-gaols ; chiefly British and fairly archaic alternative spelling of 'jail' (pronounced the same) (plural).
+gaols ; chiefly British alternative spelling of 'jail' (pronounced the same) (plural).
 also ; in addition.
 nodes ; a point at which lines or pathways intersect or branch (plural).
+gaoled ; put (someone) in jail (chiefly British alternative spelling) (past tense).
 goes ; third person singular present of go.
 done ; past participle of do.
 silo ; a tower or pit on a farm used to store grain.
@@ -131,4 +132,7 @@ goals ; the object of a person's ambition or effort (plural).
 soli ; plural form of solo.
 geoid ; a hypothetical surface related to the shape of the earth that corresponds to mean sea level.
 dialog ; a conversation between two or more people as a feature of a book, play, or film (American spelling).
+geoidal ; relating to the shape of the earth.
 dialogs ; a conversation between two or more people as a feature of a book, play, or film (American spelling) (plural).
+anodise ; to coat (a metal, especially magnesium or aluminum) with a protective film by chemical or electrolytic means.
+soilage ; green fodder, especially when freshly cut and fed to livestock in a confined area.
