@@ -27,6 +27,7 @@ cribs;a child's bed with barred or latticed sides (plural).
 rictus;a fixed grimace or grin.
 cuts;make an opening, incision, or wound in (something) with a sharp-edged tool or object.
 court;a body of people presided over by a judge, judges, or magistrate, and acting as a tribunal in civil and criminal cases.
+coirs;fibre from the outer husk of the coconut, used in potting compost and for making ropes and matting (plural).
 cubs;the young of a fox, bear, lion, or other carnivorous mammal.
 cots;a small bed with high barred sides for a baby or very young child (plural).
 scut;the short tail of a hare, rabbit, or deer.
@@ -42,6 +43,8 @@ butyric;acid contained in foods such as butter, ghee, raw milk and parmesan chee
 curbs;a check or restraint on something (plural).
 city;a large town.
 stoic;a person who can endure pain or hardship without showing their feelings or complaining.
-coirs;fibre from the outer husk of the coconut, used in potting compost and for making ropes and matting (plural).
 toric;having the form of a torus or part of a torus.
+orcs;(in fantasy literature and games) a member of an imaginary race of human-like creatures, characterized as ugly, warlike, and malevolent (plural).
 coir;fibre from the outer husk of the coconut, used in potting compost and for making ropes and matting.
+boric;of or containing boron, esp. its oxides.
+cutis;the vertebrate skin, including both of its layers, the dermis and the epidermis.

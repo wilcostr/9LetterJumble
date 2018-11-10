@@ -29,6 +29,7 @@
     <string name="never">never</string>
     <string name="exit">exit</string>
     <string name="file_read_error">File Read Error</string>
+    <string name="privacy_policy">Privacy policy</string>
 
     <string name="button_enter">enter</string>
     <string name="button_backspace">backspace</string>
@@ -137,7 +138,7 @@
         Come back tomorrow for another challenge.</string>
     <string name="challenge_exit_title">End challenge?</string>
     <string name="challenge_exit_message">You will not be able to play another challenge until tomorrow.</string>
-    <string name="challenge_reminder">Complete the daily challenge.</string>
+    <string name="challenge_reminder">Tap to play the daily challenge.</string>
 
     <string name="reward_title">Rewarded ads</string>
     <string name="reward_message">Watch an ad to gain a clue token?</string>

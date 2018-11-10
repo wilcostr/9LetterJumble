@@ -1,5 +1,5 @@
 mead;an alcoholic drink of fermented honey and water.
-moved;go in a specified direction or manner; change position (past tense).
+moved;go in a specified direction or manner, change position (past tense).
 diatom;a single-celled alga which has a cell wall of silica. Many kinds are planktonic, and extensive fossil deposits have been found.
 movie;a cinema film.
 emit;produce and discharge (something, especially gas or radiation).
@@ -37,7 +37,8 @@ dome;a rounded vault forming the roof of a building or structure, typically with
 dame;(in the UK) the title given to a woman with the rank of Knight Commander or holder of the Grand Cross in the Orders of Chivalry.
 tame;(of an animal) not dangerous or frightened of people - domesticated.
 totem;a natural object or animal that is believed by a particular society to have spiritual significance and that is adopted by it as an emblem.
-move;go in a specified direction or manner; change position.
+move;go in a specified direction or manner, change position.
 amid;surrounded by - in the middle of.
 tome;a book, especially a large, heavy, scholarly one.
 admit;confess to be true or to be the case.
+edam;a yellow pressed cheese of Dutch origin usually made in flattened balls and often coated with red wax.

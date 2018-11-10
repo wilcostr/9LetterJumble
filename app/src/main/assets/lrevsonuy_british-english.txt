@@ -70,3 +70,6 @@ louse;either of two small wingless parasitic insects that live on the skin of ma
 yours;used to refer to a thing or things belonging to or associated with the person or people that the speaker is addressing.
 rules;a set of explicit or understood regulations or principles governing conduct or procedure within a particular area of activity.
 louvres;each of a set of angled slats fixed or hung at regular intervals in a door, shutter, or screen to allow air or light to pass through (both possible spellings accepted).
+voles;a small, typically burrowing, mouse-like rodent with a rounded muzzle (plural).
+lores;a body of traditions and knowledge on a subject or held by a particular group (plural).
+soler;one that soled shoes or boots.

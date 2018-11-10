@@ -323,6 +323,11 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
                 Intent startSettings = new Intent(getApplicationContext(), SettingsActivity.class);
                 startActivity(startSettings);
                 return true;
+            case R.id.menu_privacy_policy:
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://sites.google.com/view/twincapps-privacypolicy/home"));
+                startActivity(browserIntent);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

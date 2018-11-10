@@ -23,7 +23,7 @@ stale;(of food) no longer fresh and pleasant to eat.
 reals;the basic monetary unit of Brazil (plural).
 lets;not prevent or forbid. Allow (third person).
 latent;(of a quality or state) existing but not yet developed or manifest. Hidden or concealed.
-lent;past and past participle of lend.
+lent;past tense and past participle of lend.
 late;doing something or taking place after the expected, proper, or usual time.
 rattles;make or cause to make a rapid succession of short, sharp knocking sounds (third person).
 aslant;at an angle or in a sloping direction.
@@ -45,7 +45,7 @@ learn;gain or acquire knowledge of or skill in (something) by study, experience,
 renal;relating to the kidneys.
 slat;a thin, narrow piece of wood, plastic, or metal, especially one of a series which overlap or fit into each other, as in a fence or a Venetian blind.
 steal;take (another person's property) without permission or legal right and without intending to return it.
-learnt;gain or acquire knowledge of or skill in (something) by study, experience, or being taught (past tense).
+learnt;gain or acquire knowledge of or skill in (something) by study, experience, or being taught (past participle).
 alter;change in character or composition, typically in a comparatively small but significant way.
 staler;(of food) no longer fresh and pleasant to eat (comparative adj).
 tale;a fictitious or true narrative or story, especially one that is imaginatively recounted.
@@ -57,15 +57,22 @@ alters;change in character or composition, typically in a comparatively small bu
 lean;be in or move into a sloping position.
 lattes;a type of coffee made with espresso and hot steamed milk, milkier than a cappuccino (plural).
 tales;a fictitious or true narrative or story, especially one that is imaginatively recounted (plural).
-slant;slope or lean in a particular direction OR diverge or cause to diverge from the vertical or horizontal.
+slant;slope in a particular direction OR diverge or cause to diverge from the vertical or horizontal.
 alert;quick to notice any unusual and potentially dangerous or difficult circumstances.
 learns;gain or acquire knowledge of or skill in (something) by study, experience, or being taught (third person).
 translate;express the sense of (words or text) in another language.
 lens;a piece of glass or other transparent material with curved sides for concentrating or dispersing light rays.
 nasal;relating to the nose.
 seal;a device or substance that is used to join two things together so as to prevent them coming apart or to prevent anything passing between them.
+alterants;that which alters the state of something (plural).
 rentals;a rented house or car (plural).
 altars;the table in a Christian church at which the bread and wine are consecrated in communion services (plural).
 atlas;a book of maps or charts.
 teals;a dark greenish-blue colour (plural).
 elan;a combination of style and energetic confidence, especially in performances or manner.
+laten;to cause to grow late.
+sternal;relating to the sternum.
+latens;to cause to grow late (third person).
+leant;be in or move into a sloping position (past participle).
+alterant;that which alters the state of something.
+atlantes;plural form of atlas.

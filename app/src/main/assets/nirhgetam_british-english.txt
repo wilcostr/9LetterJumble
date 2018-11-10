@@ -89,3 +89,4 @@ margin;the edge or border of something.
 tagine;a North African stew of spiced meat and vegetables prepared by slow cooking in a shallow earthenware cooking dish with a tall, conical lid.
 imager;an electronic or other device which records images of something.
 argent;the heraldic color silver or white.
+gratin;in cooking, a dish that has a thin layer of cheese and often breadcrumbs on top.

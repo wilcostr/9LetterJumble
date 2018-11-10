@@ -35,3 +35,4 @@ lite;denoting a low-fat or low-sugar version of a manufactured food or drink pro
 unit;an individual thing or person regarded as single and complete but which can also form an individual component of a larger or more complex whole.
 lien;a right to keep possession of property belonging to another person until a debt owed by that person is discharged.
 outlive;(of a person) live longer than (another person).
+involute;complex, intricate, or involved.

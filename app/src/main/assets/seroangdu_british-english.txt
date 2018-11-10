@@ -117,4 +117,5 @@ garden;a piece of ground adjoining a house, used for growing flowers, fruit, or 
 reads;look at and comprehend the meaning of written text by interpreting the characters or symbols of which it is composed (third person).
 sear;burn or scorch the surface of (something) with a sudden, intense heat.
 rand;the basic monetary unit of South Africa.
+gouda;a flat round cheese with a yellow rind.
 rands;the basic monetary unit of South Africa (plural).

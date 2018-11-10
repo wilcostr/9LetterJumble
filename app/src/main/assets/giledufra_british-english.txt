@@ -83,3 +83,5 @@ lurid;unpleasantly bright in colour, especially so as to create a harsh or unnat
 grid;a framework of spaced bars that are parallel to or cross each other.
 dual;consisting of two parts, elements, or aspects.
 regild;gild (something) again.
+dreg;the most undesirable part — usually used in plural.
+fader;a device or control for varying the volume of sound, the intensity of light, or the gain on a video or audio signal.

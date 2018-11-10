@@ -82,3 +82,5 @@ brake;a device for slowing or stopping a moving vehicle, typically by applying p
 back;the rear surface of the human body from the shoulders to the hips.
 cane;the hollow jointed stem of a tall grass, especially bamboo or sugar.
 caber;a young tree trunk used for tossing as a trial of strength in a Scottish sport.
+mach;the ratio of the speed of a body to the speed of sound.
+embank;construct a wall or bank of earth or stone in order to contain the course or flow of (a river).

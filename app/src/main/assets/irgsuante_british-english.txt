@@ -111,3 +111,5 @@ urgent;requiring immediate action or attention.
 gustier;characterized by or blowing in gusts.
 usage;the action of using something or the fact of being used.
 sauteing;fried quickly in a little hot fat (present participle).
+agues;malaria or another illness involving fever and shivering (plural).
+triune;constituting three in one, esp the three persons in one God of the Trinity.

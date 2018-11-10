@@ -1003,7 +1003,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     }
 
     private void loadRewardedAd() {
-        // Return if Notifications switched off in settings
+        // Return if rewarded video switched off in settings
         SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
         if (!settingsPref.getBoolean(SettingsActivity.KEY_PREF_REWARD, true))
             return;
@@ -1011,8 +1011,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             return;
         if (score < 7)
             return;
-        // Load after 2 minutes, play every 3
-        if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 2*60*1000)
+        // Load after 1 minute, play every 2 minutes
+        if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 60*1000)
             return;
 
         // Start loading the video ad
@@ -1023,8 +1023,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                             .build());
         }
         else { // Ad is already loaded
-            // Still don't show ad until 3 minutes
-            if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 3*60*1000)
+            // Still don't show ad until 2 minutes
+            if (System.currentTimeMillis() - getLongFromPrefs("ad_interval_time", 0L) < 2*60*1000)
                 return;
 
             rewardImage.setVisibility(View.VISIBLE);

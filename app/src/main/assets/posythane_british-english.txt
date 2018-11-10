@@ -101,3 +101,4 @@ tops;exceed an amount, level, or number (third person).
 pesto;a sauce typically made with basil, pine nuts, olive oil, and grated Parmesan.
 potash;an alkaline potassium compound, especially potassium carbonate or hydroxide.
 teapoy;a small three-legged table or stand, especially one that holds a tea caddy.
+stoa;a classical portico or roofed colonnade.

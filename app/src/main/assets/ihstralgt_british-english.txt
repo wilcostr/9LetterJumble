@@ -55,3 +55,4 @@ airs;the invisible gaseous substance surrounding the earth, a mixture mainly of 
 girts;secure (a garment or sword) on the body with a belt or band (third person).
 girt;secure (a garment or sword) on the body with a belt or band (past participle).
 rights;that which is morally correct, just, or honourable (plural).
+athirst;having a strong eager desire.
