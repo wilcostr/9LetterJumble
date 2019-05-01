@@ -76,7 +76,7 @@ venal ; showing or motivated by susceptibility to bribery.
 valise ; a small traveling bag or suitcase.
 unveil ; remove a veil or covering from, especially uncover (a new monument or work of art) as part of a public ceremony.
 unveils ; remove a veil or covering from, especially uncover (a new monument or work of art) as part of a public ceremony (third person).
-riven ; split or tear apart violently (past tense).
+riven ; split or torn apart violently (adj).
 venial ; denoting a sin that is not regarded as depriving the soul of divine grace.
 slaver ; a person dealing in or owning slaves.
 liven ; make or become more lively or interesting.
@@ -88,3 +88,4 @@ universal ; said of, or done by all people or things in the world.
 surveil ; to watch secretly.
 revisal ; the act of rewriting something.
 unlive ; to annul or wipe out (past experience, etc.)
+valuers ; a person whose job is to estimate the value of something that is to be purchased (plural).

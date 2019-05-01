@@ -84,3 +84,5 @@ cane;the hollow jointed stem of a tall grass, especially bamboo or sugar.
 caber;a young tree trunk used for tossing as a trial of strength in a Scottish sport.
 mach;the ratio of the speed of a body to the speed of sound.
 embank;construct a wall or bank of earth or stone in order to contain the course or flow of (a river).
+ramen;quick-cooking noodles, typically served in a broth with meat and vegetables.
+hame;either of the two rigid pieces along the sides of a horse's collar, to which the traces are attached.

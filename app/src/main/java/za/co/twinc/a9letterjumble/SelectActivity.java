@@ -8,18 +8,24 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.view.animation.AnimationUtils;
 
-import java.util.Locale;
 
 public class SelectActivity extends AppCompatActivity {
 
-    private ListView listView;
+    private RecyclerView recyclerView;
+    private ActionBar actionBar;
     private int numGames;
     private String[] gameList;
+    private int[] packCounts;
+
+    private boolean showAnimation = false;
+
+    private int currentPack; //-1 for pack selection
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,21 +37,31 @@ public class SelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
+        currentPack = -1;
+
         gameList = getResources().getStringArray(R.array.games);
         numGames = gameList.length;
 
-        ActionBar actionBar = getSupportActionBar();
+        packCounts = getResources().getIntArray(R.array.levelPackCounts);
+
+        actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle(R.string.play_game);
+            actionBar.setTitle(R.string.select_pack);
         }
-        listView = findViewById(R.id.selection_list);
-        initList();
+        recyclerView = findViewById(R.id.selection_list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        recyclerView.setLayoutAnimation(AnimationUtils.loadLayoutAnimation(this,
+                R.anim.layout_animation));
     }
 
     @Override
     protected void onResume(){
-        initList();
+        if (currentPack>=0)
+            initGameSelect(currentPack);
+        else
+            initPackSelect();
         super.onResume();
     }
 
@@ -60,45 +76,112 @@ public class SelectActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void initList(){
-        GameGrid gameGrid = new GameGrid(this, numGames);
-        listView.setAdapter(gameGrid);
+    private void initPackSelect(){
 
         final SharedPreferences mainLog = this.getSharedPreferences(MainActivity.MAIN_PREFS,0);
-        listView.post(new Runnable() {
-            @Override
-            public void run() {
-                int pos = mainLog.getInt("games_unlocked", 0);
-                if (mainLog.getString(String.format(Locale.US, "score_%d", pos), "0").equals("0"))
-                    pos --;
-                if (pos<0)
-                    pos = 0;
-                listView.setSelection(pos);
-            }
-        });
+        actionBar.setTitle(R.string.select_pack);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
-                if (pos <= mainLog.getInt("games_unlocked", 0)) {
-                    Intent intent = new Intent(view.getContext(), GameActivity.class);
-                    intent.putExtra("gameNum", pos);
-                    intent.putExtra("gameLetters", gameList[pos]);
-                    intent.putExtra("numLevels", numGames);
-                    view.getContext().startActivity(intent);
-                }
-                else{
-                    AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                    builder.setTitle(getString(R.string.unlock_title, GameGrid.gameNames[pos]))
-                            .setMessage(getString(R.string.unlock_message, GameGrid.gameNames[pos-1]))
-                            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) { }
-                            }).create().show();
-                }
-            }
-        });
+        // first check if this is the first time playing
+        if (mainLog.getString("score_0", "empty").equals("empty"))
+        {
+            initGameSelect(0);
+            return;
+        }
 
+
+        final GameGrid gameGrid = new GameGrid(this, -1,
+                new GameGrid.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int pos) {
+                        int firstInPack = 0;
+                        for (int i=0; i<pos; i++)
+                            firstInPack += packCounts[i];
+                        if (firstInPack <= mainLog.getInt("games_unlocked", 0)) {
+                            // Show games
+                            currentPack = pos;
+                            showAnimation = true;
+                            initGameSelect(pos);
+                        }
+                        else{
+                            AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                            builder.setTitle(getString(R.string.unlock_title, GameGrid.packNames[pos]))
+                                    .setMessage(getString(R.string.unlock_pack_message))
+                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) { }
+                                    }).create().show();
+                        }
+                    }
+                }
+        );
+
+        recyclerView.setAdapter(gameGrid);
+        if (showAnimation)
+            recyclerView.scheduleLayoutAnimation();
+        showAnimation = false;
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if (currentPack >= 0){
+            currentPack = -1;
+            showAnimation = true;
+            initPackSelect();
+        }
+        else
+            super.onBackPressed();
+    }
+
+
+    private void initGameSelect(int pack){
+
+        final SharedPreferences mainLog = this.getSharedPreferences(MainActivity.MAIN_PREFS,0);
+        actionBar.setTitle(R.string.select_level);
+
+        int firstInPack = 0;
+        for (int i=0; i<pack; i++)
+            firstInPack += packCounts[i];
+
+        final int offset = firstInPack;
+
+        GameGrid gameGrid = new GameGrid(this, pack,
+                new GameGrid.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int pos) {
+                        if (pos+offset <= mainLog.getInt("games_unlocked", 0)) {
+                            Intent intent = new Intent(view.getContext(), GameActivity.class);
+                            intent.putExtra("gameNum", pos+offset);
+                            intent.putExtra("gameLetters", gameList[pos+offset]);
+                            intent.putExtra("numLevels", numGames);
+                            view.getContext().startActivity(intent);
+                        }
+                        else{
+                            AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                            builder.setTitle(getString(R.string.unlock_title, GameGrid.gameNames[pos+offset]))
+                                    .setMessage(getString(R.string.unlock_message, GameGrid.gameNames[pos+offset-1]))
+                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) { }
+                                    }).create().show();
+                        }
+                    }
+                });
+
+        recyclerView.setAdapter(gameGrid);
+        if (showAnimation)
+            recyclerView.scheduleLayoutAnimation();
+        showAnimation = false;
+
+        // Launch ALFA if this is the first time playing
+        if (mainLog.getString("score_0", "empty").equals("empty"))
+        {
+            Intent intent = new Intent(this, GameActivity.class);
+            intent.putExtra("gameNum", 0);
+            intent.putExtra("gameLetters", gameList[0]);
+            intent.putExtra("numLevels", numGames);
+            this.startActivity(intent);
+        }
     }
 
 }

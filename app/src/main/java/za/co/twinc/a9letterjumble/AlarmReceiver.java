@@ -2,6 +2,7 @@ package za.co.twinc.a9letterjumble;
 
 import android.app.AlarmManager;
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -11,6 +12,7 @@ import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 
 import java.util.Calendar;
@@ -27,6 +29,9 @@ public class AlarmReceiver extends BroadcastReceiver {
     private AlarmManager alarmMgr;
     // The pending intent that is triggered when the alarm fires.
     private PendingIntent alarmIntent;
+
+    NotificationManager mNotifyMgr;
+    public static final String PRIMARY_NOTIF_CHANNEL = "default";
 
     @Override
     public void onReceive(Context context, Intent intent)
@@ -50,6 +55,14 @@ public class AlarmReceiver extends BroadcastReceiver {
         if (!notify)
             return;
 
+        // Create notification channel. No problem if already created previously
+        mNotifyMgr = (NotificationManager)context.getSystemService(NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(
+                    PRIMARY_NOTIF_CHANNEL, PRIMARY_NOTIF_CHANNEL, NotificationManager.IMPORTANCE_LOW);
+            mNotifyMgr.createNotificationChannel(channel);
+        }
+
         // Create intent to open Main, load habit number in extras
         Intent openMainIntent = new Intent(context, MainActivity.class);
 
@@ -60,7 +73,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                 PendingIntent.FLAG_ONE_SHOT);
 
         // Give a notification here
-        Notification.Builder notiBuilder = new Notification.Builder(context)
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, PRIMARY_NOTIF_CHANNEL)
                 .setContentTitle(context.getString(R.string.app_name))
                 .setContentText(context.getString(R.string.challenge_reminder))
                 .setContentIntent(openMainPendingIntent)
@@ -70,12 +83,11 @@ public class AlarmReceiver extends BroadcastReceiver {
                 .setVibrate(new long[]{1000, 200, 100, 200});
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP)
-            notiBuilder.setSmallIcon(R.drawable.nine_png);
+            mBuilder.setSmallIcon(R.drawable.nine_png);
 
-        Notification noti = notiBuilder.build();
+        Notification noti = mBuilder.build();
 
         // Issue notification
-        NotificationManager mNotifyMgr = (NotificationManager)context.getSystemService(NOTIFICATION_SERVICE);
         if (mNotifyMgr != null)
             mNotifyMgr.notify(0, noti);
 

@@ -9,7 +9,7 @@
         <item>irgsuante</item>
         <item>otsucriby</item>
         <item>nirhgetam</item>
-        <item>umedenrin</item>
+       i<item>umedenrin</item>
         <item>teaimtvod</item>
         <item>hebracmnk</item>
         <item>sepdrnkil</item>
@@ -19,17 +19,93 @@
         <item>balufiuet</item>
         <item>ihstralgt</item>
         <item>tisgptahe</item>
-        <item>giledufra</item>
+       s<item>giledufra</item>
         <item>rinubaloc</item>
         <item>arelnwomw</item>
         <item>posythane</item>
         <item>teoniluov</item>
         <item>jiusefidt</item>
         <item>teipcenro</item>
-        <item>seroangdu</item>
-
+       z<item>seroangdu</item>
+        <item>stabuecjn</item>
+        <item>ceeahmnol</item>
+        <item>tihlkocsm</item>
+        <item>preeinslh</item>        
+        <item>gugedemao</item>
+        <item>uatrewacl</item>
     </string-array>
-
+    
+    <string-array name="gameNames">
+        <item>Alfa</item>
+		<item>Bravo</item>
+		<item>Charlie</item>
+		<item>Delta</item>
+		<item>Echo</item>
+		<item>Foxtrot</item>
+		<item>Golf</item>
+		<item>Hotel</item>
+		<item>India</item>
+        <item>Juliett</item>
+		<item>Kilo</item>
+		<item>Lima</item>
+		<item>Mike</item>
+		<item>November</item>
+		<item>Oscar</item>
+		<item>Papa</item>
+		<item>Quebec</item>
+		<item>Romeo</item>
+		<item>Sierra</item>
+    	<item>Tango</item>
+ 		<item>Uniform</item>
+ 		<item>Victor</item>
+ 		<item>Whiskey</item>
+ 		<item>X-ray</item>
+ 		<item>Yankee</item>
+ 		<item>Zulu</item>
+ 		<item>Alpha</item>
+ 		<item>Beta</item>
+		<item>Gamma</item>
+        <item>Delta</item>
+		<item>Epsilon</item>
+		<item>Zeta</item>
+		<item>Eta</item>
+		<item>Theta</item>
+		<item>Iota</item>
+		<item>Kappa</item>
+		<item>Lambda</item>
+		<item>Mu</item>
+		<item>Nu</item>
+		<item>Xi</item>
+        <item>Omicron</item>
+		<item>Pi</item>
+		<item>Rho</item>
+		<item>Sigma</item>
+		<item>Tau</item>
+		<item>Upsilon</item>
+		<item>Phi</item>
+		<item>Chi</item>
+		<item>Psi</item>
+		<item>Omega</item>
+    </string-array>
+    
+    <string-array name="levelPacks">
+    	<item>Red Rover</item>
+    	<item>Orange Blossom</item>
+    	<item>Yellow Submarine</item>    	
+    	<item>Green Lantern</item>
+    	<!--<item>Blue Velvet</item>-->
+    	<!--<item>Indigo Girl</item>-->
+    	<!--<item>Violet Hill</item>    	    	-->
+    </string-array>
+    
+    <integer-array name="levelPackCounts">
+    	<item>9</item>
+    	<item>9</item>
+    	<item>8</item>
+    	<item>6</item>
+    </integer-array>
+        
+    
     <string-array name="sorting">
         <item>@string/sorting_default</item>
         <item>Alphabetical</item>

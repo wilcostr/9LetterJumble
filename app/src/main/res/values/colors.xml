@@ -2,14 +2,17 @@
 <resources>
     <color name="colorPrimary">#26A69A</color>
     <color name="colorPrimaryDark">#00695C</color>
-    <color name="colorAccent">#80cbc4</color>
+    <color name="colorAccent">#6FCBC2</color>
 
     <color name="background">#EAEAEA</color>
     <color name="background_dark">#303030</color>
 
     <color name="gameItemText">#616161</color>
     <color name="rippleColor">#c2e0dd</color>
-    <color name="altColor">#ff6A4D</color>
+    <color name="altColor">#FF694B</color>
+
+    <color name="altColorLight">#FF846E</color>
+    <color name="altColorWhite">#FFBBAF</color>
 
     <!-- Colors from billing library -->
     <color name="list_bg_color">#eeeeee</color>
