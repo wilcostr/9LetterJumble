@@ -9,7 +9,7 @@
         <item>irgsuante</item>
         <item>otsucriby</item>
         <item>nirhgetam</item>
-       i<item>umedenrin</item>
+        <item>umedenrin</item>
         <item>teaimtvod</item>
         <item>hebracmnk</item>
         <item>sepdrnkil</item>
@@ -19,20 +19,22 @@
         <item>balufiuet</item>
         <item>ihstralgt</item>
         <item>tisgptahe</item>
-       s<item>giledufra</item>
+        <item>giledufra</item>
         <item>rinubaloc</item>
         <item>arelnwomw</item>
         <item>posythane</item>
         <item>teoniluov</item>
         <item>jiusefidt</item>
         <item>teipcenro</item>
-       z<item>seroangdu</item>
+        <item>seroangdu</item>
         <item>stabuecjn</item>
         <item>ceeahmnol</item>
         <item>tihlkocsm</item>
         <item>preeinslh</item>        
         <item>gugedemao</item>
         <item>uatrewacl</item>
+        <item>tcinloaif</item>
+		<item>nyngrpeac</item>
     </string-array>
     
     <string-array name="gameNames">
@@ -102,7 +104,7 @@
     	<item>9</item>
     	<item>9</item>
     	<item>8</item>
-    	<item>6</item>
+    	<item>8</item>
     </integer-array>
         
     
