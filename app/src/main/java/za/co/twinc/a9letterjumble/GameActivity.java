@@ -28,6 +28,7 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -541,10 +542,12 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
         // Entered word is correct input
         // Animate the cardview when guessing correctly
+        ScrollView wordWrapper = findViewById(R.id.word_card_wrapper);
         ObjectAnimator pulse = ObjectAnimator.ofPropertyValuesHolder(
-                cardView,
-                PropertyValuesHolder.ofFloat("scaleX", 1.15f),
-                PropertyValuesHolder.ofFloat("scaleY", 1.15f));
+                wordWrapper,
+                PropertyValuesHolder.ofFloat("translationY", 25f),
+                PropertyValuesHolder.ofFloat("scaleX", 1.1f),
+                PropertyValuesHolder.ofFloat("scaleY", 1.1f));
         pulse.setDuration(250);
         pulse.setRepeatCount(1);
         pulse.setRepeatMode(ObjectAnimator.REVERSE);
