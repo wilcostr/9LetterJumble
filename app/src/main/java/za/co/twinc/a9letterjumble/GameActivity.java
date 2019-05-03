@@ -384,7 +384,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     }
 
     public void onButtonShuffleClick(View v){
-        gridAdapter.shuffleLetters();
+        gridAdapter.shuffleLetters(isChallenge);
         onButtonBackspaceLongClick();
 
         // Rotate the shuffle button

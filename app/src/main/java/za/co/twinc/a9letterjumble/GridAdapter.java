@@ -52,17 +52,19 @@ public class GridAdapter extends BaseAdapter{
             itemClickable.set(j, true);
     }
 
-    void shuffleLetters(){
+    void shuffleLetters(boolean isChallenge){
         List<Character> characters = new ArrayList<>();
         for(char c:word.toCharArray()){
             characters.add(c);
         }
-        Character centreChar = characters.remove(4);
+        Character centreChar = 'a';
+        if (!isChallenge)
+            centreChar = characters.remove(4);
         StringBuilder output = new StringBuilder(getCount());
         while(characters.size()!=0) {
             int randPicker = (int) (Math.random() * characters.size());
             output.append(characters.remove(randPicker));
-            if (output.length()==4)
+            if (!isChallenge && output.length()==4)
                 output.append(centreChar);
         }
         word = output.toString();
