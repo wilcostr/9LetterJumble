@@ -34,7 +34,9 @@
         <item>gugedemao</item>
         <item>uatrewacl</item>
         <item>tcinloaif</item>
-		<item>nyngrpeac</item>
+        <item>nyngrpeac</item>
+        <item>imevspuli</item>
+        <item>barenrghi</item>
     </string-array>
     
     <string-array name="gameNames">
@@ -95,7 +97,7 @@
     	<item>Orange Blossom</item>
     	<item>Yellow Submarine</item>    	
     	<item>Green Lantern</item>
-    	<!--<item>Blue Velvet</item>-->
+    	<item>Blue Velvet</item>
     	<!--<item>Indigo Girl</item>-->
     	<!--<item>Violet Hill</item>    	    	-->
     </string-array>
@@ -105,6 +107,7 @@
     	<item>9</item>
     	<item>8</item>
     	<item>8</item>
+    	<item>2</item>
     </integer-array>
         
     

@@ -541,7 +541,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         }
 
         // Entered word is correct input
-        // Animate the cardview when guessing correctly
+        // Animate the view when guessing correctly
         ScrollView wordWrapper = findViewById(R.id.word_card_wrapper);
         ObjectAnimator pulse = ObjectAnimator.ofPropertyValuesHolder(
                 wordWrapper,
