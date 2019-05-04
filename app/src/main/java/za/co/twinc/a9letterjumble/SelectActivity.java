@@ -88,6 +88,7 @@ public class SelectActivity extends AppCompatActivity {
             return;
         }
 
+        final String [] packNames = this.getResources().getStringArray(R.array.levelPacks);
 
         final GameGrid gameGrid = new GameGrid(this, -1,
                 new GameGrid.OnItemClickListener() {
@@ -104,7 +105,7 @@ public class SelectActivity extends AppCompatActivity {
                         }
                         else{
                             AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                            builder.setTitle(getString(R.string.unlock_title, GameGrid.packNames[pos]))
+                            builder.setTitle(getString(R.string.unlock_title, packNames[pos]))
                                     .setMessage(getString(R.string.unlock_pack_message))
                                     .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                         @Override
@@ -144,6 +145,7 @@ public class SelectActivity extends AppCompatActivity {
             firstInPack += packCounts[i];
 
         final int offset = firstInPack;
+        final String [] gameNames = this.getResources().getStringArray(R.array.gameNames);
 
         GameGrid gameGrid = new GameGrid(this, pack,
                 new GameGrid.OnItemClickListener() {
@@ -158,8 +160,8 @@ public class SelectActivity extends AppCompatActivity {
                         }
                         else{
                             AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                            builder.setTitle(getString(R.string.unlock_title, GameGrid.gameNames[pos+offset]))
-                                    .setMessage(getString(R.string.unlock_message, GameGrid.gameNames[pos+offset-1]))
+                            builder.setTitle(getString(R.string.unlock_title, gameNames[pos+offset]))
+                                    .setMessage(getString(R.string.unlock_message, gameNames[pos+offset-1]))
                                     .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int i) { }

@@ -71,7 +71,6 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     private CounterFab counterFab;
 
     private TextView textViewGuess, textViewList, textViewScore;
-    private CardView cardView;
 
     private List<String> wordsDict, defDict;
     private Set<String> wordsIn;
@@ -79,6 +78,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
     private int gameNum, numLevels, sorting;
     private String gameName, gameLetters;
+    private String [] gameNameList;
 
     private int score;
     private Stack<Integer> buttonStack;
@@ -149,7 +149,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         saveLongToPrefs("ad_interval_time", System.currentTimeMillis());
 
         // Add touch listener for words card
-        cardView = findViewById(R.id.word_card);
+        CardView cardView = findViewById(R.id.word_card);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -172,7 +172,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
         numLevels = startGameIntent.getIntExtra("numLevels",1);
         gameLetters = startGameIntent.getStringExtra("gameLetters");
-        gameName = isChallenge ? getString(R.string.button_challenge) : GameGrid.gameNames[gameNum];
+
+        gameNameList = this.getResources().getStringArray(R.array.gameNames);
+        gameName = isChallenge ? getString(R.string.button_challenge) : gameNameList[gameNum];
+
         textViewGuess = findViewById(R.id.text_guess);
 
         // Save the score to SharedPreferences when updated
@@ -839,7 +842,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
         // Build a dialog to congratulate the player on unlocking the next level
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        String unlockMessage = getString(R.string.unlocked_message, GameGrid.gameNames[gameNum+1]);
+        String unlockMessage = getString(R.string.unlocked_message, gameNameList[gameNum+1]);
 
         // Encourage the player to finish levels
         if (gameNum == 0)

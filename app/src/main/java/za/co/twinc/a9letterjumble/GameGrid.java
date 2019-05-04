@@ -35,8 +35,8 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
 
     private boolean isPack;
 
-    public static String [] gameNames;
-    public static String [] packNames;
+    private String [] gameNames;
+    private String [] packNames;
 
     /*
     Initialisation
