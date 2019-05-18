@@ -76,14 +76,14 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     private Set<String> wordsIn;
     private Set<String> wordsClues;
 
-    private int gameNum, numLevels, sorting;
+    private int gameNum, numLevels;
     private String gameName, gameLetters;
     private String [] gameNameList;
 
     private int score;
     private Stack<Integer> buttonStack;
 
-    private boolean isChallenge;
+    private boolean isChallenge, smartSorting;
     private String challengeSolution;
     private TextView textTimer;
     private CountDownTimer countDownTimer;
@@ -100,12 +100,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        // Load sorting order from settings
-        try{
-            sorting = Integer.parseInt(settingsPref.getString(SettingsActivity.KEY_PREF_SORT, "0"));
-        } catch (NumberFormatException e) {
-            sorting = 0;
-        }
+        // Load smartSorting order from settings
+        smartSorting = settingsPref.getBoolean(SettingsActivity.KEY_PREF_SMART, true);
 
         justCreated = true;
 
@@ -252,7 +248,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                 gridAdapter.setItemClickable(i, false);
 
                 buttonStack.push(i);
-                if (sorting==0) updateWordList();
+                if (smartSorting) updateWordList();
 
                 //Make the changes to the letter views
                 gridAdapter.notifyDataSetChanged();
@@ -417,7 +413,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         else
             setGameNameDisplay();
 
-        if (sorting==0) updateWordList();
+        if (smartSorting) updateWordList();
     }
 
     public void onButtonBackspaceLongClick() {
@@ -425,7 +421,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         setGameNameDisplay();
         gridAdapter.setAllClickableTrue();
         gridAdapter.notifyDataSetChanged();
-        if (sorting==0) updateWordList();
+        if (smartSorting) updateWordList();
     }
 
     public void onButtonEnterClick(View v){
@@ -433,7 +429,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         setGameNameDisplay();
         gridAdapter.setAllClickableTrue();
         gridAdapter.notifyDataSetChanged();
-        if (sorting==0) updateWordList();
+        if (smartSorting) updateWordList();
 
 
         //TODO: Include some animation here when getting the guess wrong
@@ -596,58 +592,56 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         if (score == unlockRequirement)
             unlockNext();
 
-        addWord(guess.toString());
-    }
-
-    private void addWord(String newWord){
-        wordsIn.add(newWord);
+        wordsIn.add(guess.toString());
         saveStringSetToPrefs("words", wordsIn);
-
-        String list = getStringFromPrefs("wordstring", " ");
-        if (list.equalsIgnoreCase(" "))
-            list = newWord;
-        else
-            list = String.format("%s, %s", newWord, list);
-
-        saveStringToPrefs("wordstring", list);
         updateWordList();
     }
+
 
     private void updateWordList(){
         // Nothing to be done in challenge mode
         if (isChallenge)
             return;
-        String list = "";
-        switch (sorting) {
-            case 0:
-                String guess = textViewGuess.getText().toString();
-                List<String> smartList;
-                if (guess.indexOf('-')==0)
-                    smartList = new ArrayList<String>(wordsIn);
-                else
-                    smartList = new ArrayList<String>();
-                    for (String s : wordsIn){
-                        if (s.startsWith(guess))
-                            smartList.add(s);
-                    }
-                Collections.sort(smartList);
-                list = smartList.toString();
-                list = list.substring(1, list.length()-1);
-                break;
-            case 1:
-                List<String> listSort = new ArrayList<String>(wordsIn);
-                Collections.sort(listSort);
-                list = listSort.toString();
-                list = list.substring(1, list.length()-1);
-                break;
-            case 2:
-                list = getStringFromPrefs("wordstring", getString(R.string.prompt_no_words));
-                break;
+        String list;
+        if (smartSorting) {
+            String guess = textViewGuess.getText().toString();
+            List<String> smartList;
+            if (guess.indexOf('-') == 0)
+                smartList = new ArrayList<String>(wordsIn);
+            else {
+                smartList = new ArrayList<String>();
+                for (String s : wordsIn) {
+                    if (s.startsWith(guess))
+                        smartList.add(s);
+                }
+            }
+            Collections.sort(smartList);
+            list = zeroPadAndSort(smartList);
+        }
+        else{
+            List<String> listSort = new ArrayList<String>(wordsIn);
+            Collections.sort(listSort);
+            list = zeroPadAndSort(listSort);
         }
 
         if (list.equals("") && wordsIn.size()==0)
             list = getString(R.string.prompt_no_words);
         textViewList.setText(list);
+    }
+
+    private String zeroPadAndSort(List<String> list){
+        for (int i=0; i<list.size(); i++){
+            String word = list.get(i);
+            while (word.length()<9)
+                word = word + " ";
+            list.set(i, word);
+        }
+
+        // Remove brackets around list and comma separation
+        String ret = list.toString();
+        ret = ret.replace(", ", " ");
+        ret = ret.substring(1, ret.length() - 1);
+        return ret;
     }
 
     private void getWords(List<String> words, List<String> definitions){

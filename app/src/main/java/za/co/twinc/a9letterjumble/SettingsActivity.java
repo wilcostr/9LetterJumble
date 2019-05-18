@@ -21,7 +21,7 @@ public class SettingsActivity extends Activity {
     private static final String KEY_PREF_ABOUT      = "simple_text_about";
     public static final String KEY_PREF_REWARD      = "offer_rewarded_ads";
     public static final String KEY_PREF_CHALLENGE   = "challenge_reminders";
-    public static final String KEY_PREF_SORT        = "sorting_preference";
+    public static final String KEY_PREF_SMART       = "smart_preference";
     public static final String KEY_PREF_DARK        = "dark_mode";
 
     @Override

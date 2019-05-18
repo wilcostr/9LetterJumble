@@ -3,10 +3,11 @@
 
 
     <SwitchPreference
-        android:key="offer_rewarded_ads"
         android:defaultValue="true"
-        android:title="@string/preference_ads"
-        android:summary="@string/preference_ads_about"/>
+        android:key="offer_rewarded_ads"
+        android:summaryOff="@string/preference_ads_about_off"
+        android:summaryOn="@string/preference_ads_about"
+        android:title="@string/preference_ads" />
 
 
     <SwitchPreference
@@ -14,19 +15,19 @@
         android:defaultValue="false"
         android:title="@string/dark_mode"/>
 
-    <ListPreference
-        android:key="sorting_preference"
-        android:defaultValue="0"
-        android:summary="%s"
-        android:entries="@array/sorting"
-        android:entryValues="@array/sorting_int"
-        android:title="@string/preference_sorting" />
+    <SwitchPreference
+        android:key="smart_preference"
+        android:defaultValue="true"
+        android:title="@string/preference_smart"
+        android:summaryOn="@string/preference_smart_about"
+        android:summaryOff="@string/preference_smart_about_off"/>
 
     <SwitchPreference
         android:key="challenge_reminders"
         android:defaultValue="true"
         android:title="@string/preference_challenge"
-        android:summary="@string/preference_challenge_about"/>
+        android:summaryOn="@string/preference_challenge_about"
+        android:summaryOff="@string/preference_challenge_about_off"/>
 
     <Preference
         android:key="simple_text_about"

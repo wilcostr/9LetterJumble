@@ -109,18 +109,6 @@
     	<item>8</item>
     	<item>2</item>
     </integer-array>
-        
-    
-    <string-array name="sorting">
-        <item>@string/sorting_default</item>
-        <item>Alphabetical</item>
-        <item>Chronological</item>
-    </string-array>
 
-    <string-array name="sorting_int">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
 
 </resources>

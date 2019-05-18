@@ -13,11 +13,14 @@
     <string name="preference_about">Version</string>
     <string name="preference_ads">Rewarded ads</string>
     <string name="preference_ads_about">Get clue tokens when watching ads</string>
+    <string name="preference_ads_about_off">Ads will not be offered</string>
     <string name="preference_challenge">Notifications</string>
     <string name="preference_challenge_about">Daily challenge reminder</string>
+    <string name="preference_challenge_about_off">No reminders</string>
+    <string name="preference_smart">Smart alphabetical ordering</string>
+    <string name="preference_smart_about">Displayed words correspond to selected letters</string>
+    <string name="preference_smart_about_off">Display a static word list</string>
     <string name="dark_mode">Dark mode</string>
-    <string name="preference_sorting">Word order</string>
-    <string name="sorting_default">Smart alphabetical</string>
 
     <string name="txt_no_email">No email application found</string>
     <string name="enjoying_game">Are you enjoying the game?</string>
