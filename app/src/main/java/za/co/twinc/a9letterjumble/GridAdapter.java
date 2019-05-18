@@ -25,9 +25,9 @@ public class GridAdapter extends BaseAdapter{
     private int count;
     private ArrayList<Boolean> itemClickable = new ArrayList<> ();
 
-    GridAdapter(Context c, String jumble_word) {
+    GridAdapter(Context c, String jumbleWord) {
         mContext = c;
-        word = jumble_word.toUpperCase();
+        word = jumbleWord.toUpperCase();
         count = word.length();
         for(int j=0;j<count;j++)
             itemClickable.add(true);
@@ -108,6 +108,11 @@ public class GridAdapter extends BaseAdapter{
                 textV.setBackground(mContext.getResources().getDrawable(R.drawable.button_round_light));
                 textV.setTextColor(mContext.getResources().getColor(R.color.gameItemText));
             }
+        }
+        else {
+            textV.setTextColor(mContext.getResources().getColor(R.color.background));
+            if (position == 4 && getCount() == 9)
+                textV.setBackground(mContext.getResources().getDrawable(R.drawable.button_round_grey));
         }
 
         return textV;

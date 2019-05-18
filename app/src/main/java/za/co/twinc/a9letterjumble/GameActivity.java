@@ -250,14 +250,15 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                 else
                     textViewGuess.append(((TextView)view).getText());
                 gridAdapter.setItemClickable(i, false);
-                ((TextView) view).setTextColor(getResources().getColor(R.color.background));
-                if (i == 4 && !isChallenge)
-                    view.setBackground(getResources().getDrawable(R.drawable.button_round_grey));
+
                 buttonStack.push(i);
                 if (sorting==0) updateWordList();
 
-                // Shake the enter button
-                if (gameNum==0 && score==0 && textViewGuess.getText().length()==4){
+                //Make the changes to the letter views
+                gridAdapter.notifyDataSetChanged();
+
+                // Shake the enter button for beginners
+                if (gameNum==0 && score<=1 && textViewGuess.getText().length()==4){
                     ObjectAnimator shake = ObjectAnimator.ofFloat(findViewById(R.id.button_enter),
                             "rotation",
                             0, -15, 15, -15, 15);
