@@ -1,13 +1,16 @@
 package za.co.twinc.a9letterjumble;
 
+import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.DataSetObserver;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -89,6 +92,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     private CountDownTimer countDownTimer;
     private int secondsTimer;
 
+    private static Activity activity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +103,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             setTheme(R.style.AppThemeDark);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        activity = this;
 
         // Load smartSorting order from settings
         smartSorting = settingsPref.getBoolean(SettingsActivity.KEY_PREF_SMART, true);
@@ -107,6 +112,11 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
         // Create main share preference log
         final SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
+
+        if (mainLog.getBoolean("isFlipped", false))
+            setContentView(R.layout.activity_game_flip);
+        else
+            setContentView(R.layout.activity_game);
 
         Intent startGameIntent = getIntent();
         gameNum = startGameIntent.getIntExtra("gameNum",0);
@@ -274,6 +284,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             textViewScore.setVisibility(View.GONE);
             counterFab.setVisibility(View.GONE);
             textViewList.setText(R.string.challenge_message);
+            textViewList.setTypeface(Typeface.SANS_SERIF);
 
             textTimer = findViewById(R.id.text_timer);
             textTimer.setVisibility(View.VISIBLE);
@@ -384,20 +395,56 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         textViewGuess.setText(getString(R.string.game_display_name, gameName));
     }
 
-    public void onButtonShuffleClick(View v){
+    public void onButtonShuffleClick (View v){
         gridAdapter.shuffleLetters(isChallenge);
         onButtonBackspaceLongClick();
 
         // Rotate the shuffle button
-        ObjectAnimator rotate = ObjectAnimator.ofFloat(findViewById(R.id.button_shuffle),
+        ObjectAnimator rotate = ObjectAnimator.ofFloat(v,
                 "rotation",
                 0, 180);
         rotate.setDuration(250);
-        rotate.setInterpolator(new LinearInterpolator());
+        rotate.start();
+
+    }
+
+    public void onButtonSwopClick (View v){
+        // Flip the swop button
+        ObjectAnimator rotate = ObjectAnimator.ofFloat(v,
+                "rotationX",v.getRotationX()+180);
+        rotate.setDuration(350);
+
+        rotate.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
+                SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
+                SharedPreferences.Editor editor = mainLog.edit();
+                editor.putBoolean("isFlipped", !mainLog.getBoolean("isFlipped", false));
+                editor.apply();
+
+                activity.recreate();
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {
+
+            }
+        });
+
         rotate.start();
     }
 
-    public void onButtonBackspaceClick(View v){
+    public void onButtonBackspaceClick (View v){
         String guess = textViewGuess.getText().toString();
         // Check for default display and return
         if (guess.charAt(0) == getString(R.string.game_display_name," ").charAt(0))
