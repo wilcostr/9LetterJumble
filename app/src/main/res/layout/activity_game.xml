@@ -118,19 +118,19 @@
             app:layout_constraintTop_toTopOf="@id/grid"
             app:srcCompat="@drawable/ic_autorenew_black_42dp" />
 
-            <ImageButton
-                android:id="@+id/button_swop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/button_swop"
-                android:onClick="onButtonSwopClick"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="15dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/grid"
-                app:layout_constraintTop_toTopOf="@id/grid"
-                app:srcCompat="@drawable/ic_swap_vert_black_42dp" />
+        <ImageButton
+            android:id="@+id/button_swop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/button_swop"
+            android:onClick="onButtonSwopClick"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/grid"
+            app:layout_constraintTop_toTopOf="@id/grid"
+            app:srcCompat="@drawable/ic_swap_vert_black_42dp" />
 
 
         <TextView
