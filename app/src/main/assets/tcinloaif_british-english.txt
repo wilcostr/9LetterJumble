@@ -45,3 +45,4 @@ loci;the most important area or point with which something is associated (plural
 focal;relating to the centre or most important part.
 inflict;cause (something unpleasant or painful) to be suffered by someone or something.
 falcon;a bird of prey with long pointed wings and a notched beak, typically catching prey by diving on it from above.
+finial;a decorative, terminal part at the tip of a spire, gable, lamp shade support, etc., or projecting upward from the top of a cabinet.

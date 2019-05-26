@@ -28,7 +28,6 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.GridView;
 import android.widget.ImageButton;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -144,9 +143,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         // Don't show ad in the first ad_interval_time of gameplay
         saveLongToPrefs("ad_interval_time", System.currentTimeMillis());
 
+        textViewList = findViewById(R.id.word_list);
+
         // Add touch listener for words card
-        CardView cardView = findViewById(R.id.word_card);
-        cardView.setOnClickListener(new View.OnClickListener() {
+        textViewList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 displayStats();
@@ -203,7 +203,6 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         }
 
         // Save the guessed words as a whole string to shared preferences when updating
-        textViewList = findViewById(R.id.word_list);
         updateWordList();
 
         // Get previous clues
@@ -542,7 +541,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
         // Entered word is correct input
         // Animate the view when guessing correctly
-        ScrollView wordWrapper = findViewById(R.id.word_card_wrapper);
+        CardView wordWrapper = findViewById(R.id.word_card);
         ObjectAnimator pulse = ObjectAnimator.ofPropertyValuesHolder(
                 wordWrapper,
                 PropertyValuesHolder.ofFloat("translationY", 25f),
