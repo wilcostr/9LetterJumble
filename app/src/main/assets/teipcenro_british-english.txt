@@ -1,7 +1,4 @@
 cite;refer to (a passage, book, or author) as evidence for or justification of an argument or statement, especially in a scholarly work.
-cere;a fleshy, membranous covering of the base of the upper mandible of a bird, especially a bird of prey or a parrot, through which the nostrils open.
-otic;relating to the ear.
-erection;the action of erecting a structure or object.
 cent;a monetary unit in various countries, equal to one hundredth of the currency unit.
 niece;a daughter of one's brother or sister.
 tonic;a medicinal substance taken to give a feeling of vigour or well-being.
@@ -45,6 +42,9 @@ topic;a matter dealt with in a text, discourse, or conversation.
 nice;pleasant or attractive.
 nicer;pleasant or attractive (comparative adj).
 citron;a shrubby Asian tree bearing fruits which resemble large lemons with less acid flesh and thick fragrant peel.
+cere;a fleshy, membranous covering of the base of the upper mandible of a bird, especially a bird of prey or a parrot, through which the nostrils open.
+otic;relating to the ear.
+erection;the action of erecting a structure or object.
 receipt;a written or printed statement acknowledging that something has been paid for or that goods have been received.
 crepe;a thin pancake.
 porcine;of, affecting, or resembling a pig or pigs.
@@ -58,3 +58,4 @@ toric;having the form of a torus or part of a torus.
 enteric;relating to or occurring in the intestines.
 precent;lead a choir or congregation in singing.
 coir;fibre from the outer husk of the coconut, used in potting compost and for making ropes and matting.
+entropic;having a tendency to change from a state of order to a state of disorder.

@@ -136,3 +136,5 @@ geoidal ; relating to the shape of the earth.
 dialogs ; a conversation between two or more people as a feature of a book, play, or film (American spelling) (plural).
 anodise ; to coat (a metal, especially magnesium or aluminum) with a protective film by chemical or electrolytic means.
 soilage ; green fodder, especially when freshly cut and fed to livestock in a confined area.
+loden ; a fulled, waterproof wool cloth with a short pile, used for coats.
+siloed ; (of a system, process, department, etc.) isolated from others.
