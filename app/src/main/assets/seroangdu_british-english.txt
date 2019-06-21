@@ -29,6 +29,7 @@ gander;a male goose.
 unread;(of a book or document) not read.
 gear;a toothed wheel that works with others to alter the relation between the speed of a driving mechanism and the speed of the driven parts.
 asunder;apart.
+gran;an informal shortened form for grandmother.
 road;a wide way leading from one place to another, especially one with a specially prepared surface which vehicles can use.
 sonar;a system for the detection of objects by emitting sound pulses and detecting or measuring their return after being reflected.
 earn;obtain (money) in return for labour or services.
