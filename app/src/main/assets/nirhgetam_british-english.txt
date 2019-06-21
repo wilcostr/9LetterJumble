@@ -38,6 +38,7 @@ mage;a magician or learned person.
 hating;feel intense dislike for.
 eating;put (food) into the mouth and chew and swallow it.
 grim;very serious or gloomy.
+gran;an informal shortened form for grandmother.
 image;a representation of the external form of a person or thing in art.
 meting;dispense or allot justice, a punishment, or harsh treatment.
 grit;small loose particles of stone or sand.
