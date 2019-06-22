@@ -9,111 +9,103 @@
 
     <include layout="@layout/loading_indicator"/>
 
-    <ScrollView
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/screen_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/alphabet">
+        android:layout_height="match_parent">
 
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/activity_main_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonPlay"
+            style="@style/MainButtons"
+            android:onClick="onPlayClicked"
+            android:text="@string/button_play"
+            app:layout_constraintBottom_toTopOf="@id/buttonChallenge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-            <View
-                android:id="@+id/spacer"
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+            android:id="@+id/buttonChallenge"
+            style="@style/MainButtons"
+            android:onClick="onChallengeClicked"
+            android:text="@string/button_challenge"
+            app:layout_constraintBottom_toTopOf="@id/buttonHowto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonPlay" />
 
-            <Button
-                android:id="@+id/buttonPlay"
-                style="@style/MainButtons"
-                android:onClick="onPlayClicked"
-                android:text="@string/button_play"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/spacer" />
+        <Button
+            android:id="@+id/buttonHowto"
+            style="@style/MainButtons"
+            android:onClick="onHowClicked"
+            android:text="@string/button_howto"
+            app:layout_constraintBottom_toTopOf="@id/buttonStore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonChallenge" />
 
-            <Button
-                android:id="@+id/buttonChallenge"
-                style="@style/MainButtons"
-                android:onClick="onChallengeClicked"
-                android:text="@string/button_challenge"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/buttonPlay" />
+        <Button
+            android:id="@+id/buttonStore"
+            style="@style/MainButtons"
+            android:onClick="onStoreClicked"
+            android:text="@string/button_store"
+            app:layout_constraintBottom_toTopOf="@id/buttonAds"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonHowto" />
 
-            <Button
-                android:id="@+id/buttonHowto"
-                style="@style/MainButtons"
-                android:onClick="onHowClicked"
-                android:text="@string/button_howto"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/buttonChallenge" />
+        <Button
+            android:id="@+id/buttonAds"
+            style="@style/MainButtons"
+            android:onClick="onAdsButtonClicked"
+            android:text="@string/button_ads"
+            app:layout_constraintBottom_toTopOf="@+id/buttonFrame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonStore" />
 
-            <Button
-                android:id="@+id/buttonStore"
-                style="@style/MainButtons"
-                android:onClick="onStoreClicked"
-                android:text="@string/button_store"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/buttonHowto" />
+        <FrameLayout
+            android:id="@+id/buttonFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/buttonAds"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAds">
 
-            <Button
-                android:id="@+id/buttonAds"
-                style="@style/MainButtons"
-                android:onClick="onAdsButtonClicked"
-                android:text="@string/button_ads"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/buttonStore" />
+            <ImageButton
+                android:id="@+id/buttonRate"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="onRateClicked"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+        </FrameLayout>
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_round"
-                app:layout_constraintStart_toStartOf="@+id/buttonAds"
-                app:layout_constraintTop_toBottomOf="@+id/buttonAds"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_round"
+            app:layout_constraintBottom_toBottomOf="@id/buttonFrame"
+            app:layout_constraintEnd_toEndOf="@+id/buttonAds">
 
-                <ImageButton
-                    android:id="@+id/buttonRate"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:onClick="onRateClicked"
-                    android:padding="8dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/btn_star_big_on" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/button_round"
-                app:layout_constraintEnd_toEndOf="@+id/buttonAds"
-                app:layout_constraintTop_toBottomOf="@+id/buttonAds">
-
-                <ImageButton
-                    android:id="@+id/buttonShare"
-                    android:onClick="onShareClicked"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:padding="8dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="?attr/actionModeShareDrawable"
-                    android:tint="@android:color/white"/>
-
-            </FrameLayout>
-        </android.support.constraint.ConstraintLayout>
-    </ScrollView>
+            <ImageButton
+                android:id="@+id/buttonShare"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="onShareClicked"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:tint="@android:color/white"
+                app:srcCompat="?attr/actionModeShareDrawable" />
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
 </android.support.design.widget.CoordinatorLayout>

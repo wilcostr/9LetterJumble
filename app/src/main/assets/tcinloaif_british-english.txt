@@ -22,6 +22,7 @@ lint;short, fine fibres which separate from the surface of cloth or yarn during 
 lion ; a large tawny-colored cat that lives in prides, found in Africa and northwestern India.
 loin ; the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones.
 coil;a length of something wound in a joined sequence of concentric rings.
+tailfin;a projecting vertical surface on the tail of an aircraft, providing stability and typically housing the rudder.
 loft;a room or space directly under the roof of a house or other building, used for accommodation or storage.
 flint;a hard grey rock consisting of nearly pure silica (chert), occurring chiefly as nodules in chalk.
 final;the last one in a series of events, things, or people.

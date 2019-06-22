@@ -63,5 +63,6 @@ oaten;made of oats or oat straw.
 cadent;having cadence or rhythm.
 decan;of or relating to a dean or deanery.
 enatic;related on your mother's side.
+auntie;a familiar or diminutive word for aunt.
 outdance;to surpass in dancing, especially competitively.
 octad;a group or series of eight.

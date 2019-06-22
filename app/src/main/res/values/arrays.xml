@@ -37,6 +37,12 @@
         <item>nyngrpeac</item>
         <item>imevspuli</item>
         <item>barenrghi</item>
+        <item>misreahfn</item>
+        <item>secituhri</item>
+        <item>aacnpldes</item>
+        <item>bhairrnge</item>
+        <item>tiblasrim</item>
+        <item>mucpooser</item>
     </string-array>
     
     <string-array name="gameNames">
@@ -107,7 +113,7 @@
     	<item>9</item>
     	<item>8</item>
     	<item>8</item>
-    	<item>2</item>
+    	<item>8</item>
     </integer-array>
 
 

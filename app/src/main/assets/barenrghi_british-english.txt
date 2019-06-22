@@ -50,3 +50,4 @@ herring;a fairly small silvery fish which is most abundant in coastal waters and
 bang;a sudden loud, sharp noise.
 hearing;the faculty of perceiving sounds.
 brine;water strongly impregnated with salt.
+gran;an informal shortened form for grandmother.

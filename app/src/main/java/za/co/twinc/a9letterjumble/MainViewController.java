@@ -111,7 +111,7 @@ class MainViewController {
         // Save to shared preferences
         SharedPreferences main_log = mActivity.getSharedPreferences(MAIN_PREFS, 0);
         SharedPreferences.Editor editor = main_log.edit();
-        editor.putBoolean("premium",mIsPremium);
+        editor.putBoolean("premium", mIsPremium);
         editor.apply();
     }
 
