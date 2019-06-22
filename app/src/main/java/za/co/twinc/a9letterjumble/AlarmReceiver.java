@@ -65,6 +65,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         // Create intent to open Main, load habit number in extras
         Intent openMainIntent = new Intent(context, MainActivity.class);
+        openMainIntent.putExtra("challenge", true);
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
         stackBuilder.addParentStack(MainActivity.class);

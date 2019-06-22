@@ -71,7 +71,13 @@
     <string name="game_repeated_guess">%s already recorded</string>
     <string name="game_traditional_guess">Middle letter required: %s</string>
 
-    <string name="game_dispute">dispute</string>
+    <string name="game_dispute">Dispute</string>
+    <string name="game_dispute_message">%1$s can be included in the game if the following holds true:
+
+                                        \n\nIt is reasonable to expect all players to be required to find this word.
+                                        \nThe word is not flagged as jargon, archaic, regional, slang, or informal.
+
+                                        \n\nIf you believe including %2$s will improve the game, we\'ll consider adding it.</string>
     <string name="game_dispute_subject">9 Letter Jumble dispute: Add %1$s to %2$s.</string>
     <string name="game_dispute_body">"My suggested definition: "</string>
 

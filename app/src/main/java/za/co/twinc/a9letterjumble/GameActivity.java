@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.DataSetObserver;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -273,6 +274,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             textViewScore.setVisibility(View.GONE);
             counterFab.setVisibility(View.GONE);
             textViewList.setText(R.string.challenge_message);
+            textViewList.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
 
             textTimer = findViewById(R.id.text_timer);
             textTimer.setVisibility(View.VISIBLE);
@@ -516,17 +518,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                     .setAction(R.string.game_dispute, new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-                            emailIntent.setData(Uri.parse("mailto:dev.twinc@gmail.com"))
-                                        .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.game_dispute_subject,
-                                            guess, gameName))
-                                        .putExtra(Intent.EXTRA_TEXT, getString(R.string.game_dispute_body));
-                            try {
-                                startActivity(emailIntent);
-                            } catch (ActivityNotFoundException e) {
-                                Toast.makeText(getApplicationContext(), getString(R.string.txt_no_email),
-                                        Toast.LENGTH_LONG).show();
-                            }
+                            disputeClicked(guess.toString());
                         }
                     })
                     .show();
@@ -596,6 +588,38 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         updateWordList();
     }
 
+    private void disputeClicked(final String guess){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.game_dispute)
+                .setMessage(getString(R.string.game_dispute_message, guess, guess))
+                .setPositiveButton(R.string.game_dispute, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // Open email client to send dispute
+                        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                        emailIntent.setData(Uri.parse("mailto:dev.twinc@gmail.com"))
+                                .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.game_dispute_subject,
+                                        guess, gameName))
+                                .putExtra(Intent.EXTRA_TEXT, getString(R.string.game_dispute_body));
+                        try {
+                            startActivity(emailIntent);
+                        } catch (ActivityNotFoundException e) {
+                            Toast.makeText(getApplicationContext(), getString(R.string.txt_no_email),
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+        builder.create().show();
+
+    }
+
 
     private void updateWordList(){
         // Nothing to be done in challenge mode
@@ -623,8 +647,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             list = zeroPadAndSort(listSort);
         }
 
-        if (list.equals("") && wordsIn.size()==0)
+        if (list.equals("") && wordsIn.size()==0) {
             list = getString(R.string.prompt_no_words);
+            textViewList.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+        }
         textViewList.setText(list);
     }
 

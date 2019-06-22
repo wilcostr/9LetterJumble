@@ -75,6 +75,13 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         mScreenWait = findViewById(R.id.screen_wait);
         mScreenMain = findViewById(R.id.screen_main);
 
+        // Check if we launched from notification
+        Intent startMain = getIntent();
+        if (startMain != null) {
+            if (startMain.getBooleanExtra("challenge", false))
+                onChallengeClicked(null);
+        }
+
         SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
 
         // Show onboarding the first time you open the game
@@ -347,7 +354,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
                     editor.putInt("clue_count", clueCount);
                     editor.putBoolean("give_share_reward", false);
                     editor.apply();
-                    Snackbar.make(findViewById(R.id.activity_main_layout), getString(R.string.clue_gained,3),
+                    Snackbar.make(mScreenMain, getString(R.string.clue_gained,3),
                             Snackbar.LENGTH_LONG).show();
                 }
             }
