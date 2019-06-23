@@ -37,7 +37,7 @@
                 android:padding="8dp"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="24sp"
+                android:textSize="@dimen/guess_text"
                 android:textStyle="bold" />
         </android.support.v7.widget.CardView>
 
@@ -52,7 +52,7 @@
             android:background="@drawable/timer_background"
             android:text="@string/start_time"
             android:textColor="@android:color/white"
-            android:textSize="32sp"
+            android:textSize="@dimen/timer_text"
             android:layout_marginTop="32dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
@@ -62,20 +62,19 @@
 
         <GridView
             android:id="@+id/grid"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/grid_size"
+            android:layout_height="@dimen/grid_size"
+            android:padding="2dp"
+            android:clipToPadding="false"
+            android:horizontalSpacing="12dp"
             android:listSelector="@android:color/transparent"
             android:numColumns="3"
-            android:paddingStart="8dp"
-            android:paddingTop="24dp"
-            android:paddingBottom="4dp"
-            android:clipToPadding="false"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="24dp"
             android:verticalSpacing="12dp"
-            android:horizontalSpacing="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_timer"
-            tools:ignore="RtlSymmetry" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
         <ImageButton
@@ -95,7 +94,7 @@
             android:id="@+id/button_enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="4dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/button_enter"
@@ -140,40 +139,50 @@
             android:padding="16dp"
             android:text="@string/game_display_score"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="18sp"
+            android:textSize="@dimen/text_20"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/grid" />
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/word_card"
+        <FrameLayout
+            android:id="@+id/testFrame"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintHeight_max="wrap"
-            app:cardBackgroundColor="@color/colorPrimary"
             app:layout_constraintTop_toBottomOf="@id/button_backspace"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintVertical_bias="0"
-            android:layout_margin="16dp">
+            >
 
-            <ScrollView
-                android:id="@+id/word_card_middle"
+            <android.support.v7.widget.CardView
+                android:id="@+id/word_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:animateLayoutChanges="true">
+                app:layout_constraintHeight_max="wrap"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:layout_margin="16dp">
 
-                <TextView
-                    android:id="@+id/word_list"
+                <ScrollView
+                    android:id="@+id/word_card_middle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/prompt_no_words"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:typeface="monospace" />
-            </ScrollView>
 
-        </android.support.v7.widget.CardView>
+                    android:layout_margin="16dp"
+                    android:animateLayoutChanges="true">
+
+                    <TextView
+                        android:id="@+id/word_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prompt_no_words"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_16" />
+                </ScrollView>
+
+            </android.support.v7.widget.CardView>
+
+        </FrameLayout>
+
+
 
 
         <com.andremion.counterfab.CounterFab
