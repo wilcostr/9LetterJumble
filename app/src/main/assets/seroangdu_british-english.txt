@@ -121,3 +121,4 @@ agues;malaria or another illness involving fever and shivering (plural).
 rand;the basic monetary unit of South Africa.
 gouda;a flat round cheese with a yellow rind.
 rands;the basic monetary unit of South Africa (plural).
+unaged;not subjected to an aging process.
