@@ -8,7 +8,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.DataSetObserver;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -19,7 +18,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.text.Editable;
+import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.style.TabStopSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -274,7 +275,6 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             textViewScore.setVisibility(View.GONE);
             counterFab.setVisibility(View.GONE);
             textViewList.setText(R.string.challenge_message);
-            textViewList.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
 
             textTimer = findViewById(R.id.text_timer);
             textTimer.setVisibility(View.VISIBLE);
@@ -625,40 +625,36 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         // Nothing to be done in challenge mode
         if (isChallenge)
             return;
-        String list;
+        SpannableString list;
         if (smartSorting) {
             String guess = textViewGuess.getText().toString();
             List<String> smartList;
             if (guess.indexOf('-') == 0)
-                smartList = new ArrayList<String>(wordsIn);
+                smartList = new ArrayList<>(wordsIn);
             else {
-                smartList = new ArrayList<String>();
+                smartList = new ArrayList<>();
                 for (String s : wordsIn) {
                     if (s.startsWith(guess))
                         smartList.add(s);
                 }
             }
-            Collections.sort(smartList);
             list = zeroPadAndSort(smartList);
         }
         else{
-            List<String> listSort = new ArrayList<String>(wordsIn);
-            Collections.sort(listSort);
+            List<String> listSort = new ArrayList<>(wordsIn);
             list = zeroPadAndSort(listSort);
         }
 
-        if (list.equals("") && wordsIn.size()==0) {
-            list = getString(R.string.prompt_no_words);
-            textViewList.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
-        }
+        if (list.toString().equals("") && wordsIn.size()==0)
+            list = new SpannableString(getString(R.string.prompt_no_words));
+
         textViewList.setText(list);
     }
 
-    private String zeroPadAndSort(List<String> list){
+    private SpannableString zeroPadAndSort(List<String> list){
+        Collections.sort(list);
         for (int i=0; i<list.size(); i++){
-            String word = list.get(i);
-            while (word.length()<9)
-                word = word + " ";
+            String word = list.get(i) + "\t";
             list.set(i, word);
         }
 
@@ -666,7 +662,15 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         String ret = list.toString();
         ret = ret.replace(", ", " ");
         ret = ret.substring(1, ret.length() - 1);
-        return ret;
+
+        SpannableString str = new SpannableString(ret);
+        str.setSpan(new TabStopSpan.Standard(200),0, ret.length(), 0);
+        str.setSpan(new TabStopSpan.Standard(400),0, ret.length(), 0);
+        str.setSpan(new TabStopSpan.Standard(600),0, ret.length(), 0);
+        str.setSpan(new TabStopSpan.Standard(800),0, ret.length(), 0);
+        str.setSpan(new TabStopSpan.Standard(1000),0, ret.length(), 0);
+
+        return str;
     }
 
     private void getWords(List<String> words, List<String> definitions){

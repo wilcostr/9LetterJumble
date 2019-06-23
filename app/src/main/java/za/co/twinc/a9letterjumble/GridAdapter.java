@@ -3,6 +3,7 @@ package za.co.twinc.a9letterjumble;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,12 +84,12 @@ public class GridAdapter extends BaseAdapter{
         TextView textV;
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
-            // TODO: Consider putting textV in FrameLayout to make touch feedback round
-            int scaledSize = (int) (mContext.getResources().getDisplayMetrics().densityDpi * 0.4);
             textV = new TextView(mContext);
+
+            int scaledSize = (int)mContext.getResources().getDimension(R.dimen.grid_item);
             textV.setLayoutParams(new GridView.LayoutParams(scaledSize, scaledSize));
 
-            textV.setTextSize(34);
+            textV.setTextSize(TypedValue.COMPLEX_UNIT_PX, mContext.getResources().getDimension(R.dimen.grid_text));
             textV.setTypeface(null, Typeface.BOLD);
             textV.setGravity(Gravity.CENTER);
             if (Build.VERSION.SDK_INT>=21)

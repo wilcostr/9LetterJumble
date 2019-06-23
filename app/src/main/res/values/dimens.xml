@@ -18,4 +18,15 @@
     <dimen name="button_width">152dp</dimen>
     <dimen name="button_height">48dp</dimen>
 
+    <dimen name="button_enter">45dp</dimen>
+    <dimen name="grid_item">65dp</dimen>
+    <dimen name="grid_size">225dp</dimen>
+    <dimen name="grid_text">34sp</dimen>
+
+    <dimen name="guess_text">24sp</dimen>
+    <dimen name="timer_text">32sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+
 </resources>
