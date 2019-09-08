@@ -40,7 +40,7 @@ public class PremiumDelegate extends UiManagingDelegate {
         int textId = mBillingProvider.isPremiumPurchased() ? R.string.button_own
                 : R.string.button_buy;
         holder.button.setText(textId);
-        holder.skuIcon.setImageResource(R.drawable.premium_icon);
+        holder.skuIcon.setImageResource(R.drawable.icon_premium);
     }
 
     @Override

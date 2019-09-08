@@ -68,8 +68,15 @@ public class UiManager implements RowViewHolder.OnButtonClickListener {
 
     public void onButtonClicked(int position) {
         SkuRowData data = mRowDataProvider.getData(position);
-        if (data != null) {
+        if (data != null)
            mDelegatesFactory.onButtonClicked(data);
-        }
+
     }
+
+    public void enableRewardFromUiManager () {
+        SkuRowData data = mRowDataProvider.getData(0);
+        if (data != null)
+            mDelegatesFactory.enableRewardFromFactory(data);
+    }
+
 }

@@ -43,6 +43,8 @@
         <item>bhairrnge</item>
         <item>tiblasrim</item>
         <item>mucpooser</item>
+        <item>mrmodefla</item>
+        <item>dosmenupy</item>
     </string-array>
     
     <string-array name="gameNames">
@@ -104,7 +106,7 @@
     	<item>Yellow Submarine</item>    	
     	<item>Green Lantern</item>
     	<item>Blue Velvet</item>
-    	<!--<item>Indigo Girl</item>-->
+    	<item>Indigo Girl</item>
     	<!--<item>Violet Hill</item>    	    	-->
     </string-array>
     
@@ -114,6 +116,7 @@
     	<item>8</item>
     	<item>8</item>
     	<item>8</item>
+    	<item>2</item>    	
     </integer-array>
 
 

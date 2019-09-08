@@ -23,10 +23,10 @@ import za.co.twinc.a9letterjumble.billing.BillingProvider;
 /**
  * Handles Ui specific to "clue-pack" - consumable in-app purchase row
  */
-public class CP2Delegate extends UiManagingDelegate {
-    public static final String SKU_ID = "cp2";
+public class CP5Delegate extends UiManagingDelegate {
+    public static final String SKU_ID = "cp5";
 
-    public CP2Delegate(BillingProvider billingProvider) {
+    public CP5Delegate(BillingProvider billingProvider) {
         super(billingProvider);
     }
 
@@ -40,7 +40,7 @@ public class CP2Delegate extends UiManagingDelegate {
     public void onBindViewHolder(SkuRowData data, RowViewHolder holder) {
         super.onBindViewHolder(data, holder);
         holder.button.setText(R.string.button_buy);
-        holder.skuIcon.setImageResource(R.drawable.cp1_icon);
+        holder.skuIcon.setImageResource(R.drawable.cp2_icon);
     }
 }
 

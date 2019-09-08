@@ -123,7 +123,7 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
 
             if (gameOffset > mainLog.getInt("games_unlocked", 0)) {
                 wordCard.setCardBackgroundColor(view.getContext().getResources().getColor(R.color.rippleColor));
-                arrowButton.setImageResource(R.drawable.ic_lock_outline_black_36dp);
+                arrowButton.setImageResource(R.drawable.ic_lock_outline);
             }
             else {
                 wordCard.setCardBackgroundColor(view.getContext().getResources().getColor(R.color.colorAccent));
@@ -150,7 +150,7 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
 
             if (position+gameOffset > mainLog.getInt("games_unlocked", 0)) {
                 wordCard.setCardBackgroundColor(view.getContext().getResources().getColor(R.color.rippleColor));
-                arrowButton.setImageResource(R.drawable.ic_lock_outline_black_36dp);
+                arrowButton.setImageResource(R.drawable.ic_lock_outline);
                 score.setText("");
             }
             // TODO: figure out why this else is necessary to fix Alfa background

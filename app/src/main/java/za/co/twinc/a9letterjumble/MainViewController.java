@@ -17,16 +17,19 @@
 package za.co.twinc.a9letterjumble;
 
 import android.content.SharedPreferences;
-import android.support.design.widget.Snackbar;
 import android.widget.Toast;
 
+import com.android.billingclient.api.AcknowledgePurchaseParams;
 import com.android.billingclient.api.BillingClient;
+import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.Purchase;
 import za.co.twinc.a9letterjumble.billing.BillingManager.BillingUpdatesListener;
-import za.co.twinc.a9letterjumble.skulist.row.CP1Delegate;
 import za.co.twinc.a9letterjumble.skulist.row.CP2Delegate;
 import za.co.twinc.a9letterjumble.skulist.row.CP3Delegate;
+import za.co.twinc.a9letterjumble.skulist.row.CP4Delegate;
+import za.co.twinc.a9letterjumble.skulist.row.CP5Delegate;
 import za.co.twinc.a9letterjumble.skulist.row.PremiumDelegate;
+import za.co.twinc.a9letterjumble.skulist.row.RewardDelegate;
 
 import java.util.List;
 
@@ -67,20 +70,29 @@ class MainViewController {
         }
 
         @Override
-        public void onConsumeFinished(String token, @BillingClient.BillingResponse int result) {
-            if (result == BillingClient.BillingResponse.OK) {
+        public void onConsumeFinished(String token, BillingResult billingResult) {
+            if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                 // Successfully consumed, so we apply the effects of the item
 
                 switch (getAndDeleteConsumableToken(token)){
-                    case CP1Delegate.SKU_ID:
-                        gainClues(6);
-                        break;
                     case CP2Delegate.SKU_ID:
-                        gainClues(21);
+                        gainClues(14);
                         break;
                     case CP3Delegate.SKU_ID:
-                        gainClues(26);
+                        gainClues(18);
                         mIsPremium = true;
+                        saveData();
+                        break;
+                    case CP4Delegate.SKU_ID:
+                        gainClues(36);
+                        mIsPremium = true;
+                        saveData();
+                        break;
+                    case CP5Delegate.SKU_ID:
+                        gainClues(52);
+                        break;
+                    case RewardDelegate.SKU_ID:
+                        gainClues(1);
                         saveData();
                         break;
                 }
@@ -94,9 +106,12 @@ class MainViewController {
                     case PremiumDelegate.SKU_ID:
                         mIsPremium = true;
                         saveData();
+                        if (!purchase.isAcknowledged()){
+                            mActivity.getBillingManager().acknowledgePurchase(purchase);
+                        }
                         break;
                     default:
-                        // Everything else is consumable and will be process in onConsumeFinished
+                        // Everything else is consumable and will be processed in onConsumeFinished
                         saveConsumableToken(purchase.getPurchaseToken(), purchase.getSku());
                         mActivity.getBillingManager().consumeAsync(purchase.getPurchaseToken());
                         break;

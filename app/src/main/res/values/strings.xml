@@ -119,7 +119,7 @@
 
     <string name="unlock_title">Unlock %s</string>
     <string name="unlock_message">Find 50%% of the words in %s to unlock this level.</string>
-    <string name="unlock_pack_message">Find 50% of the words in every level of the previous pack.</string>
+    <string name="unlock_pack_message">Find 50% of the words in every level of the previous level pack to unlock this pack.</string>
     <string name="unlocked_title">Level unlocked</string>
     <string name="unlocked_message">Congratulations! You\'ve unlocked %s.</string>
     <string name="unlocked_keep_going">Gain 3 bonus clue tokens when you complete the level.</string>
@@ -160,11 +160,13 @@
     <string name="alert_already_purchased">Item has already been purchased</string>
     <string name="button_buy">Buy</string>
     <string name="button_own">Owned</string>
+    <string name="button_watch">Watch now</string>
     <string name="error_no_skus">We didn\'t find any SKUs to display… Check your internet
         connection and make sure your Google Developer Console was setup correctly.</string>
     <string name="error_billing_unavailable">Billing unavailable. Make sure your Google Play app
         is up to date</string>
     <string name="error_billing_default">Billing unavailable. Please check your device.</string>
     <string name="content_description_app_loading_image">App loading image</string>
+    <string name="sfx_volume">Sound effects volume</string>
 
 </resources>

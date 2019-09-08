@@ -31,10 +31,12 @@ public class UiDelegatesFactory {
 
     public UiDelegatesFactory(BillingProvider provider) {
         uiDelegates = new LinkedHashMap<>();
-        uiDelegates.put(CP1Delegate.SKU_ID, new CP1Delegate(provider));
+        uiDelegates.put(RewardDelegate.SKU_ID, new RewardDelegate(provider));
         uiDelegates.put(PremiumDelegate.SKU_ID, new PremiumDelegate(provider));
         uiDelegates.put(CP2Delegate.SKU_ID, new CP2Delegate(provider));
         uiDelegates.put(CP3Delegate.SKU_ID, new CP3Delegate(provider));
+        uiDelegates.put(CP4Delegate.SKU_ID, new CP4Delegate(provider));
+        uiDelegates.put(CP5Delegate.SKU_ID, new CP5Delegate(provider));
     }
 
     /**
@@ -57,5 +59,9 @@ public class UiDelegatesFactory {
 
     public void onButtonClicked(SkuRowData data) {
         uiDelegates.get(data.getSku()).onButtonClicked(data);
+    }
+
+    public void enableRewardFromFactory(SkuRowData data) {
+        uiDelegates.get(data.getSku()).enableRewardButton();
     }
 }

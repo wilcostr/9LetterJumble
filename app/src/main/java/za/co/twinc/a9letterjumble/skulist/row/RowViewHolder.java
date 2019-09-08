@@ -53,4 +53,8 @@ public final class RowViewHolder extends RecyclerView.ViewHolder {
             });
         }
     }
+
+    public void enableReward() {
+
+    }
 }

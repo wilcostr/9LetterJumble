@@ -60,21 +60,42 @@
             style="@style/MainButtons"
             android:onClick="onAdsButtonClicked"
             android:text="@string/button_ads"
-            app:layout_constraintBottom_toTopOf="@+id/buttonFrame"
+            app:layout_constraintBottom_toTopOf="@+id/buttonFrameVolume"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/buttonStore" />
 
         <FrameLayout
-            android:id="@+id/buttonFrame"
+            android:id="@+id/buttonFrameVolume"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/button_round"
+            app:layout_constraintTop_toBottomOf="@id/buttonAds"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/buttonAds"
-            app:layout_constraintTop_toBottomOf="@+id/buttonAds">
+            app:layout_constraintEnd_toStartOf="@id/buttonFrameRate">
+
+            <ImageButton
+                android:id="@+id/buttonVolume"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="onVolumeClicked"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_volume_up" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/buttonFrameRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_round"
+            app:layout_constraintBottom_toBottomOf="@id/buttonFrameVolume"
+            app:layout_constraintStart_toEndOf="@id/buttonFrameVolume"
+            app:layout_constraintEnd_toStartOf="@id/buttonFrameShare">
 
             <ImageButton
                 android:id="@+id/buttonRate"
@@ -88,12 +109,12 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/buttonFrameShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="24dp"
             android:background="@drawable/button_round"
-            app:layout_constraintBottom_toBottomOf="@id/buttonFrame"
+            app:layout_constraintBottom_toBottomOf="@id/buttonFrameVolume"
+            app:layout_constraintStart_toEndOf="@id/buttonFrameRate"
             app:layout_constraintEnd_toEndOf="@+id/buttonAds">
 
             <ImageButton

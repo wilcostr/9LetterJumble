@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             app:backgroundTint="@color/altColor"
             app:rippleColor="@android:color/transparent"
-            app:srcCompat="@drawable/ic_search_white_24dp"
+            app:srcCompat="@drawable/ic_search"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -96,7 +96,7 @@
             android:onClick="onButtonBackspaceClick"
             app:layout_constraintEnd_toStartOf="@id/button_enter"
             app:layout_constraintBottom_toBottomOf="@id/button_enter"
-            app:srcCompat="@drawable/ic_backspace_black_36dp" />
+            app:srcCompat="@drawable/ic_backspace" />
 
         <ImageButton
             android:id="@+id/button_enter"
@@ -110,7 +110,7 @@
             android:onClick="onButtonEnterClick"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/grid"
-            app:srcCompat="@drawable/ic_add_box_black_36dp" />
+            app:srcCompat="@drawable/ic_add_box" />
 
         <ImageButton
             android:id="@+id/button_shuffle"
@@ -124,7 +124,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/grid"
             app:layout_constraintTop_toTopOf="@id/grid"
-            app:srcCompat="@drawable/ic_autorenew_black_42dp" />
+            app:srcCompat="@drawable/ic_autorenew" />
 
         <ImageButton
             android:id="@+id/button_swop"
@@ -138,7 +138,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/grid"
             app:layout_constraintTop_toTopOf="@id/grid"
-            app:srcCompat="@drawable/ic_swap_vert_black_42dp" />
+            app:srcCompat="@drawable/ic_swap_vert" />
 
 
         <TextView

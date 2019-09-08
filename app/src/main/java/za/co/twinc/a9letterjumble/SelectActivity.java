@@ -24,7 +24,7 @@ public class SelectActivity extends AppCompatActivity {
     private int[] packCounts;
 
     private boolean showAnimation = false;
-
+    private Sounds mySounds;
     private int currentPack; //-1 for pack selection
 
     @Override
@@ -54,6 +54,8 @@ public class SelectActivity extends AppCompatActivity {
 
         recyclerView.setLayoutAnimation(AnimationUtils.loadLayoutAnimation(this,
                 R.anim.layout_animation));
+
+        mySounds = new Sounds();
     }
 
     @Override
@@ -98,12 +100,14 @@ public class SelectActivity extends AppCompatActivity {
                         for (int i=0; i<pos; i++)
                             firstInPack += packCounts[i];
                         if (firstInPack <= mainLog.getInt("games_unlocked", 0)) {
+                            mySounds.playClick(view.getContext());
                             // Show games
                             currentPack = pos;
                             showAnimation = true;
                             initGameSelect(pos);
                         }
                         else{
+                            mySounds.play(view.getContext(), R.raw.reject);
                             AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                             builder.setTitle(getString(R.string.unlock_title, packNames[pos]))
                                     .setMessage(getString(R.string.unlock_pack_message))
@@ -152,6 +156,7 @@ public class SelectActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(View view, int pos) {
                         if (pos+offset <= mainLog.getInt("games_unlocked", 0)) {
+                            mySounds.playClick(view.getContext());
                             Intent intent = new Intent(view.getContext(), GameActivity.class);
                             intent.putExtra("gameNum", pos+offset);
                             intent.putExtra("gameLetters", gameList[pos+offset]);
@@ -159,6 +164,7 @@ public class SelectActivity extends AppCompatActivity {
                             view.getContext().startActivity(intent);
                         }
                         else{
+                            mySounds.play(view.getContext(), R.raw.reject);
                             AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                             builder.setTitle(getString(R.string.unlock_title, gameNames[pos+offset]))
                                     .setMessage(getString(R.string.unlock_message, gameNames[pos+offset-1]))

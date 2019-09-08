@@ -92,6 +92,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     private CountDownTimer countDownTimer;
     private int secondsTimer;
 
+    private Sounds mySounds;
+
     private static Activity activity;
 
 
@@ -160,6 +162,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         textViewList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mySounds.playClick(view.getContext());
                 displayStats();
             }
         });
@@ -238,6 +241,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         counterFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mySounds.playClick(view.getContext());
                 showClueDialog();
             }
         });
@@ -262,6 +266,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
                 //Make the changes to the letter views
                 gridAdapter.notifyDataSetChanged();
+
+                //Play a click sound file
+                mySounds.play(view.getContext(), R.raw.click04);
 
                 // Shake the enter button for beginners
                 if (gameNum==0 && score<=1 && textViewGuess.getText().length()==4){
@@ -290,6 +297,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
             // The timer is set-up and started from onResume()
         }
+
+        // Initialise the media player
+        mySounds = new Sounds();
     }
 
     @Override
@@ -395,6 +405,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     }
 
     public void onButtonShuffleClick(View v){
+        mySounds.playClick(this);
         gridAdapter.shuffleLetters(isChallenge);
         onButtonBackspaceLongClick();
 
@@ -404,10 +415,11 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                 0, 180);
         rotate.setDuration(250);
         rotate.start();
-
     }
 
     public void onButtonSwopClick (View v){
+        mySounds.playClick(this);
+
         // Flip the swop button
         ObjectAnimator rotate = ObjectAnimator.ofFloat(v,
                 "rotationX",v.getRotationX()+180);
@@ -448,6 +460,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         // Check for default display and return
         if (guess.charAt(0) == getString(R.string.game_display_name," ").charAt(0))
             return;
+
+        // Play a sound
+        mySounds.play(this, R.raw.click02);
 
         int i = buttonStack.pop();
         gridAdapter.setItemClickable(i, true);
@@ -545,6 +560,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         if (guess.length() < 4){
             Snackbar.make(findViewById(R.id.game_content), getString(R.string.game_short_guess),
                     Snackbar.LENGTH_SHORT).show();
+
+            // Play a sound
+            mySounds.play(this, R.raw.reject);
             return;
         }
 
@@ -553,6 +571,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         if (guess.toString().indexOf(requiredChar) < 0){
             Snackbar.make(findViewById(R.id.game_content), getString(R.string.game_traditional_guess, requiredChar),
                     Snackbar.LENGTH_SHORT).show();
+            // Play a sound
+            mySounds.play(this, R.raw.reject);
             return;
         }
 
@@ -567,16 +587,24 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                         }
                     })
                     .show();
+            // Play a sound
+            mySounds.play(this, R.raw.reject);
             return;
         }
 
         // Check for repeated guess
         if (wordsIn.contains(guess.toString())){
             Snackbar.make(findViewById(R.id.game_content), getString(R.string.game_repeated_guess, guess), Snackbar.LENGTH_SHORT).show();
+            // Play a sound
+            mySounds.play(this, R.raw.reject);
             return;
         }
 
         // Entered word is correct input
+
+        // Play a sound
+        mySounds.play(this, R.raw.accept);
+
         // Animate the view when guessing correctly
         CardView wordWrapper = findViewById(R.id.word_card);
         ObjectAnimator pulse = ObjectAnimator.ofPropertyValuesHolder(
@@ -722,7 +750,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         if (gameLetters.length()<9)
             return;
         String line;
-        String fileName = "_british-english.txt";
+        String fileName = ".txt";
         try {
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(getAssets().open(gameLetters + fileName)));
@@ -963,6 +991,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                 .addSizes(new Size(12, 5f))
                 .setPosition((float)viewKonfetti.getWidth()/2, 200f)
                 .stream(300, 700L);
+
+        // Play a sound
+        mySounds.play(this, R.raw.win2);
     }
 
     private void askFeedback() {

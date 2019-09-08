@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
     private MainViewController mViewController;
     private View mScreenWait, mScreenMain;
 
+    private Sounds mySounds;
     private static AlarmReceiver alarmReceiver;
 
     @Override
@@ -88,9 +91,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         if (mainLog.getBoolean("show_intro", true)){
             Intent startIntro = new Intent(this, IntroActivity.class);
             startActivity(startIntro);
-            SharedPreferences.Editor editor = mainLog.edit();
-            editor.putBoolean("show_intro", false);
-            editor.apply();
+            mainLog.edit().putBoolean("show_intro", false).apply();
         }
 
         // Give hint to share
@@ -115,14 +116,19 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
                             }
                         });
                 // Don't show this tip again
-                SharedPreferences.Editor editor = mainLog.edit();
-                editor.putBoolean("show_share_tip", false);
-                editor.apply();
+                mainLog.edit().putBoolean("show_share_tip", false).apply();
             }
         }
 
         // Set alarmReceiver for notifications
         setNotification();
+
+        // Initialise the media player
+        mySounds = new Sounds();
+
+        // Check if the sound icon should show muted
+        if (mainLog.getFloat("volume", 0.5f) == 0f)
+            ((ImageButton)findViewById(R.id.buttonVolume)).setImageResource(R.drawable.ic_volume_off);
 
     }
 
@@ -187,11 +193,13 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
 
 
     public void onPlayClicked(View view){
+        mySounds.playClick(getApplicationContext());
         Intent intent = new Intent(getApplicationContext(), SelectActivity.class);
         startActivity(intent);
     }
 
     public void onChallengeClicked(View view){
+        mySounds.playClick(getApplicationContext());
         SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
 
         // Get the current day, setting hours and minutes to zero
@@ -248,15 +256,18 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
     }
 
     public void onHowClicked(View view){
+        mySounds.playClick(getApplicationContext());
         Intent startIntro = new Intent(this, IntroActivity.class);
         startActivity(startIntro);
     }
 
     public void onStoreClicked(View view){
+        mySounds.playClick(getApplicationContext());
         openStore();
     }
 
     public void onAdsButtonClicked(View view){
+        mySounds.playClick(getApplicationContext());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.ads_title);
         builder.setMessage(R.string.ads_msg);
@@ -274,6 +285,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
     }
 
     public void onRateClicked(View view){
+        mySounds.playClick(getApplicationContext());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.rate_request, null);
@@ -287,9 +299,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
-                        SharedPreferences.Editor editor = mainLog.edit();
-                        editor.putBoolean("show_rate_prompt", false);
-                        editor.apply();
+                        mainLog.edit().putBoolean("show_rate_prompt", false).apply();
 
                         Intent goToMarket = new Intent(Intent.ACTION_VIEW,
                                 Uri.parse("market://details?id=" + getPackageName()));
@@ -303,7 +313,52 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
     }
 
     public void onShareClicked(View view){
+        mySounds.playClick(getApplicationContext());
         shareApp();
+    }
+
+    public void onVolumeClicked(View view){
+        mySounds.playClick(getApplicationContext());
+
+        final SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
+        float floatVolume = mainLog.getFloat("volume", 0.5f);
+
+        final ImageButton button = findViewById(R.id.buttonVolume);
+        if (floatVolume == 0f)
+            button.setImageResource(R.drawable.ic_volume_off);
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.sfx_volume);
+
+        SeekBar seekBar = new SeekBar(this);
+        seekBar.setProgress((int)(100*floatVolume/0.5));
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int vol;
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                vol = i;
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                float floatVolume = 0.5f*(vol/100f);
+                if (floatVolume == 0f)
+                    button.setImageResource(R.drawable.ic_volume_off);
+                else
+                    button.setImageResource(R.drawable.ic_volume_up);
+                mainLog.edit().putFloat("volume", floatVolume).apply();
+
+                mySounds.playDing(getApplicationContext());
+
+            }
+        });
+
+        builder.setView(seekBar).create().show();
     }
 
     @Override

@@ -13,6 +13,7 @@
 // limitations under the License.
 package za.co.twinc.a9letterjumble.skulist.row;
 
+import android.widget.Button;
 import android.widget.Toast;
 import com.android.billingclient.api.BillingClient.SkuType;
 import za.co.twinc.a9letterjumble.R;
@@ -25,26 +26,40 @@ import za.co.twinc.a9letterjumble.billing.BillingProvider;
 public abstract class UiManagingDelegate {
 
     protected final BillingProvider mBillingProvider;
+    public Button rewardButton;
 
     public abstract @SkuType String getType();
 
     public UiManagingDelegate(BillingProvider billingProvider) {
         mBillingProvider = billingProvider;
+        rewardButton = null;
     }
 
     public void onBindViewHolder(SkuRowData data, RowViewHolder holder) {
         holder.description.setText(data.getDescription());
         holder.price.setText(data.getPrice());
-        holder.button.setEnabled(true);
+
+        if (data.getSku().equals("reward")) {
+            holder.button.setEnabled(false);
+            holder.button.setAlpha(0.4f);
+        }
+
+        rewardButton = holder.button;
     }
 
     public void onButtonClicked(SkuRowData data) {
-        mBillingProvider.getBillingManager().initiatePurchaseFlow(data.getSku(),
-                data.getSkuType());
+        mBillingProvider.getBillingManager().initiatePurchaseFlow(data.getSku());
     }
 
     protected void showAlreadyPurchasedToast() {
         Toast.makeText(mBillingProvider.getBillingManager().getContext(),
                 R.string.alert_already_purchased, Toast.LENGTH_SHORT).show();
+    }
+
+    public void enableRewardButton() {
+        if (rewardButton != null) {
+            rewardButton.setEnabled(true);
+            rewardButton.setAlpha(1f);
+        }
     }
 }

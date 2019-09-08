@@ -16,7 +16,7 @@
 
 package za.co.twinc.a9letterjumble.skulist;
 
-import static com.android.billingclient.api.BillingClient.BillingResponse;
+import static com.android.billingclient.api.BillingClient.BillingResponseCode;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -31,6 +31,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.android.billingclient.api.BillingClient.SkuType;
+import com.android.billingclient.api.BillingResult;
+import com.android.billingclient.api.RewardResponseListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsResponseListener;
 import za.co.twinc.a9letterjumble.R;
@@ -46,6 +48,7 @@ import java.util.List;
 public class AcquireFragment extends DialogFragment {
     private RecyclerView mRecyclerView;
     private SkusAdapter mAdapter;
+    private UiManager uiManager;
     private View mLoadingView;
     private TextView mErrorTextView;
     private BillingProvider mBillingProvider;
@@ -64,6 +67,11 @@ public class AcquireFragment extends DialogFragment {
         mErrorTextView = root.findViewById(R.id.error_textview);
         mRecyclerView = root.findViewById(R.id.list);
         mLoadingView = root.findViewById(R.id.screen_wait);
+
+        mAdapter = new SkusAdapter();
+        uiManager = createUiManager(mAdapter, mBillingProvider);
+        mAdapter.setUiManager(uiManager);
+
         if (mBillingProvider != null) {
             handleManagerAndUiReady();
         }
@@ -77,6 +85,7 @@ public class AcquireFragment extends DialogFragment {
             }
         });
         toolbar.setTitle(R.string.button_store);
+
         return root;
     }
 
@@ -127,11 +136,11 @@ public class AcquireFragment extends DialogFragment {
                 .getBillingClientResponseCode();
 
         switch (billingResponseCode) {
-            case BillingResponse.OK:
+            case BillingResponseCode.OK:
                 // If manager was connected successfully, then show no SKUs error
                 mErrorTextView.setText(getText(R.string.error_no_skus));
                 break;
-            case BillingResponse.BILLING_UNAVAILABLE:
+            case BillingResponseCode.BILLING_UNAVAILABLE:
                 mErrorTextView.setText(getText(R.string.error_billing_unavailable));
                 break;
             default:
@@ -146,9 +155,7 @@ public class AcquireFragment extends DialogFragment {
     private void querySkuDetails() {
         if (getActivity() != null && !getActivity().isFinishing()) {
             final List<SkuRowData> dataList = new ArrayList<>();
-            mAdapter = new SkusAdapter();
-            final UiManager uiManager = createUiManager(mAdapter, mBillingProvider);
-            mAdapter.setUiManager(uiManager);
+
             // Filling the list with all the data to render subscription rows
             List<String> subscriptionsSkus = uiManager.getDelegatesFactory()
                     .getSkuList(SkuType.SUBS);
@@ -170,17 +177,27 @@ public class AcquireFragment extends DialogFragment {
         mBillingProvider.getBillingManager().querySkuDetailsAsync(billingType, skusList,
                 new SkuDetailsResponseListener() {
                     @Override
-                    public void onSkuDetailsResponse(int responseCode, List<SkuDetails> skuDetailsList) {
+                    public void onSkuDetailsResponse(BillingResult billingResult, List<SkuDetails> skuDetailsList) {
 
-                        if (responseCode == BillingResponse.OK && skuDetailsList != null && skuDetailsList.size() > 0) {
+                        if (billingResult.getResponseCode() == BillingResponseCode.OK
+                                && skuDetailsList != null
+                                && skuDetailsList.size() > 0) {
+
                             // If we successfully got SKUs fill all the rows
                             // If we got a full house of results, keep the order
                             if (skuDetailsList.size() == skusList.size()){
                                 for (int i = 0; i < skusList.size(); i++) {
                                     for (SkuDetails details : skuDetailsList) {
-                                        if (details.getSku().equals(skusList.get(i)))
+                                        if (details.getSku().equals(skusList.get(i))) {
                                             inList.add(new SkuRowData(details, SkusAdapter.TYPE_NORMAL,
                                                     billingType));
+                                            if (details.isRewarded()) {
+                                                mBillingProvider
+                                                        .getBillingManager()
+                                                        .loadRewardedVideo(details,
+                                                                rewardResponse());
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -217,6 +234,22 @@ public class AcquireFragment extends DialogFragment {
                         }
                     }
                 });
+    }
+
+    private RewardResponseListener rewardResponse () {
+        return new RewardResponseListener() {
+            @Override
+            public void onRewardResponse(BillingResult billingResult) {
+                if (billingResult.getResponseCode() == BillingResponseCode.OK) {
+                    // Enable the reward product, or make
+                    // any necessary updates to the UI.
+                    System.out.println("'tis done...");
+                    uiManager.enableRewardFromUiManager();
+                }
+                else
+                    System.out.println(billingResult.getDebugMessage());
+            }
+        };
     }
 
     protected UiManager createUiManager(SkusAdapter adapter, BillingProvider provider) {

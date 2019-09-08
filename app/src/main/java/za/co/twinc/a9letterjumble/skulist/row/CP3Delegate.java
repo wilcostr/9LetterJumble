@@ -40,7 +40,7 @@ public class CP3Delegate extends UiManagingDelegate {
     public void onBindViewHolder(SkuRowData data, RowViewHolder holder) {
         super.onBindViewHolder(data, holder);
         holder.button.setText(R.string.button_buy);
-        holder.skuIcon.setImageResource(R.drawable.cp3_icon);
+        holder.skuIcon.setImageResource(R.drawable.cp_star);
     }
 }
 
