@@ -26,7 +26,7 @@ import za.co.twinc.a9letterjumble.billing.BillingProvider;
 public class RewardDelegate extends UiManagingDelegate {
     public static final String SKU_ID = "reward";
 
-    public RewardDelegate(BillingProvider billingProvider) {
+    RewardDelegate(BillingProvider billingProvider) {
         super(billingProvider);
     }
 
@@ -42,10 +42,6 @@ public class RewardDelegate extends UiManagingDelegate {
         holder.button.setText(R.string.button_watch);
         //holder.button.setEnabled(false);
         holder.skuIcon.setImageResource(R.drawable.ic_video);
-    }
-
-    public void doSomething() {
-        enableRewardButton();
     }
 }
 

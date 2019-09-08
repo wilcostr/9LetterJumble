@@ -27,8 +27,8 @@ public class CardsWithHeadersDecoration extends RecyclerView.ItemDecoration {
         private final RowDataProvider mRowDataProvider;
         private final int mHeaderGap, mRowGap;
 
-        public CardsWithHeadersDecoration(RowDataProvider rowDataProvider, int headerGap,
-                int rowGap) {
+        CardsWithHeadersDecoration(RowDataProvider rowDataProvider, int headerGap,
+                                   int rowGap) {
             this.mRowDataProvider = rowDataProvider;
             this.mHeaderGap = headerGap;
             this.mRowGap = rowGap;

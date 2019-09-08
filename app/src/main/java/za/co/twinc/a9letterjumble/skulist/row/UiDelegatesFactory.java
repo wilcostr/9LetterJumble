@@ -29,7 +29,7 @@ import java.util.Map;
 public class UiDelegatesFactory {
     private final Map<String, UiManagingDelegate> uiDelegates;
 
-    public UiDelegatesFactory(BillingProvider provider) {
+    UiDelegatesFactory(BillingProvider provider) {
         uiDelegates = new LinkedHashMap<>();
         uiDelegates.put(RewardDelegate.SKU_ID, new RewardDelegate(provider));
         uiDelegates.put(PremiumDelegate.SKU_ID, new PremiumDelegate(provider));
@@ -57,11 +57,11 @@ public class UiDelegatesFactory {
         uiDelegates.get(data.getSku()).onBindViewHolder(data, holder);
     }
 
-    public void onButtonClicked(SkuRowData data) {
+    void onButtonClicked(SkuRowData data) {
         uiDelegates.get(data.getSku()).onButtonClicked(data);
     }
 
-    public void enableRewardFromFactory(SkuRowData data) {
+    void enableRewardFromFactory(SkuRowData data) {
         uiDelegates.get(data.getSku()).enableRewardButton();
     }
 }

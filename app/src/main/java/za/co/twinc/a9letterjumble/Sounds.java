@@ -10,8 +10,6 @@ import android.media.MediaPlayer;
 
 public class Sounds {
 
-    private MediaPlayer mediaPlayer;
-
     public void play(Context context, int sound){
         float volume = context.getSharedPreferences(
                 MainActivity.MAIN_PREFS, 0).getFloat("volume", 0.5f);
@@ -19,7 +17,7 @@ public class Sounds {
         if (volume==0f)
             return;
 
-        mediaPlayer = MediaPlayer.create(context, sound);
+        MediaPlayer mediaPlayer = MediaPlayer.create(context, sound);
         mediaPlayer.setVolume(volume, volume);
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -30,11 +28,11 @@ public class Sounds {
         mediaPlayer.start();
     }
 
-    public void playDing (Context context){
+    void playDing(Context context){
         play(context, R.raw.accept);
     }
 
-    public void playClick(Context context){
+    void playClick(Context context){
         play(context, R.raw.click02);
     }
 

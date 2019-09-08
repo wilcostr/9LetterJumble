@@ -18,6 +18,7 @@ package za.co.twinc.a9letterjumble.skulist;
 import static java.lang.annotation.RetentionPolicy.SOURCE;
 
 import android.support.annotation.IntDef;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 import za.co.twinc.a9letterjumble.skulist.row.RowDataProvider;
@@ -42,7 +43,7 @@ public class SkusAdapter extends RecyclerView.Adapter<RowViewHolder> implements 
     @IntDef({TYPE_HEADER, TYPE_NORMAL})
     public @interface RowTypeDef {}
     public static final int TYPE_HEADER = 0;
-    public static final int TYPE_NORMAL = 1;
+    static final int TYPE_NORMAL = 1;
 
     private UiManager mUiManager;
     private List<SkuRowData> mListData;
@@ -61,13 +62,14 @@ public class SkusAdapter extends RecyclerView.Adapter<RowViewHolder> implements 
         return mListData == null ? TYPE_HEADER : mListData.get(position).getRowType();
     }
 
+    @NonNull
     @Override
-    public RowViewHolder onCreateViewHolder(ViewGroup parent, @RowTypeDef int viewType) {
+    public RowViewHolder onCreateViewHolder(@NonNull ViewGroup parent, @RowTypeDef int viewType) {
         return mUiManager.onCreateViewHolder(parent, viewType);
     }
 
     @Override
-    public void onBindViewHolder(RowViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RowViewHolder holder, int position) {
         mUiManager.onBindViewHolder(getData(position), holder);
     }
 

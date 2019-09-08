@@ -65,7 +65,7 @@ public class SettingsActivity extends Activity {
                             if (((SwitchPreference)findPreference(s)).isChecked())
                                 MainActivity.setNotification(getActivity());
                             else
-                                MainActivity.cancelNotification(getActivity());
+                                MainActivity.cancelNotification();
                         }
                     }
                 };

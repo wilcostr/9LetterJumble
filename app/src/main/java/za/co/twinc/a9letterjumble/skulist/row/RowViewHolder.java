@@ -26,9 +26,9 @@ import za.co.twinc.a9letterjumble.R;
  * ViewHolder for quick access to row's views
  */
 public final class RowViewHolder extends RecyclerView.ViewHolder {
-    public TextView title, description, price;
+    TextView title, description, price;
     public Button button;
-    public ImageView skuIcon;
+    ImageView skuIcon;
 
     /**
      * Handler for a button click on particular row
@@ -52,9 +52,5 @@ public final class RowViewHolder extends RecyclerView.ViewHolder {
                 }
             });
         }
-    }
-
-    public void enableReward() {
-
     }
 }

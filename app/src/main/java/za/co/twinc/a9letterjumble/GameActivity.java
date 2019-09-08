@@ -3,6 +3,7 @@ package za.co.twinc.a9letterjumble;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -94,6 +95,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
     private Sounds mySounds;
 
+    @SuppressLint("StaticFieldLeak")
     private static Activity activity;
 
 
@@ -226,7 +228,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             wordsClues.addAll(prefSet);
 
         // Update the old clue system
-        if (wordsClues.size() > 0 && getStringFromPrefs("clue_words", "empty").equals("empty")){
+        if (wordsClues.size() > 0 && getClueWordsFromPrefs("empty").equals("empty")){
             StringBuilder temp = new StringBuilder();
             for (String s : wordsClues)
                 temp.append(";").append(s);
@@ -879,7 +881,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                     saveStringToPrefs("clue_words", word.toUpperCase());
                 else
                     saveStringToPrefs("clue_words",
-                            getStringFromPrefs("clue_words", "") + ";" + word.toUpperCase());
+                            getClueWordsFromPrefs("") + ";" + word.toUpperCase());
 
                 String clue = defDict.get(wordsDict.indexOf(word.toLowerCase()));
                 clue = getString(R.string.clue_new_message, clue, word.toUpperCase().charAt(0));
@@ -901,7 +903,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
     private void showOldClues(){
         String clueString = "";
-        for (String s : getStringFromPrefs("clue_words", "").split(";")){
+        for (String s : getClueWordsFromPrefs("").split(";")){
             String clue = defDict.get(wordsDict.indexOf(s.toLowerCase()));
             if (wordsIn.contains(s))
                 clue = getString(R.string.clue_solved_message, clue, s);
@@ -1004,7 +1006,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     private void askReview(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.rate_request, null);
+        @SuppressLint("InflateParams")
+            View dialogView = inflater.inflate(R.layout.rate_request, null);
         builder.setView(dialogView)
                 .setPositiveButton(R.string.review, new DialogInterface.OnClickListener() {
                     @Override
@@ -1182,9 +1185,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         editor.apply();
     }
 
-    private String getStringFromPrefs(String stringName, String defaultString){
+    private String getClueWordsFromPrefs(String defaultString){
         SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
-        return mainLog.getString(String.format(Locale.US, "%s_%d", stringName, gameNum), defaultString);
+        return mainLog.getString(String.format(Locale.US, "%s_%d", "clue_words", gameNum), defaultString);
     }
 
     private void saveStringSetToPrefs(String setName, Set<String> set){
@@ -1316,28 +1319,32 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         }
 
         @Override
+        @SuppressLint({"InflateParams", "SetTextI18n"})
         public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
             if (convertView == null){
                 // Create a new view
                 LayoutInflater inf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = inf.inflate(R.layout.definitions_group, null);
+                convertView = inf != null ? inf.inflate(R.layout.definitions_group, null) : null;
             }
-            TextView heading = convertView.findViewById(R.id.heading);
+            TextView heading = convertView != null ? (TextView)convertView.findViewById(R.id.heading) : null;
             String word = wordsArray[groupPosition].toLowerCase();
-            heading.setText(word.substring(0,1).toUpperCase() + word.substring(1));
+            if (heading != null)
+                heading.setText(word.substring(0,1).toUpperCase() + word.substring(1));
             return convertView;
         }
 
+        @SuppressLint("InflateParams")
         @Override
         public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
             if (convertView == null) {
                 // Create a new view
                 LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = infalInflater.inflate(R.layout.definitions_child, null);
+                convertView = infalInflater != null ? infalInflater.inflate(R.layout.definitions_child, null) : null;
             }
-            TextView childItem = convertView.findViewById(R.id.childItem);
+            TextView childItem = convertView != null ? (TextView)convertView.findViewById(R.id.childItem) : null;
             String def = defDict.get(wordsDict.indexOf(wordsArray[groupPosition].toLowerCase()));
-            childItem.setText(def);
+            if (childItem != null)
+                childItem.setText(def);
             return convertView;
         }
 

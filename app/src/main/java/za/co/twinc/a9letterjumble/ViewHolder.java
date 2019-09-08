@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import org.jetbrains.annotations.Contract;
 
 /**
  * Created by wilco on 2019/05/01.
@@ -16,7 +15,7 @@ public abstract class ViewHolder<Model> extends RecyclerView.ViewHolder {
 
     private Model model;
 
-    protected ViewHolder(View itemView)
+    ViewHolder(View itemView)
     {
         super(itemView);
         view = itemView;
@@ -34,7 +33,7 @@ public abstract class ViewHolder<Model> extends RecyclerView.ViewHolder {
         return model;
     }
 
-    public final void setModel(Model model)
+    final void setModel(Model model)
     {
         this.model = model;
         onSetModel(model);

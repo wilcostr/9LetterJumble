@@ -25,7 +25,7 @@ import za.co.twinc.a9letterjumble.billing.BillingProvider;
 public class PremiumDelegate extends UiManagingDelegate {
     public static final String SKU_ID = "premium";
 
-    public PremiumDelegate(BillingProvider billingProvider) {
+    PremiumDelegate(BillingProvider billingProvider) {
         super(billingProvider);
     }
 

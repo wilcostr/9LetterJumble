@@ -25,12 +25,12 @@ import za.co.twinc.a9letterjumble.billing.BillingProvider;
  */
 public abstract class UiManagingDelegate {
 
-    protected final BillingProvider mBillingProvider;
-    public Button rewardButton;
+    final BillingProvider mBillingProvider;
+    private Button rewardButton;
 
     public abstract @SkuType String getType();
 
-    public UiManagingDelegate(BillingProvider billingProvider) {
+    UiManagingDelegate(BillingProvider billingProvider) {
         mBillingProvider = billingProvider;
         rewardButton = null;
     }
@@ -51,12 +51,12 @@ public abstract class UiManagingDelegate {
         mBillingProvider.getBillingManager().initiatePurchaseFlow(data.getSku());
     }
 
-    protected void showAlreadyPurchasedToast() {
+    void showAlreadyPurchasedToast() {
         Toast.makeText(mBillingProvider.getBillingManager().getContext(),
                 R.string.alert_already_purchased, Toast.LENGTH_SHORT).show();
     }
 
-    public void enableRewardButton() {
+    void enableRewardButton() {
         if (rewardButton != null) {
             rewardButton.setEnabled(true);
             rewardButton.setAlpha(1f);

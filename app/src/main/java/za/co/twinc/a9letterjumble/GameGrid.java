@@ -42,7 +42,7 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
     Initialisation
     pack        gives the number of the level pack, or -1 to indicate pack selection
      */
-    public GameGrid(Context c, int pack, OnItemClickListener l) {
+    GameGrid(Context c, int pack, OnItemClickListener l) {
         super();
 
         listener = l;

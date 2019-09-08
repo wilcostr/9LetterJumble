@@ -45,7 +45,6 @@ import java.util.Map;
 import java.util.Set;
 
 import za.co.twinc.a9letterjumble.R;
-import za.co.twinc.a9letterjumble.skulist.row.UiManager;
 
 /**
  * Handles all the interactions with Play Store (via Billing library), maintains connection to
@@ -104,9 +103,10 @@ public class BillingManager implements PurchasesUpdatedListener {
     /**
      * Listener for the Billing client state to become connected
      */
-    public interface ServiceConnectedListener {
-        void onServiceConnected(BillingResult billingResult);
-    }
+    // TODO: Delete if safe
+//    public interface ServiceConnectedListener {
+//        void onServiceConnected(BillingResult billingResult);
+//    }
 
     public BillingManager(Activity activity, final BillingUpdatesListener updatesListener) {
         mActivity = activity;
@@ -301,7 +301,7 @@ public class BillingManager implements PurchasesUpdatedListener {
      * Query purchases across various use cases and deliver the result in a formalized way through
      * a listener
      */
-    public void queryPurchases() {
+    private void queryPurchases() {
         Runnable queryToExecute = new Runnable() {
             @Override
             public void run() {
@@ -313,7 +313,7 @@ public class BillingManager implements PurchasesUpdatedListener {
         executeServiceRequest(queryToExecute);
     }
 
-    public void startServiceConnection(final Runnable executeOnSuccess) {
+    private void startServiceConnection(final Runnable executeOnSuccess) {
         mBillingClient.startConnection(new BillingClientStateListener() {
             @Override
             public void onBillingSetupFinished(BillingResult billingResult) {

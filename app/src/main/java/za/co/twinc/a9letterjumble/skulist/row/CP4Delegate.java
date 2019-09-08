@@ -26,7 +26,7 @@ import za.co.twinc.a9letterjumble.billing.BillingProvider;
 public class CP4Delegate extends UiManagingDelegate {
     public static final String SKU_ID = "cp4";
 
-    public CP4Delegate(BillingProvider billingProvider) {
+    CP4Delegate(BillingProvider billingProvider) {
         super(billingProvider);
     }
 

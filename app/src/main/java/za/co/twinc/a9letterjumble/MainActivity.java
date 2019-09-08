@@ -1,5 +1,6 @@
 package za.co.twinc.a9letterjumble;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -288,7 +289,8 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         mySounds.playClick(getApplicationContext());
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.rate_request, null);
+        @SuppressLint("InflateParams")
+            View dialogView = inflater.inflate(R.layout.rate_request, null);
         SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
         if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, false)) {
             TextView textViewMessage = dialogView.findViewById(R.id.rate_request_message);
@@ -419,7 +421,8 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
     private void shareApp(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.share_request, null);
+        @SuppressLint("InflateParams")
+            View dialogView = inflater.inflate(R.layout.share_request, null);
         SharedPreferences settingsPref = PreferenceManager.getDefaultSharedPreferences(this);
         if (settingsPref.getBoolean(SettingsActivity.KEY_PREF_DARK, false)) {
             TextView textViewMessage = dialogView.findViewById(R.id.share_request_message);
@@ -442,7 +445,6 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) { }
                 }).create().show();
-
     }
 
     public void openStore(){
@@ -500,7 +502,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
     private void setNotification(){ setNotification(this);}
 
     // Clear a notification
-    public static void cancelNotification(Context ctx){
+    public static void cancelNotification(){
         alarmReceiver.cancelAlarm();
     }
 

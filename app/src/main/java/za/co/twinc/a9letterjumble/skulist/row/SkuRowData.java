@@ -43,7 +43,7 @@ public class SkuRowData {
         this.type = SkusAdapter.TYPE_HEADER;
     }
 
-    public String getSku() {
+    String getSku() {
         return sku;
     }
 
@@ -51,7 +51,7 @@ public class SkuRowData {
         return title;
     }
 
-    public String getPrice() {
+    String getPrice() {
         return price;
     }
 
