@@ -79,6 +79,9 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         mScreenWait = findViewById(R.id.screen_wait);
         mScreenMain = findViewById(R.id.screen_main);
 
+        // Initialise the media player
+        mySounds = new Sounds();
+
         // Check if we launched from notification
         Intent startMain = getIntent();
         if (startMain != null) {
@@ -123,9 +126,6 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
 
         // Set alarmReceiver for notifications
         setNotification();
-
-        // Initialise the media player
-        mySounds = new Sounds();
 
         // Check if the sound icon should show muted
         if (mainLog.getFloat("volume", 0.5f) == 0f)

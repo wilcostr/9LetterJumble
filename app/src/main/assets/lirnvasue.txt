@@ -1,0 +1,95 @@
+lives;plural form of life.
+value;the regard that something is held to deserve.
+values;the regard that something is held to deserve (plural).
+live;remain living.
+vans;a covered motor vehicle, typically without side windows, used for transporting goods or people (plural).
+save;keep safe or rescue (someone or something) from harm or danger.
+evil;profoundly immoral and malevolent.
+evils;profound immorality, wickedness, and depravity, especially when regarded as a supernatural force (plural).
+visual;relating to seeing or sight.
+silver;a precious shiny grayish-white metal.
+liver;a large lobed glandular organ in the abdomen of vertebrates, involved in many metabolic processes.
+livers;a large lobed glandular organ in the abdomen of vertebrates, involved in many metabolic processes (plural).
+alive;(of a person, animal, or plant) living, not dead.
+slave;a person who is the legal property of another and is forced to obey them.
+virus;an infective agent that is too small to be seen by light microscopy, and is able to multiply only within the living cells of a host.
+varies;differ in size, amount, degree, or nature from something else of the same general class.
+navies;the branch of a nation's armed services that conducts military operations at sea (plural).
+vein;any of the tubes forming part of the blood circulation system of the body, carrying in most cases oxygen-depleted blood toward the heart.
+laver;a basin or similar container used for washing oneself.
+veins;any of the tubes forming part of the blood circulation system of the body, carrying in most cases oxygen-depleted blood toward the heart (plural).
+vain;having or showing an excessively high opinion of one's appearance, abilities, or worth.
+rival;a person competing with another for the same objective or for superiority in the same field of activity.
+rivals;a person competing with another for the same objective or for superiority in the same field of activity (plural).
+naevi;a birthmark or a mole on the skin, especially a birthmark in the form of a raised red patch (plural) (both spellings accepted).
+nevi;a birthmark or a mole on the skin, especially a birthmark in the form of a raised red patch (plural) (both spellings accepted).
+naevus;a birthmark or a mole on the skin, especially a birthmark in the form of a raised red patch (both spellings accepted).
+nevus;a birthmark or a mole on the skin, especially a birthmark in the form of a raised red patch (both spellings accepted).
+revs;revolutions of an engine per minute.
+viral;of the nature of, caused by, or relating to a virus or viruses.
+naive;(of a person or action) showing a lack of experience, wisdom, or judgment.
+naiver;(of a person or action) showing a lack of experience, wisdom, or judgment (comparative adj).
+veil;a piece of fine material worn by women to protect or conceal the face.
+veils;a piece of fine material worn by women to protect or conceal the face (plural).
+raven;a large heavily built crow with mainly black plumage, feeding chiefly on carrion.
+lavers;a basin or similar container used for washing oneself (plural).
+ravens;a large heavily built crow with mainly black plumage, feeding chiefly on carrion (plural).
+vies;compete eagerly with someone in order to do or achieve something.
+vine;a climbing or trailing woody-stemmed plant of the grape family.
+vines;a climbing or trailing woody-stemmed plant of the grape family (plural).
+vase;a decorative container, typically made of glass or china and used as an ornament or for displaying cut flowers.
+visa;an endorsement on a passport indicating that the holder is allowed to enter, leave, or stay for a specified period of time in a country.
+nave;the central part of a church building, intended to accommodate most of the congregation.
+naves;the central part of a church building, intended to accommodate most of the congregation (plural).
+vile;extremely unpleasant.
+viler;extremely unpleasant (comparative adj).
+vale;a valley (used in place names or as a poetic term).
+vales;a valley (used in place names or as a poetic term) (plural).
+ravine;a deep, narrow gorge with steep sides.
+ravines;a deep, narrow gorge with steep sides (plural).
+vane;a broad blade attached to a rotating axis that pushes or is pushed by wind or water and forms part of a windmill, propeller, or turbine.
+vanes;a broad blade attached to a rotating axis that pushes or is pushed by wind or water and forms part of a windmill, propeller, or turbine (plural).
+vial;a small container, typically cylindrical and made of glass, used especially for holding liquid medicines.
+vials;a small container, typically cylindrical and made of glass, used especially for holding liquid medicines (plural).
+unravel;undo (twisted, knitted, or woven threads).
+unravels;undo (twisted, knitted, or woven threads) (third person).
+navel;a rounded, knotty depression in the center of a person's belly caused by the detachment of the umbilical cord after birth.
+navels;a rounded, knotty depression in the center of a person's belly caused by the detachment of the umbilical cord after birth (plural).
+anvil;a heavy steel or iron block with a flat top, concave sides, and typically a pointed end, on which metal can be hammered and shaped.
+anvils;a heavy steel or iron block with a flat top, concave sides, and typically a pointed end, on which metal can be hammered and shaped (plural).
+veal;the flesh of a calf, used as food.
+vise;a metal tool with movable jaws that are used to hold an object firmly in place while work is done on it, typically attached to a workbench.
+salve;an ointment used to promote healing of the skin or as protection.
+rave;talk wildly or incoherently, as if one were delirious or insane.
+raves;talk wildly or incoherently, as if one were delirious or insane (third person).
+saver;a person who regularly saves money through a bank or recognized scheme.
+sliver;a small, thin, narrow piece of something cut or split off a larger piece.
+vernal;of, in, or appropriate to spring.
+suave;(especially of a man) charming, confident, and elegant.
+suaver;(especially of a man) charming, confident, and elegant (comparative adj).
+aver;state or assert to be the case.
+avers;state or assert to be the case (third person).
+ravel;untangle or unravel something.
+ravels;untangle or unravel something (third person).
+valuer;a person whose job is to estimate the value of something that is to be purchased.
+venal;showing or motivated by susceptibility to bribery.
+valise;a small traveling bag or suitcase.
+unveil;remove a veil or covering from, especially uncover (a new monument or work of art) as part of a public ceremony.
+unveils;remove a veil or covering from, especially uncover (a new monument or work of art) as part of a public ceremony (third person).
+riven;split or torn apart violently (adj).
+venial;denoting a sin that is not regarded as depriving the soul of divine grace.
+slaver;a person dealing in or owning slaves.
+liven;make or become more lively or interesting.
+livens;make or become more lively or interesting (third person).
+salver;a tray, typically one made of silver and used in formal circumstances.
+snivel;cry and sniffle.
+vainer;having or showing an excessively high opinion of one's appearance, abilities, or worth (comparative adj).
+universal;said of, or done by all people or things in the world.
+surveil;to watch secretly.
+revisal;the act of rewriting something.
+unlive;to annul or wipe out (past experience, etc.)
+valuers;a person whose job is to estimate the value of something that is to be purchased (plural).
+serval;an African wildcat.
+avulse;to tear off forcibly.
+lave;wash one's face and hands.
+rive;separate or cut with a tool, such as a sharp instrument.

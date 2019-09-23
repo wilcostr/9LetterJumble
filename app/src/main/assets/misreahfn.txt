@@ -1,0 +1,136 @@
+hire;employ (someone) for wages.
+miners;a person who works in a mine (plural).
+marines;a member of a body of troops trained to serve on land or sea (plural).
+hers;used to refer to a thing or things belonging to or associated with a female person or animal previously mentioned.
+fries;potato pieces cooked in hot fat or oil (plural).
+safe;protected from or not exposed to danger or risk.
+fireman;a male firefighter.
+near;at or to a short distance away.
+risen;move from a lower position to a higher one - come or go up (past tense).
+miser;a person who hoards wealth and spends as little money as possible.
+fisherman;a person who catches fish for a living or for sport.
+freshman;a first-year student at university.
+hear;perceive with the ear the sound made by (someone or something).
+hame;either of the two rigid pieces along the sides of a horse's collar, to which the traces are attached.
+same;identical, not different.
+mare;the female of a horse or other equine animal.
+name;a word or set of words by which a person or thing is known, addressed, or referred to.
+serif;a slight projection finishing off a stroke of a letter in certain typefaces.
+heir;a person legally entitled to the property or rank of another on that person's death.
+namers;a person who gives a name or names (plural).
+ears;the organ of hearing and balance in humans and other vertebrates.
+reams;500 (formerly 480) sheets of paper (plural).
+anime;a style of Japanese film and television animation, typically aimed at adults as well as children.
+masher;a utensil for mashing food.
+airmen;a pilot or member of the crew of an aircraft, especially in an air force (plural).
+afresh;in a new or different way.
+fires;a process of combustion or burning (plural).
+shamer;a person who publicly mocks or criticizes someone for a particular aspect of their appearance or behaviour in order to make them feel humiliated.
+sane;(of a person) of sound mind.
+ares;a metric unit of measurement, equal to 100 square metres (plural).
+fisher;a person who catches fish for a living or for sport.
+fame;the state of being known or talked about by many people, especially on account of notable achievements.
+mares;the female of a horse or other equine animal (plural).
+hems;the edge of a piece of cloth or clothing which has been turned under and sewn (plural).
+nears;approach (third person).
+seam;a line where two pieces of fabric are sewn together in a garment or other article.
+harem;(in former times) the separate part of a Muslim household reserved for wives, concubines, and female servants.
+finer;of very high quality (comparative adj).
+mean;intend to convey or refer to (a particular thing).
+snare;a trap for catching birds or mammals, typically one having a noose of wire or cord.
+fare;the money paid for a journey on public transport.
+rhea;a large flightless bird of South American grasslands, resembling a small ostrich with greyish-brown plumage.
+amen;uttered at the end of a prayer or hymn, meaning ‘so be it’.
+hare;a fast-running, long-eared mammal that resembles a large rabbit, having very long hind legs and typically found in grassland or open woodland.
+raise;lift or move to a higher position or level.
+safer;protected from or not exposed to danger or risk (comparative adj).
+ashier;of a pale greyish colour (comparative adj).
+miner;a person who works in a mine.
+emir;a title of various Muslim (mainly Arab) rulers.
+sheaf;a bundle of grain stalks laid lengthways and tied together after reaping.
+manes;a growth of long hair on the neck of a horse, lion, or other mammal (plural).
+harems;(in former times) the separate part of a Muslim household reserved for wives, concubines, and female servants (plural).
+rife;(especially of something undesirable) of common occurrence - widespread.
+resin;a sticky flammable organic substance, insoluble in water, exuded by some trees and other plants (notably fir and pine).
+hens;a female bird, especially of a domestic fowl (plural).
+marine;relating to or found in the sea.
+hies;go quickly.
+saner;(of a person) of sound mind (comparative adj).
+emirs;a title of various Muslim (mainly Arab) rulers (plural).
+serf;an agricultural labourer bound by the feudal system who was tied to working on his lord's estate.
+seminar;a conference or other meeting for discussion or training.
+fresh;(of food) recently made or obtained. Not tinned, frozen, or otherwise preserved.
+inseam;another term for inside leg.
+mesa;an isolated flat-topped hill with steep sides, found in landscapes with horizontal strata.
+rheas;a large flightless bird of South American grasslands, resembling a small ostrich with greyish-brown plumage (plural).
+fares;the money paid for a journey on public transport (plural).
+fines;a sum of money exacted as a penalty by a court of law or other authority (plural).
+hernia;a condition in which part of an organ is displaced and protrudes through the wall of the cavity containing it.
+sine;the trigonometric function.
+arise;(of a problem, opportunity, or situation) emerge, become apparent.
+sear;burn or scorch the surface of (something) with a sudden, intense heat.
+share;a part or portion of a larger amount which is divided among a number of people, or to which a number of people contribute.
+fine;of very high quality.
+hares;a fast-running, long-eared mammal that resembles a large rabbit (plural).
+namer;a person who gives a name or names.
+ferns;a flowerless plant which has feathery or leafy fronds and reproduces by spores released from the undersides of the fronds (plural).
+smear;coat or mark (something) messily or carelessly with a greasy or sticky substance.
+manse;a house provided for a minister of certain Christian Churches.
+earns;obtain (money) in return for labour or services (third person).
+earn;obtain (money) in return for labour or services.
+rime;frost formed on cold objects by the rapid freezing of water vapour in cloud or fog.
+mesh;material made of a network of wire or thread.
+infer;deduce or conclude (something) from evidence and reasoning rather than from explicit statements.
+fears;an unpleasant emotion caused by the threat of danger, pain, or harm (plural).
+hears;perceive with the ear the sound made by someone or something (third person).
+rise;move from a lower position to a higher one - come or go up.
+ahem;used to represent the noise made when clearing the throat, typically to attract attention or express disapproval or embarrassment.
+shame;a painful feeling of humiliation or distress caused by the consciousness of wrong or foolish behaviour.
+fern;a flowerless plant which has feathery or leafy fronds and reproduces by spores released from the undersides of the fronds.
+mines;an excavation in the earth for extracting coal or other minerals (plural).
+mine;used to refer to a thing or things belonging to or associated with the speaker.
+mire;a stretch of swampy or boggy ground.
+anise;a Mediterranean plant of the parsley family, cultivated for its aromatic seeds which are used in cooking and herbal medicine.
+rinse;wash (something) with clean water to remove soap, detergent, dirt, or impurities.
+shiner;a thing that shines or reflects light.
+reins;a long, narrow strap attached at one end to a horse's bit, typically used in pairs to guide or check a horse in riding or driving (plural).
+hernias;a condition in which part of an organ is displaced and protrudes through the wall of the cavity containing it (plural).
+fens;a low and marshy or frequently flooded area of land (plural).
+famines;extreme scarcity of food (plural).
+sera;plural form of serum.
+sire;the male parent of an animal, especially a stallion or bull kept for breeding.
+shear;cut the wool off (a sheep or other animal).
+remain;continue to exist, especially after other similar people or things have ceased to do so.
+miens;a person's appearance or manner, especially as an indication of their character or mood.
+hires;employ (someone) for wages (third person).
+ream;500 (formerly 480) sheets of paper.
+fear;an unpleasant emotion caused by the threat of danger, pain, or harm.
+afire;on fire, burning.
+remains;the parts left over after other parts have been removed, used, or destroyed.
+mires;a stretch of swampy or boggy ground (plural).
+frames;a rigid structure that surrounds something such as a picture, door, or windowpane (plural).
+hames;two curved pieces of iron or wood forming or attached to the collar of a draught horse, to which the traces are attached.
+ashen;(of a person's face) very pale with shock, fear, or illness.
+heirs;a person legally entitled to the property or rank of another on that person's death (plural).
+shrine;a place regarded as holy because of its associations with a divinity or a sacred person or relic.
+arsine;a poisonous gas smelling slightly of garlic.
+infers;deduce or conclude (something) from evidence and reasoning rather than from explicit statements (third person).
+mane;a growth of long hair on the neck of a horse, lion, or other mammal.
+ramen;quick-cooking noodles, typically served in a broth with meat and vegetables.
+fire;a process of combustion or burning.
+shire;a county, especially in England, or any of the former districts or regions in Great Britain.
+rimes;cover (an object) with hoar frost (third person).
+means;an action or system by which a result is achieved - a method.
+siren;a device that makes a loud prolonged signal or warning sound.
+armies;an organized military force equipped for fighting on land (plural).
+names;a word or set of words by which a person or thing is known, addressed, or referred to (plural).
+shine;(of the sun or another source of light) give out a bright light.
+arisen;(of a problem, opportunity, or situation) emerge, become apparent (past tense).
+frame;a rigid structure that surrounds something such as a picture, door, or windowpane.
+eras;a long and distinct period of history (plural).
+rein;a long, narrow strap attached at one end to a horse's bit, typically used in pairs to guide or check a horse in riding or driving.
+famine;extreme scarcity of food.
+mien;a person's appearance or manner, especially as an indication of their character or mood.
+shea;a small tropical African tree which bears oily nuts from which a body butter is often made.
+menhir;a tall upright megalith.
+menhirs;a tall upright megalith (plural).

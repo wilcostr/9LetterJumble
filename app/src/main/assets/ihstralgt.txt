@@ -1,0 +1,60 @@
+lair;a place where a wild animal lives.
+thirst;a feeling of needing or wanting to drink something.
+trial;a formal examination of evidence by a judge in order to decide guilt in a case of criminal or civil proceedings.
+lairs;a place where a wild animal lives (plural).
+alright;of a satisfactory or acceptable quality.
+astir;in a state of excited movement.
+tarts;an open pastry case containing a sweet or savoury filling (plural).
+trials;a formal examination of evidence by a judge in order to decide guilt in a case of criminal or civil proceedings (plural).
+stir;move a spoon round and round in a liquid.
+tars;cover something with tar.
+stair;a set of steps leading from one floor to another (singular).
+artist;a person who creates paintings or drawings as a profession or hobby.
+trash;waste material.
+grit;small loose particles of stone or sand.
+starlit;lit or made brighter by stars.
+girls;a female child (plural).
+hart;an adult male deer.
+harts;an adult male deer (plural).
+rash;acting or done without careful consideration of the possible consequences.
+star;a fixed luminous point in the night sky which is a large, remote incandescent body like the sun.
+rats;a rodent that resembles a large mouse (plural).
+garish;obtrusively bright and showy.
+trail;a mark or a series of signs or objects left behind by the passage of someone or something.
+liar;a person who tells lies.
+girl;a female child.
+grist;corn that is ground to make flour.
+aright;correctly and properly.
+straight;without a curve or bend.
+grits;a dish of coarsely ground maize kernels boiled with water or milk.
+tart;an open pastry case containing a sweet or savoury filling.
+right;morally good, justified, or acceptable.
+hair;any of the fine thread-like strands growing from the skin of humans, mammals, and some other animals.
+rags;a piece of old cloth (plural).
+liars;a person who tells lies (plural).
+trait;a distinguishing quality or characteristic, typically one belonging to a person.
+start;embark on a continuing action or a new venture.
+sitar;a large, long-necked Indian lute with movable frets, played with a wire pick.
+sari;a garment consisting of a length of cotton or silk elaborately draped around the body, traditionally worn by women from South Asia.
+strait;a narrow passage of water connecting two seas or two other large areas of water.
+starlight;the light that comes from the stars.
+girth;the measurement around the middle of something, especially a person's waist.
+hairs;any of the fine thread-like strands growing from the skin of humans, mammals, and some other animals (plural).
+rail;a bar or series of bars fixed on upright supports or attached to a wall or ceiling.
+traits;a distinguishing quality or characteristic, typically one belonging to a person (plural).
+grail;a cup or chalice that in medieval legend was associated with unusual powers.
+trails;a mark or a series of signs or objects left behind by the passage of someone or something (plural).
+shirt;a garment for the upper body.
+gratis;without charge - free.
+girths;the measurement around the middle of something, especially a person's waist (plural).
+tsar;one having great power or authority.
+arts;the expression or application of human creative skill and imagination, typically in a visual form such as painting or sculpture (plural).
+rails;a bar or series of bars fixed on upright supports or attached to a wall or ceiling (plural).
+rigs;provide (a sailing boat) with sails and rigging.
+airs;the invisible gaseous substance surrounding the earth, a mixture mainly of oxygen and nitrogen (plural).
+girts;secure (a garment or sword) on the body with a belt or band (third person).
+girt;secure (a garment or sword) on the body with a belt or band (past participle).
+rights;that which is morally correct, just, or honourable (plural).
+rial;a basic monetary unit of some Middle Eastern countries.
+rials;a basic monetary unit of some Middle Eastern countries (plural).
+athirst;having a strong eager desire.
