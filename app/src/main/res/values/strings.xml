@@ -66,6 +66,7 @@
     <string name="button_howto">How To</string>
     <string name="button_store">Store</string>
     <string name="button_ads">Why Ads</string>
+    <string name="button_solve">Solve</string>
 
     <string name="game_invalid_guess">%s is not a valid word</string>
     <string name="game_short_guess">Minimum of four letters required</string>
@@ -103,6 +104,7 @@
     <string name="definitions">Definitions</string>
 
     <string name="clues">Clues</string>
+    <string name="solution">Solution</string>
     <string name="clue_gained_one">1 clue token gained</string>
     <string name="clue_gained">%d clue tokens gained</string>
     <string name="clues_available_tokens">Available clue tokens: %1$d</string>
@@ -113,8 +115,8 @@
     <string name="clues_use">Get clue</string>
     <string name="clues_old">View clues</string>
 
-    <string name="clue_new">New clue</string>
-    <string name="clue_new_message">"%1$s\nFirst letter: %2$s"</string>
+    <string name="clue_new">Clue</string>
+    <string name="clue_new_message">"%1$s\nFirst letter: %2$s \n\nUse another clue token to view the solution?"</string>
     <string name="clue_solved_message">"%1$s\nSolved: %2$s"</string>
 
     <string name="unlock_title">Unlock %s</string>

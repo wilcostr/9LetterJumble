@@ -603,7 +603,11 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         }
 
         // Entered word is correct input
+        addWord(guess.toString());
+    }
 
+
+    private void addWord(String word){
         // Play a sound
         mySounds.play(this, R.raw.accept);
 
@@ -628,10 +632,10 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             // Hand out clues every 15 words
             if (score%15 == 0)
                 increaseCounterFab();
-            // Show a tapTarget for getting clues after the first 8 words
+                // Show a tapTarget for getting clues after the first 8 words
             else if (score == 8)
                 showClueTip();
-            // Show a tapTarget for stats screen after the first 13 words
+                // Show a tapTarget for stats screen after the first 13 words
             else if (score == 13)
                 showStatsTip();
         }
@@ -646,7 +650,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         }
 
         // Clue for getting a 9 letter word
-        if (guess.length() == 9) {
+        if (word.length() == 9) {
             increaseCounterFab();
             throwConfetti();
         }
@@ -658,7 +662,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         if (score == unlockRequirement)
             unlockNext();
 
-        wordsIn.add(guess.toString());
+        wordsIn.add(word.toString());
         saveStringSetToPrefs("words", wordsIn);
         updateWordList();
     }
@@ -826,6 +830,14 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     }
 
     private void showClueDialog(){
+        // If There is an unsolved clue, don't offer new clues
+        for (String word : wordsClues){
+            if (!wordsIn.contains(word)){
+                showUnsolvedClue(word);
+                return;
+            }
+        }
+
         String message;
         if (counterFab.getCount() == 0 && wordsClues.size() == 0)
             message = getString(R.string.clues_message_no_tokens);
@@ -855,12 +867,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                         showOldClues();
                     }
                 })
-                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
+                .setNegativeButton(android.R.string.cancel, null);
         AlertDialog dialog = builder.create();
         dialog.show();
         if (counterFab.getCount() < 1 || score == wordsDict.size())
@@ -870,35 +877,56 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     }
 
     private void giveClue(){
-        for (String word: wordsDict){
-            if (!wordsIn.contains(word.toUpperCase()) && !wordsClues.contains(word.toUpperCase())){
+        for (String wordLower: wordsDict){
+            String word = wordLower.toUpperCase();
+            if (!wordsIn.contains(word) && !wordsClues.contains(word)){
                 decreaseCounterFab();
-                wordsClues.add(word.toUpperCase());
+                wordsClues.add(word);
                 saveStringSetToPrefs("clues", wordsClues);
                 saveCluesUsed();
 
                 if (wordsClues.size() == 1)
-                    saveStringToPrefs("clue_words", word.toUpperCase());
+                    saveStringToPrefs("clue_words", word);
                 else
                     saveStringToPrefs("clue_words",
-                            getClueWordsFromPrefs("") + ";" + word.toUpperCase());
+                            getClueWordsFromPrefs("") + ";" + word);
 
-                String clue = defDict.get(wordsDict.indexOf(word.toLowerCase()));
-                clue = getString(R.string.clue_new_message, clue, word.toUpperCase().charAt(0));
-
-                // add double space to the clue when displaying in isolation
-                clue = clue.replace("First letter:", "\nFirst letter:");
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle(R.string.clue_new)
-                        .setMessage(clue)
-                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) { }
-                        }).create().show();
+                showUnsolvedClue(word);
                 return;
             }
         }
+    }
+
+    private void showUnsolvedClue(final String word){
+        String clue = defDict.get(wordsDict.indexOf(word.toLowerCase()));
+        clue = getString(R.string.clue_new_message, clue, word.charAt(0));
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.clue_new)
+                .setMessage(clue)
+                .setPositiveButton(R.string.exit, null)
+                .setNeutralButton(R.string.button_solve, new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i){
+                        decreaseCounterFab();
+                        addWord(word);
+                        String clue = defDict.get(wordsDict.indexOf(word.toLowerCase()));
+                        showSolution(word);
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        if (counterFab.getCount() < 1)
+            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setEnabled(false);
+    }
+
+    private void showSolution(String solution){
+        AlertDialog.Builder innerBuilder = new AlertDialog.Builder(this);
+        innerBuilder.setTitle(R.string.solution)
+                .setMessage(solution)
+                .setPositiveButton(android.R.string.ok, null)
+                .create()
+                .show();
     }
 
     private void showOldClues(){
