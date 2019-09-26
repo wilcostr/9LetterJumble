@@ -92,3 +92,4 @@ imager;an electronic or other device which records images of something.
 argent;the heraldic color silver or white.
 gratin;in cooking, a dish that has a thin layer of cheese and often breadcrumbs on top.
 rehang;hang (something) again or differently.
+hegira;a journey by a large group to escape from a hostile environment.

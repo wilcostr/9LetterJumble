@@ -80,3 +80,4 @@ posed;present or constitute (a problem or danger) (third person).
 moused;(of a cat or owl) hunt for or catch mice.
 spue;eject the contents of the stomach through the mouth.
 unposed;not arranged for pictorial purposes.
+eponym;the person for whom something is named.

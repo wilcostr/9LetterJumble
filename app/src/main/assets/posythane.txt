@@ -107,3 +107,4 @@ antsy;nervous and unable to relax.
 shoat;a young pig.
 teashop;a restaurant where tea and light meals are available.
 thane;a man ranking above an ordinary freeman and below a noble in Anglo-Saxon England (especially one who gave military service in exchange for land).
+pesty;bothersome or irritating.
