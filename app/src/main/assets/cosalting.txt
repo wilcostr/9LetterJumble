@@ -1,0 +1,216 @@
+loan;a thing that is borrowed, especially a sum of money that is expected to be paid back with interest.
+tonsil;either of two masses of lymphatic tissue one on each side of the oral pharynx.
+gnat;a small two-winged fly that resembles a mosquito.
+lions;a large tawny-colored cat that lives in prides, found in Africa and northwestern India (plural).
+actions;the fact or process of doing something, typically to achieve an aim (plural).
+tail;the hindmost part of an animal, especially when prolonged beyond the rest of the body.
+cogs;a wheel or bar with a series of projections on its edge, which transfers motion by engaging with projections on another wheel or bar (plural).
+noils;short strands and knots combed out of wool fibre before spinning (plural).
+coatings;a thin layer or covering of something (plural).
+locating;a determination of the place where something is.
+song;a short poem or other set of words set to music or meant to be sung.
+clangs;a loud, resonant metallic sound or series of sounds (plural).
+colas;a brown carbonated drink (plural).
+clots;a thick mass of coagulated liquid, especially blood, or of material stuck together (plural).
+snail;a gastropod mollusk usually having an external enclosing spiral shell.
+octal;relating to or using a system of numerical notation that has 8 rather than 10 as a base.
+loans;a thing that is borrowed, especially a sum of money that is expected to be paid back with interest (plural).
+tangs;a strong taste, flavour, or smell (plural).
+gins;a clear alcoholic spirit distilled from grain or malt and flavoured with juniper berries (plural).
+lacing;the laced fastening of a shoe or garment.
+tonic;a medicinal substance taken to give a feeling of vigour or well-being.
+glint;give out or reflect small flashes of light.
+oats;a species of cereal grain grown for its seed.
+slit;a long narrow opening.
+stoical;enduring pain and hardship without showing one's feelings or complaining.
+losing;be deprived of or cease to have or retain (something).
+slot;a long, narrow aperture or slit in a machine for something to be inserted.
+scan;look at all parts of (something) carefully in order to detect some feature.
+lingo;a foreign language or local dialect.
+longs;have a strong wish or desire (third person).
+into;expressing movement or action with the result that someone or something becomes enclosed or surrounded by something else.
+tans;become brown or browner after exposure to the sun (third person).
+coils;a length of something wound in a joined sequence of concentric rings (plural).
+login;the information you use to sign into a computer or online service.
+slag;stony waste matter separated from metals during the smelting or refining of ore.
+soil;the upper layer of earth in which plants grow.
+coat;an outer garment with sleeves, worn outdoors and typically extending below the hips.
+coals;a combustible black or dark brown rock consisting chiefly of carbonized plant matter (plural).
+tons;a unit of weight equal to 1000 kg (plural).
+goat;any of numerous agile ruminants related to sheep but having a beard and straight horns.
+togas;a loose flowing outer garment worn by the citizens of ancient Rome (plural).
+agnostic;a person who believes that nothing is known or can be known of the existence or nature of God.
+cosign;to sign and endorse another person's signature, as for a loan.
+slog;work hard over a period of time.
+cantos;one of the sections into which certain long poems are divided.
+goal;the object of a person's ambition or effort.
+gains;obtain or secure (something wanted or desirable) (third person).
+angst;an acute but unspecific feeling of anxiety.
+sonic;relating to audible sound.
+clog;a shoe with a thick wooden sole.
+action;the fact or process of doing something, typically to achieve an aim.
+oils;a viscous liquid derived from petroleum, especially for use as a fuel or lubricant (plural).
+also;in addition.
+stain;mark or discolour with something that is not easily removed.
+gnats;a small two-winged fly that resembles a mosquito. Gnats include both biting and non-biting forms, and they typically form large swarms (plural).
+coin;a flat disc or piece of metal with an official stamp, used as money.
+gaols;chiefly British alternative spelling of 'jail' (pronounced the same) (plural).
+social;marked by friendly companionship with others.
+loins;the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones (plural).
+slat;a thin, narrow piece of wood, plastic, or metal, especially one of a series which overlap or fit into each other, as in a fence or a Venetian blind.
+sating;satisfy (a desire or an appetite) to the full.
+coasting;moving easily without using power.
+scion;a descendent or heir.
+slant;slope in a particular direction OR diverge or cause to diverge from the vertical or horizontal.
+oast;a usually conical kiln used for drying hops, malt, or tobacco.
+tails;the hindmost part of an animal, especially when prolonged beyond the rest of the body (plural).
+slain;killed.
+casting;an object made by pouring molten metal or other material into a mould.
+lain;place in a horizontal position (past participle).
+logs;a part of the trunk or a large branch of a tree that has fallen or been cut off (plural).
+lots;a large number or amount of something.
+nits;the egg or young form of a louse or other parasitic insect, especially the egg of a human head louse attached to a hair.
+clan;a close-knit group of interrelated families, especially in the Scottish Highlands.
+clang;a loud resonant repeating noise.
+scaling;ascent by or as if by a ladder.
+cant;hypocritical and sanctimonious talk, typically of a moral, religious, or political nature.
+coats;an outer garment with sleeves, worn outdoors and typically extending below the hips (plural).
+goats;a hardy domesticated ruminant mammal that has backward-curving horns and (in the male) a beard (plural).
+logic;reasoning conducted or assessed according to strict principles of validity.
+snag;an unexpected or hidden obstacle or drawback.
+antics;foolish, outrageous, or amusing behaviour.
+casing;a cover or shell that protects or encloses something.
+lasting;existing for a long time.
+slang;a type of language consisting of words and phrases that are regarded as very informal, are more common in speech than writing.
+oilcan;a can, especially one with a long nozzle, for machine lubricant.
+casino;a public room or building where gambling games are played.
+tang;a strong taste, flavour, or smell.
+coati;omnivorous mammal of Central America and South America.
+giants;an imaginary or mythical being of human form but superhuman size (plural).
+tongs;any of various devices for taking hold of objects.
+nail;a small metal spike with a broadened flat head, driven into wood to join things together or to serve as a hook.
+costing;the proposed or estimated cost of producing or undertaking something.
+staling;make or become stale.
+nags;harass (someone) constantly to do something that they are averse to (third person).
+silo;a tower or pit on a farm used to store grain.
+sting;feel or cause to feel a sharp tingling or burning pain.
+gist;the choicest or most essential or most vital part of some idea or experience.
+along;moving in a constant direction on (a path or any more or less horizontal surface).
+salting;the act of adding salt to food.
+talc;fine powder with a pleasant smell which people put on their bodies after they have had a bath or a shower.
+satin;a smooth, glossy fabric, usually of silk.
+tins;an airtight sealed container for preserving food (plural).
+castling;interchanging the positions of the king and a rook.
+altos;the highest adult male singing voice (sometimes distinguished from the countertenor voice as using falsetto).
+loin;the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones.
+nails;a small metal spike with a broadened flat head, driven into wood to join things together or to serve as a hook (plural).
+ions;an atom or molecule with a net electric charge due to the loss or gain of one or more electrons (plural).
+lost;past and past participle of lose.
+coital;connected with or relating to sexual intercourse.
+cants;talk hypocritically and sanctimoniously about something (third person).
+colt;a young uncastrated male horse, in particular one less than four years old.
+tics;a habitual spasmodic contraction of the muscles, most often in the face.
+sign;an object, quality, or event whose presence or occurrence indicates the probable presence or occurrence of something else.
+sago;edible starch that is obtained from a palm and is a staple food in parts of the tropics.
+snog;kiss and cuddle amorously.
+acting;the performance of a part or role in a drama.
+acts;take action (third person).
+coal;a combustible black or dark brown rock consisting chiefly of carbonized plant matter.
+silt;fine sand, clay, or other material carried by running water and deposited as a sediment, especially in a channel or harbour.
+saint;a person acknowledged as holy or virtuous and regarded in Christian faith as being in heaven after death.
+ails;trouble or afflict (someone) in mind or body (third person).
+gilts;gold leaf or gold paint applied in a thin layer to a surface (plural).
+clings;hold on tightly to (third person).
+gaol;chiefly British alternative spelling of 'jail' (pronounced the same).
+coil;a length of something wound in a joined sequence of concentric rings.
+ants;a small insect that lives in a complex social colony with one or more breeding queens (plural).
+lion;a large tawny-colored cat that lives in prides, found in Africa and northwestern India.
+goals;the object of a person's ambition or effort (plural).
+lags;fail to keep up with another or others in movement or development (third person).
+tango;a ballroom dance of Latin-American origin.
+tacos;a Mexican dish consisting of a folded or rolled tortilla filled with various mixtures, such as seasoned mince, chicken, or beans.
+cast;throw (something) forcefully in a specified direction.
+talon;a claw, especially one belonging to a bird of prey.
+logins;the information you use to sign into a computer or online service (plural).
+ingots;a block of steel, gold, silver, or other metal, typically oblong in shape (plural).
+soli;plural form of solo.
+sing;make musical sounds with the voice, especially words with a set tune.
+last;coming after all others in time or order.
+ingot;metal that is cast in the shape of a block for convenient handling.
+anti;opposed to - against.
+icons;a symbol or graphic representation on a screen of a program, option, or window (plural).
+sang;past of sing.
+tings;a sharp, clear ringing sound (third person).
+cans;a cylindrical metal container (plural).
+tangos;a ballroom dance originating in Buenos Aires, characterized by marked rhythms and postures and abrupt pauses (plural).
+icon;a symbol or graphic representation on a screen of a program, option, or window.
+snot;nasal mucus.
+antilog;the number of which a given number is the logarithm.
+cost;(of an object or action) the payment of a specified sum of money before it can be acquired or done.
+gloat;malicious satisfaction.
+slating;the act of laying slates for a roof.
+otic;relating to the ear.
+nostalgic;unhappy about being away and longing for familiar things or persons.
+scant;less than the correct or legal or full amount often deliberately so.
+stoic;a person who can endure pain or hardship without showing their feelings or complaining.
+sling;a flexible strap or belt used in the form of a loop to support or raise a hanging weight.
+tonics;a medicinal substance taken to give a feeling of vigour or well-being (plural).
+antis;a person opposed to a particular policy, activity, or idea (plural).
+clot;a thick mass of coagulated liquid, especially blood, or of material stuck together.
+toga;a loose flowing outer garment worn by the citizens of ancient Rome.
+gloats;dwell on one's own success or another's misfortune with smugness or malignant pleasure (third person).
+tags;a label attached to someone or something for the purpose of identification or to give other information (plural).
+clans;a close-knit group of interrelated families, especially in the Scottish Highlands (plural).
+taco;a Mexican dish consisting of a folded or rolled tortilla filled with various mixtures, such as seasoned mince, chicken, or beans.
+solacing;give solace to.
+cons;a disadvantage of or argument against something (plural).
+long;measuring a great distance from end to end.
+noil;short strands and knots combed out of wool fibre before spinning.
+slogan;a short and striking or memorable phrase used in advertising.
+alto;(especially in church music) the highest adult male singing voice.
+cots;a small bed with high barred sides for a baby or very young child (plural).
+giant;an imaginary or mythical being of human form but superhuman size.
+acing;(in tennis and similar games) serve an ace against (an opponent).
+signal;a gesture, action, or sound that is used to convey information or instructions.
+clogs;a shoe with a thick wooden sole (plural).
+canto;one of the sections into which certain long poems are divided.
+salon;an establishment where a hairdresser, beautician, or couturier conducts business.
+snit;a fit of irritation.
+colts;a young uncastrated male horse, in particular one less than four years old (plural).
+closing;final or ending.
+sail;a piece of material extended on a mast to catch the wind and propel a boat or ship or other vessel.
+ascot;a cravat with wide square ends.
+cats;a small domesticated carnivorous mammal with soft fur, a short snout, and retractable claws (plural).
+lingos;a foreign language or local dialect (plural) (both possible spellings accepted).
+cation;a positively charged ion.
+coast;the act of moving smoothly along a surface while remaining in contact with it.
+gait;a person's manner of walking.
+scat;go away - leave.
+cola;a brown carbonated drink.
+tonal;relating to the tone of music, colour, or writing.
+talons;a claw, especially one belonging to a bird of prey (plural).
+cling;hold on tightly to.
+antic;grotesque or bizarre.
+salt;a white crystalline substance which gives seawater its characteristic taste and is used for seasoning or preserving food.
+coins;a flat disc or piece of metal with an official stamp, used as money (plural).
+gilt;having the deep slightly brownish color of gold.
+gain;obtain or secure (something wanted or desirable).
+toil;work extremely hard or incessantly.
+ting;a sharp, clear ringing sound, such as that made when a glass is struck by a metal object.
+align;place or arrange (things) in a straight line.
+toils;work extremely hard or incessantly (third person).
+stoa;a classical portico or roofed colonnade.
+list;a number of connected items or names written or printed consecutively.
+coating;a thin layer or covering of something.
+lint;short, fine fibres which separate from the surface of cloth or yarn during processing.
+aligns;place or arrange (things) in a straight line (third person).
+glints;give out or reflect small flashes of light (third person).
+gaits;a person's manner of walking (plural).
+stag;a male deer, especially a male red deer after its fifth year.
+soling;put a new sole onto (a shoe).
+cations;a positively charged ion (plural).
+cols;the lowest point of a ridge or saddle between two peaks, typically providing a pass from one side of a mountain range to another (plural).
+cist;an ancient coffin or burial chamber made from stone or a hollowed tree.
+loci;the most important area or point with which something is associated (plural).
+iota;an extremely small amount.
+iotas;an extremely small amount (plural).

@@ -90,3 +90,5 @@ pita;flat, hollow, slightly leavened bread which can be split open to hold a fil
 antitype;an opposite or contrasting type.
 pitta;flat, hollow, slightly leavened bread which can be split open to hold a filling (two spellings accepted).
 paternity;the kinship relation between an offspring and the father.
+niter;potassium nitrate (saltpetre) used especially as a fertilizer and explosive (both spellings accepted).
+nitre;potassium nitrate (saltpetre) used especially as a fertilizer and explosive (both spellings accepted).

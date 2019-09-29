@@ -3,7 +3,7 @@ sired;be the male parent of (an animal).
 nerd;a foolish or contemptible person who lacks social skills or is boringly studious.
 rile;make (someone) annoyed or irritated.
 ripe;(of fruit or grain) developed to the point of readiness for harvesting and eating.
-pride;a feeling of deep pleasure or satisfaction derived from one's own achievements, the achievements of one's close associates, or from qualities or possessions that are widely admired.
+pride;a feeling of deep pleasure or satisfaction derived from one's own achievements.
 slider;a knob or lever which is moved horizontally or vertically to control a variable, such as the volume of a radio.
 rinds;the tough outer skin of certain fruit, especially citrus fruit (plural).
 liners;a large luxurious passenger ship of a type formerly used on a regular line (plural).
@@ -60,7 +60,7 @@ redips;to dip again (third person).
 piers;a platform on pillars projecting from the shore into the sea, typically incorporating entertainment arcades and places to eat (plural).
 rind;the tough outer skin of certain fruit, especially citrus fruit.
 liner;a large luxurious passenger ship of a type formerly used on a regular line.
-prides;a feeling of deep pleasure or satisfaction derived from one's own achievements, the achievements of one's close associates, or from qualities or possessions that are widely admired (plural).
+prides;a feeling of deep pleasure or satisfaction derived from one's own achievements (third person).
 relink;to link or connect again.
 idlers;a person who avoids work or spends time in an aimless or lazy way (plural).
 sinker;a weight used to sink a fishing line or sounding line.
