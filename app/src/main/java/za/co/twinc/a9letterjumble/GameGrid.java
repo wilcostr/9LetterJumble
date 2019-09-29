@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
+import android.support.v4.content.res.TypedArrayUtils;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -11,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -60,7 +64,16 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
 
         if (pack >= 0)
             numGames = packCounts[pack];
+        else if (pack == -10){
+            gameNames = res.getStringArray(R.array.gameNamesPremium);
+            numGames = res.getIntArray(R.array.levelPackCountsPremium)[0];
+        }
         numPacks = packNames.length;
+
+        SharedPreferences mainLog = c.getSharedPreferences(MainActivity.MAIN_PREFS, 0);
+        int gamesUnlocked = mainLog.getInt("games_unlocked", 0);
+        if (gamesUnlocked >= 3)
+            numPacks += 1;
 
         setHasStableIds(true);
     }
@@ -86,8 +99,9 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull GameViewHolder holder, int position) {
         holder.setModel(position);
-
         View view = holder.getView();
+        SharedPreferences mainLog = view.getContext().getSharedPreferences(MainActivity.MAIN_PREFS, 0);
+
         final int fp = position;
 
         view.setOnClickListener(new View.OnClickListener() {
@@ -100,7 +114,6 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
         int [] gameImages = {R.drawable.ic_icon_game1, R.drawable.ic_icon_game2, R.drawable.ic_icon_game3,
                 R.drawable.ic_icon_game4, R.drawable.ic_icon_game5, R.drawable.ic_icon_game6, R.drawable.ic_icon_game7};
 
-        SharedPreferences mainLog = view.getContext().getSharedPreferences(MainActivity.MAIN_PREFS, 0);
         TextView gameTag = view.findViewById(R.id.game_tag);
         TextView cluesUsed = view.findViewById(R.id.clues_used);
         CardView wordCard = view.findViewById(R.id.word_card);
@@ -109,19 +122,44 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
         TextView score = view.findViewById(R.id.game_score);
 
         if (isPack) {
+            String thisPack;
+            int thisImage;
+            int gamesUnlocked = mainLog.getInt("games_unlocked", 0);
+            if (gamesUnlocked >= 3) {
+                if (position==0) {
+                    thisPack = view.getContext().getResources().getStringArray(R.array.levelPacksPremium)[0];
+                    thisImage = R.drawable.ic_icon_premium;
+                }
+                else {
+                    thisPack = packNames[position - 1];
+                    thisImage = gameImages[position - 1];
+                }
+            }
+            else{
+                thisPack = packNames[position];
+                thisImage = gameImages[position];
+            }
+
             // Display level pack name
-            gameTag.setText(String.format(Locale.US, "%s  ", packNames[position]));
+            gameTag.setText(String.format(Locale.US, "%s  ", thisPack));
             cluesUsed.setVisibility(View.GONE);
             score.setVisibility(View.GONE);
 
             // Set game image to rainbow
-            gameImage.setImageResource(gameImages[position%gameImages.length]);
+            gameImage.setImageResource(thisImage);
 
             gameOffset = 0;
             for (int i=0; i<position; i++)
                 gameOffset += packCounts[i];
+            if (gamesUnlocked >= 3 && position > 0)
+                gameOffset -= packCounts[position-1];
 
-            if (gameOffset > mainLog.getInt("games_unlocked", 0)) {
+            boolean isLocked = gameOffset > mainLog.getInt("games_unlocked", 0);
+            boolean isNewsletter = mainLog.getBoolean("isNewsletter", false);
+            if (position==0 && gamesUnlocked >= 3 && !isNewsletter)
+                isLocked = true;
+
+            if (isLocked) {
                 wordCard.setCardBackgroundColor(view.getContext().getResources().getColor(R.color.rippleColor));
                 arrowButton.setImageResource(R.drawable.ic_lock_outline);
             }
@@ -131,11 +169,24 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
             }
         }
         else{
+            //Level select
+
+            String cluesUsedString = "clues_used_%d";
+            String gamesUnlockedString = "games_unlocked";
+            String scoreString = "score_%d";
+            int thisImage = (packNum>=0)? gameImages[packNum] : R.drawable.ic_icon_premium;
+
+            if (packNum == -10){
+                cluesUsedString = "clues_used_premium_%d";
+                gamesUnlockedString = "games_unlocked_premium";
+                scoreString = "score_premium_%d";
+            }
+
             // Display game name
             gameTag.setText(String.format(Locale.US,"%s  ", gameNames[position+gameOffset].toUpperCase()));
 
             // Display the number of clues spent on this level
-            int clueUseCount = mainLog.getInt(String.format(Locale.US, "clues_used_%d", position+gameOffset), 0);
+            int clueUseCount = mainLog.getInt(String.format(Locale.US, cluesUsedString, position+gameOffset), 0);
             if (clueUseCount > 0)
                 cluesUsed.setVisibility(View.VISIBLE);
             else
@@ -146,9 +197,9 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
                 cluesUsed.setText(R.string.game_display_one_clue_used);
 
             // Set game image to rainbow
-            gameImage.setImageResource(gameImages[packNum%gameImages.length]);
+            gameImage.setImageResource(thisImage);
 
-            if (position+gameOffset > mainLog.getInt("games_unlocked", 0)) {
+            if (position+gameOffset > mainLog.getInt(gamesUnlockedString, 0)) {
                 wordCard.setCardBackgroundColor(view.getContext().getResources().getColor(R.color.rippleColor));
                 arrowButton.setImageResource(R.drawable.ic_lock_outline);
                 score.setText("");
@@ -157,8 +208,8 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
             else {
                 wordCard.setCardBackgroundColor(view.getContext().getResources().getColor(R.color.colorAccent));
                 arrowButton.setImageResource(R.drawable.ic_arrow);
-                String scoreString = mainLog.getString(String.format(Locale.US, "score_%d", position+gameOffset), "0");
-                score.setText(view.getContext().getString(R.string.game_display_score, scoreString));
+                String scoreDisplayString = mainLog.getString(String.format(Locale.US, scoreString, position+gameOffset), "0");
+                score.setText(view.getContext().getString(R.string.game_display_score, scoreDisplayString));
             }
         }
 
@@ -166,8 +217,15 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
 
     @Override
     public long getItemId(int position) {
-        if (isPack)
+        if (isPack) {
+            if (numPacks > packNames.length){
+                if (position==0)
+                    return "Gold Rush".hashCode();
+                else
+                    return packNames[position-1].hashCode();
+            }
             return packNames[position].hashCode();
+        }
         else
             return gameNames[position].hashCode();
     }

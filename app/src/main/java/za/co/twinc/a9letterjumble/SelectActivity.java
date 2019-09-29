@@ -60,7 +60,7 @@ public class SelectActivity extends AppCompatActivity {
 
     @Override
     protected void onResume(){
-        if (currentPack>=0)
+        if (currentPack != -1)
             initGameSelect(currentPack);
         else
             initPackSelect();
@@ -95,26 +95,41 @@ public class SelectActivity extends AppCompatActivity {
         final GameGrid gameGrid = new GameGrid(this, -1,
                 new GameGrid.OnItemClickListener() {
                     @Override
-                    public void onItemClick(View view, int pos) {
+                    public void onItemClick(View view, int posWithOffset) {
+                        int gamesUnlocked = mainLog.getInt("games_unlocked", 0);
+                        int pos = posWithOffset;
+                        if (gamesUnlocked >= 3)
+                            pos -= 1;
                         int firstInPack = 0;
                         for (int i=0; i<pos; i++)
                             firstInPack += packCounts[i];
-                        if (firstInPack <= mainLog.getInt("games_unlocked", 0)) {
+                        if (pos == -1){
+                            boolean isNewsletter = mainLog.getBoolean("isNewsletter", false);
+                            if (!isNewsletter){
+                                mySounds.play(view.getContext(), R.raw.reject);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                                builder.setTitle("Level pack locked")
+                                        .setMessage("You are not an email newsletter subscriber.")
+                                        .setPositiveButton(android.R.string.ok, null)
+                                        .create()
+                                        .show();
+                            }
+                        }
+                        else if (firstInPack <= gamesUnlocked) {
                             mySounds.playClick(view.getContext());
                             // Show games
-                            currentPack = pos;
+                            currentPack = (pos == -1) ? -10 : pos;
                             showAnimation = true;
-                            initGameSelect(pos);
+                            initGameSelect(currentPack);
                         }
                         else{
                             mySounds.play(view.getContext(), R.raw.reject);
                             AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                             builder.setTitle(getString(R.string.unlock_title, packNames[pos]))
                                     .setMessage(getString(R.string.unlock_pack_message))
-                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int i) { }
-                                    }).create().show();
+                                    .setPositiveButton(android.R.string.ok, null)
+                                    .create()
+                                    .show();
                         }
                     }
                 }
@@ -129,7 +144,7 @@ public class SelectActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (currentPack >= 0){
+        if (currentPack != -1){
             currentPack = -1;
             showAnimation = true;
             initPackSelect();

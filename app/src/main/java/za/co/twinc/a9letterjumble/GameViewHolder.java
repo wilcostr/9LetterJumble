@@ -32,6 +32,4 @@ public class GameViewHolder extends ViewHolder<Integer> {
     {
 
     }
-
-
 }

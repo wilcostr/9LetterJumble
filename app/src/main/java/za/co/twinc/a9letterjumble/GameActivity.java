@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.DataSetObserver;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -293,6 +294,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             textViewScore.setVisibility(View.GONE);
             counterFab.setVisibility(View.GONE);
             textViewList.setText(R.string.challenge_message);
+            textViewList.setTypeface(Typeface.SANS_SERIF);
 
             textTimer = findViewById(R.id.text_timer);
             textTimer.setVisibility(View.VISIBLE);
@@ -537,10 +539,15 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                             }
                         });
                 builder.create().show();
+                // Play a sound
+                mySounds.play(this, R.raw.accept);
             }
-            else
+            else {
                 Snackbar.make(findViewById(R.id.game_content), R.string.challenge_wrong_guess,
                         Snackbar.LENGTH_SHORT).show();
+                // Play a sound
+                mySounds.play(this, R.raw.reject);
+            }
             return;
         }
 
@@ -689,14 +696,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
                         }
                     }
                 })
-                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
+                .setNegativeButton(android.R.string.cancel, null);
         builder.create().show();
-
     }
 
 
@@ -724,8 +725,13 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             list = zeroPadAndSort(listSort);
         }
 
-        if (list.toString().equals("") && wordsIn.size()==0)
+        if (list.toString().equals("") && wordsIn.size()==0) {
             list = new SpannableString(getString(R.string.prompt_no_words));
+            textViewList.setTypeface(Typeface.SANS_SERIF);
+        }
+        else if (wordsIn.size() == 1)
+            textViewList.setTypeface(Typeface.MONOSPACE);
+
 
         textViewList.setText(list);
     }
@@ -733,7 +739,9 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     private SpannableString zeroPadAndSort(List<String> list){
         Collections.sort(list);
         for (int i=0; i<list.size(); i++){
-            String word = list.get(i) + "\t";
+            //String word = list.get(i) + "\t";
+            String word = list.get(i);
+            while (word.length()<9) word = word + " ";
             list.set(i, word);
         }
 
@@ -742,14 +750,16 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         ret = ret.replace(", ", " ");
         ret = ret.substring(1, ret.length() - 1);
 
-        SpannableString str = new SpannableString(ret);
-        str.setSpan(new TabStopSpan.Standard(200),0, ret.length(), 0);
-        str.setSpan(new TabStopSpan.Standard(400),0, ret.length(), 0);
-        str.setSpan(new TabStopSpan.Standard(600),0, ret.length(), 0);
-        str.setSpan(new TabStopSpan.Standard(800),0, ret.length(), 0);
-        str.setSpan(new TabStopSpan.Standard(1000),0, ret.length(), 0);
+        return new SpannableString(ret);
 
-        return str;
+//        SpannableString str = new SpannableString(ret);
+//        str.setSpan(new TabStopSpan.Standard(200),0, ret.length(), 0);
+//        str.setSpan(new TabStopSpan.Standard(400),0, ret.length(), 0);
+//        str.setSpan(new TabStopSpan.Standard(600),0, ret.length(), 0);
+//        str.setSpan(new TabStopSpan.Standard(800),0, ret.length(), 0);
+//        str.setSpan(new TabStopSpan.Standard(1000),0, ret.length(), 0);
+//
+//        return str;
     }
 
     private void getWords(List<String> words, List<String> definitions){

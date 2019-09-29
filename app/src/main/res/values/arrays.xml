@@ -45,6 +45,12 @@
         <item>mucpooser</item>
         <item>mrmodefla</item>
         <item>dosmenupy</item>
+        <item>tanitepry</item>
+        <item>braherton</item>
+        <item>nviilaceg</item>
+        <item>renagetuo</item>
+        <item>ditarpezo</item>
+        <item>nestagmim</item>
     </string-array>
     
     <string-array name="gameNames">
@@ -99,7 +105,7 @@
 		<item>Psi</item>
 		<item>Omega</item>
     </string-array>
-    
+   
     <string-array name="levelPacks">
     	<item>Red Rover</item>
     	<item>Orange Blossom</item>
@@ -116,8 +122,29 @@
     	<item>8</item>
     	<item>8</item>
     	<item>8</item>
-    	<item>2</item>    	
+    	<item>8</item>    	
     </integer-array>
 
+    <string-array name="gamesPremium">
+    	<item>caterngel</item>
+    	<item>eccnithal</item>
+    	<item>cosalting</item>
+    	<item>rotnivdep</item>
+    </string-array>
+    
+    <string-array name="gameNamesPremium">
+    	<item>Hydrogen</item>
+    	<item>Helium</item>
+    	<item>Lithium</item>
+    	<item>Beryllium</item>
+    </string-array>
+    
+    <string-array name="levelPacksPremium">
+    	<item>Gold Rush</item>
+    </string-array>
+    
+    <integer-array name="levelPackCountsPremium">
+    	<item>4</item>
+    </integer-array>
 
 </resources>
