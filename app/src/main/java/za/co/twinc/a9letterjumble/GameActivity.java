@@ -64,6 +64,8 @@ import nl.dionsegijn.konfetti.KonfettiView;
 import nl.dionsegijn.konfetti.models.Shape;
 import nl.dionsegijn.konfetti.models.Size;
 
+import static java.lang.Math.abs;
+
 public class GameActivity extends AppCompatActivity implements RewardedVideoAdListener {
 
     private InterstitialAd mInterstitialAd;
@@ -125,7 +127,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
         Intent startGameIntent = getIntent();
         gameNum = startGameIntent.getIntExtra("gameNum",0);
-        isChallenge = gameNum < 0;
+        isChallenge = gameNum == -1;
 
         // Initialise banner and MobileAds
         AdView adView = findViewById(R.id.adView);
@@ -186,8 +188,14 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         numLevels = startGameIntent.getIntExtra("numLevels",1);
         gameLetters = startGameIntent.getStringExtra("gameLetters");
 
-        gameNameList = this.getResources().getStringArray(R.array.gameNames);
-        gameName = isChallenge ? getString(R.string.button_challenge) : gameNameList[gameNum];
+        if (gameNum > -10) {
+            gameNameList = this.getResources().getStringArray(R.array.gameNames);
+            gameName = isChallenge ? getString(R.string.button_challenge) : gameNameList[gameNum];
+        }
+        else {
+            gameNameList = this.getResources().getStringArray(R.array.gameNamesPremium);
+            gameName = gameNameList[abs(gameNum+10)];
+        }
 
         textViewGuess = findViewById(R.id.text_guess);
 
@@ -968,13 +976,19 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     }
 
     private void unlockNext(){
+        int gameNumLocal = gameNum;
+        String gamesUnlocked = "games_unlocked";
+        if (gameNum < 0){
+            gameNumLocal = abs(gameNum + 10);
+            gamesUnlocked = "games_unlocked_premium";
+        }
         // Quick return if we are playing an old level with newly added words
-        if (getIntFromPrefs("games_unlocked", 0) > gameNum)
+        if (getIntFromPrefs(gamesUnlocked, 0) > gameNumLocal)
             return;
-        saveIntToPrefs("games_unlocked", gameNum + 1);
+        saveIntToPrefs(gamesUnlocked, gameNumLocal + 1);
 
         // Return if this is the last available level
-        if (gameNum == numLevels-1)
+        if (gameNumLocal == numLevels-1)
             return;
 
         // Build a dialog to congratulate the player on unlocking the next level
@@ -1004,10 +1018,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             });
         }
         else{
-            builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) { }
-            });
+            builder.setPositiveButton(android.R.string.ok, null);
         }
 
         builder.setTitle(R.string.unlocked_title)

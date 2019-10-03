@@ -49,6 +49,8 @@
     <string name="share">Share</string>
     <string name="share_message">Challenge your friends to see if they can find more words than you.</string>
 
+    <string name="upgrade">Upgrade</string>
+    <string name="subscribe">Subscribe</string>
     <string name="remove_ads">Remove ads</string>
     <string name="ads_title">Bothered by the ads?</string>
     <string name="ads_msg">Ads allow us to release free games.
@@ -68,7 +70,7 @@
     <string name="button_ads">Why Ads</string>
     <string name="button_solve">Solve</string>
 
-    <string name="game_invalid_guess">%s is not a valid word</string>
+    <string name="game_invalid_guess">%s is not in our list</string>
     <string name="game_short_guess">Minimum of four letters required</string>
     <string name="game_repeated_guess">%s already recorded</string>
     <string name="game_traditional_guess">Middle letter required: %s</string>
@@ -121,16 +123,29 @@
 
     <string name="unlock_title">Unlock %s</string>
     <string name="unlock_message">Find 50%% of the words in %s to unlock this level.</string>
-    <string name="unlock_pack_message">Find 50% of the words in every level of the previous level pack to unlock this pack.</string>
+    <string name="unlock_pack_message">Find 50%% of the words in every level of %s to unlock this pack.</string>
     <string name="unlocked_title">Level unlocked</string>
     <string name="unlocked_message">Congratulations! You\'ve unlocked %s.</string>
     <string name="unlocked_keep_going">Gain 3 bonus clue tokens when you complete the level.</string>
+
+    <string name="gold_locked">Level pack locked</string>
+    <string name="gold_message">In Gold Rush, levels have no middle letter requirement.
+                                \n\nOnly available to premium players and email newsletter subscribers.</string>
+    <string name="subscribe_message">Hit SUBSCRIBE below then come back with the unlock code.</string>
+    <string name="subscribe_subject">9LJ newsletter signup</string>
+    <string name="subscribe_body">Do not edit the subject or add anything to this email.
+                              \n\nIt is set up to trigger an automatic response and will not be read by a human. :)</string>
+    <string name="unlock">unlock</string>
+    <string name="invalid_code">Invalid code</string>
+    <string name="gold_unlocked">Premium level pack unlocked</string>
 
     <string name="clue_tip_title">Score</string>
     <string name="clue_tip_description">Find 15 words to gain your first clue token</string>
     <string name="share_tip_title">Gain three bonus clue tokens</string>
     <string name="share_tip_description">Share the game on social media</string>
     <string name="stats_tip_description">Tap the word list to view level stats</string>
+    <string name="store_tip_title">Game Store</string>
+    <string name="store_tip_description">Upgrade to premium\nor get clue tokens</string>
 
     <string name="intro_title_1">Welcome to\n9 Letter Jumble</string>
     <string name="intro_title_2">Rules of the game</string>

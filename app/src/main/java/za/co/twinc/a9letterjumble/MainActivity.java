@@ -82,14 +82,39 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         // Initialise the media player
         mySounds = new Sounds();
 
-        // Check if we launched from notification
+        // Check if we launched with intent
         Intent startMain = getIntent();
         if (startMain != null) {
             if (startMain.getBooleanExtra("challenge", false))
                 onChallengeClicked(null);
+
+            else if (startMain.getBooleanExtra("store", false)){
+                TapTargetView.showFor(this,                 // `this` is an Activity
+                        TapTarget.forView(findViewById(R.id.buttonStore),
+                                getString(R.string.store_tip_title),
+                                getString(R.string.store_tip_description))
+                                // All options below are optional
+                                .outerCircleColor(R.color.colorAccent)   // Specify a color for the outer circle
+                                .transparentTarget(true)
+                                .dimColor(android.R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
+                                .drawShadow(true)                           // Whether to draw a drop shadow or not
+                                .titleTextColor(android.R.color.white)
+                                .descriptionTextColor(android.R.color.black),
+                        new TapTargetView.Listener() {          // The listener can listen for regular clicks, long clicks or cancels
+                            @Override
+                            public void onTargetClick(TapTargetView view) {
+                                super.onTargetClick(view);
+                                onStoreClicked(view);
+                            }
+                        });
+            }
         }
 
         SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
+
+        mainLog.edit()
+                .putBoolean("isNewsletter", false)
+                .apply();
 
         // Show onboarding the first time you open the game
         if (mainLog.getBoolean("show_intro", true)){
@@ -256,11 +281,6 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         }
     }
 
-    public void onHowClicked(View view){
-        mySounds.playClick(getApplicationContext());
-        Intent startIntro = new Intent(this, IntroActivity.class);
-        startActivity(startIntro);
-    }
 
     public void onStoreClicked(View view){
         mySounds.playClick(getApplicationContext());
@@ -382,6 +402,10 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
                 return true;
             case R.id.menu_why_ads:
                 openStore();
+                return true;
+            case R.id.menu_how_to:
+                Intent startIntro = new Intent(this, IntroActivity.class);
+                startActivity(startIntro);
                 return true;
             case R.id.menu_settings:
                 Intent startSettings = new Intent(getApplicationContext(), SettingsActivity.class);

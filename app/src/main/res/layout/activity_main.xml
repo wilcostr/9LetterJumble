@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:focusableInTouchMode="true"
     tools:context="za.co.twinc.a9letterjumble.MainActivity">
 
-    <include layout="@layout/loading_indicator"/>
+    <include layout="@layout/loading_indicator" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/screen_main"
@@ -30,30 +30,10 @@
             style="@style/MainButtons"
             android:onClick="onChallengeClicked"
             android:text="@string/button_challenge"
-            app:layout_constraintBottom_toTopOf="@id/buttonHowto"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonPlay" />
-
-        <Button
-            android:id="@+id/buttonHowto"
-            style="@style/MainButtons"
-            android:onClick="onHowClicked"
-            android:text="@string/button_howto"
-            app:layout_constraintBottom_toTopOf="@id/buttonStore"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonChallenge" />
-
-        <Button
-            android:id="@+id/buttonStore"
-            style="@style/MainButtons"
-            android:onClick="onStoreClicked"
-            android:text="@string/button_store"
             app:layout_constraintBottom_toTopOf="@id/buttonAds"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonHowto" />
+            app:layout_constraintTop_toBottomOf="@id/buttonPlay" />
 
         <Button
             android:id="@+id/buttonAds"
@@ -63,18 +43,18 @@
             app:layout_constraintBottom_toTopOf="@+id/buttonFrameVolume"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonStore" />
+            app:layout_constraintTop_toBottomOf="@id/buttonChallenge" />
 
         <FrameLayout
             android:id="@+id/buttonFrameVolume"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="36dp"
             android:background="@drawable/button_round"
-            app:layout_constraintTop_toBottomOf="@id/buttonAds"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonFrameRate"
             app:layout_constraintStart_toStartOf="@+id/buttonAds"
-            app:layout_constraintEnd_toStartOf="@id/buttonFrameRate">
+            app:layout_constraintTop_toBottomOf="@id/buttonAds">
 
             <ImageButton
                 android:id="@+id/buttonVolume"
@@ -85,7 +65,9 @@
                 android:padding="8dp"
                 android:scaleType="fitCenter"
                 android:tint="@android:color/white"
-                app:srcCompat="@drawable/ic_volume_up" />
+                app:srcCompat="@drawable/ic_volume_up"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="360dp" />
         </FrameLayout>
 
         <FrameLayout
@@ -94,8 +76,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_round"
             app:layout_constraintBottom_toBottomOf="@id/buttonFrameVolume"
-            app:layout_constraintStart_toEndOf="@id/buttonFrameVolume"
-            app:layout_constraintEnd_toStartOf="@id/buttonFrameShare">
+            app:layout_constraintEnd_toStartOf="@id/buttonFrameShare"
+            app:layout_constraintStart_toEndOf="@id/buttonFrameVolume">
 
             <ImageButton
                 android:id="@+id/buttonRate"
@@ -114,8 +96,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_round"
             app:layout_constraintBottom_toBottomOf="@id/buttonFrameVolume"
-            app:layout_constraintStart_toEndOf="@id/buttonFrameRate"
-            app:layout_constraintEnd_toEndOf="@+id/buttonAds">
+            app:layout_constraintEnd_toStartOf="@+id/buttonFrameStore"
+            app:layout_constraintStart_toEndOf="@id/buttonFrameRate">
 
             <ImageButton
                 android:id="@+id/buttonShare"
@@ -128,5 +110,27 @@
                 android:tint="@android:color/white"
                 app:srcCompat="?attr/actionModeShareDrawable" />
         </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/buttonFrameStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_round"
+            app:layout_constraintBottom_toBottomOf="@id/buttonFrameVolume"
+            app:layout_constraintEnd_toEndOf="@+id/buttonAds"
+            app:layout_constraintStart_toEndOf="@id/buttonFrameShare">
+
+            <ImageButton
+                android:id="@+id/buttonStore"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="onStoreClicked"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_store" />
+        </FrameLayout>
+
     </android.support.constraint.ConstraintLayout>
 </android.support.design.widget.CoordinatorLayout>
