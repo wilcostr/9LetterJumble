@@ -16,18 +16,14 @@ reenact;act out (a past event).
 tear;pull (something) apart or to pieces with force.
 later;doing something or taking place after the expected, proper, or usual time (comparative adj).
 gear;a toothed wheel that works with others to alter the relation between the speed of a driving mechanism and the speed of the driven parts.
-enlace;spin,wind, or twist together.
 alert;quick to notice any unusual and potentially dangerous or difficult circumstances.
 learn;gain or acquire knowledge of or skill in (something) by study, experience, or being taught.
-canter;a pace of a horse or other quadruped between a trot and a gallop.
 glen;a narrow secluded valley (in the mountains).
 lager;a general term for beer made with bottom fermenting yeast (usually by decoction mashing).
 lace;a fine open fabric of cotton or silk, made by looping, twisting, or knitting thread in patterns and used especially for trimming garments.
 glee;great delight, especially from one's own good fortune or another's misfortune.
-egret;a heron with mainly white plumage, having long plumes in the breeding season.
 angle;the space between two lines or planes that intersect.
 cent;a monetary unit in various countries, equal to one hundredth of the currency unit.
-glean;gather, as of natural products.
 elate;fill with high spirits.
 genera;plural form of genus.
 enact;make (a bill or other proposal) law.
@@ -36,26 +32,21 @@ angel;a spiritual being believed to act as an attendant, agent, or messenger of 
 gent;a gentleman.
 leer;look or gaze in a lascivious or unpleasant way.
 central;in or near a center or constituting a center.
-elan;a combination of style and energetic confidence, especially in performances or manner.
 eager;having or showing keen interest or intense desire or impatient expectancy.
 lectern;desk or stand with a slanted top used to hold a text at the proper height for a lecturer.
 clan;a close-knit group of interrelated families, especially in the Scottish Highlands.
-crag;a steep or rugged cliff or rock face.
 enrage;put into a great anger.
 eternal;continuing forever or indefinitely.
 agree;to achieve harmony of opinion, feeling, or purpose.
 careen;pitching dangerously to one side.
 lance;a long weapon with a wooden shaft and a pointed steel head, formerly used by a horseman in charging.
-cant;hypocritical and sanctimonious talk, typically of a moral, religious, or political nature.
 rate;a measure, quantity, or frequency, typically one measured against another quantity or measure.
 near;at or to a short distance away.
 lancer;a soldier of a cavalry regiment armed with lances.
 gnarl;a rough, knotty protuberance, especially on a tree.
 relace;lace again.
-enate;related on the mother's side.
 treacle;a pale cane syrup.
 center;the point that is equally distant from every point on the circumference of a circle or sphere (both spellings accepted).
-claret;a red wine from Bordeaux, or wine of a similar character made elsewhere.
 tree;a woody perennial plant, typically having a single stem or trunk growing to a considerable height.
 elegant;refined and tasteful in appearance or behavior or style.
 cleat;a piece of wood, metal, or plastic, often wedge-shaped, fastened to something to strengthen it or give secure footing.
@@ -71,17 +62,14 @@ care;the provision of what is necessary for the health, welfare, maintenance, an
 antler;each of the branched horns on the head of an adult deer (typically a male one), which are made of bone and are grown and cast annually.
 aglet;metal or plastic sheath over the end of a shoelace or ribbon.
 renal;relating to the kidneys.
-garnet;a precious stone consisting of a deep red vitreous silicate mineral.
 rectangle;a plane figure with four straight sides and four right angles, especially one with unequal adjacent sides, in contrast to a square.
 anger;a strong feeling of annoyance, displeasure, or hostility.
 eaten;put (food) into the mouth and chew and swallow it (past participle).
 create;to make, cause to be or to become.
-recta;the final section of the large intestine, terminating at the anus (plural).
 leaner;(of a person or animal) thin, especially healthily so (comparative adj).
 enlarge;make or become larger or more extensive.
 recant;formally reject or disavow a formerly held belief, usually under pressure.
 tang;a strong taste, flavour, or smell.
-lancet;a small, broad two-edged surgical knife or blade with a sharp point.
 creel;a wickerwork basket worn on the back or suspended from the shoulder, used especially by anglers for carrying fish.
 gentler;having or showing a mild, kind, or tender temperament or character (comparative adj).
 great;of an extent, amount, or intensity considerably above average.
@@ -120,7 +108,6 @@ regal;belonging to or befitting a supreme ruler.
 leger;a record in which commercial accounts are recorded.
 laten;to cause to grow late.
 neater;arranged in a tidy way (comparative adj).
-nacre;also known as mother of pearl, a composite material produced by some molluscs as an inner shell layer.
 teal;a dark greenish-blue colour.
 cartel;an association of manufacturers or suppliers with the purpose of maintaining prices at a high level and restricting competition.
 acre;a unit of land area equal to 4,840 square yards (0.405 hectare).
@@ -151,6 +138,20 @@ ante;a stake put up by a player in poker or brag before receiving cards.
 reel;winder consisting of a revolving spool with a handle.
 react;respond in a particular way.
 regale;entertain or amuse (someone) with talk.
+nacre;also known as mother of pearl, a composite material produced by some molluscs as an inner shell layer.
+lancet;a small, broad two-edged surgical knife or blade with a sharp point.
+recta;the final section of the large intestine, terminating at the anus (plural).
+garnet;a precious stone consisting of a deep red vitreous silicate mineral.
+claret;a red wine from Bordeaux, or wine of a similar character made elsewhere.
+enate;related on the mother's side.
+cant;hypocritical and sanctimonious talk, typically of a moral, religious, or political nature.
+crag;a steep or rugged cliff or rock face.
+elan;a combination of style and energetic confidence, especially in performances or manner.
+glean;gather, as of natural products.
+egret;a heron with mainly white plumage, having long plumes in the breeding season.
+canter;a pace of a horse or other quadruped between a trot and a gallop.
+enlace;spin,wind, or twist together.
 argent;the heraldic color silver or white.
 clanger;a conspicuous mistake whose effects seem to reverberate.
 enteral;of or relating to or inside the intestines.
+retag;to tag (something) again.

@@ -82,3 +82,4 @@ rial;a basic monetary unit of some Middle Eastern countries.
 rials;a basic monetary unit of some Middle Eastern countries (plural).
 tibial;relating to the tibia.
 barm;froth on fermenting malt liquor used as a natural yeast starter.
+mistral;a strong north wind that blows in France during the winter.

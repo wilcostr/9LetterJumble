@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
-import android.support.v4.content.res.TypedArrayUtils;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -12,9 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Locale;
 
 /**
@@ -170,23 +166,20 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
         }
         else{
             //Level select
-
-            String cluesUsedString = "clues_used_%d";
             String gamesUnlockedString = "games_unlocked";
-            String scoreString = "score_%d";
-            int thisImage = (packNum>=0)? gameImages[packNum] : R.drawable.ic_icon_premium;
+            int truePosition = position+gameOffset;
+            int thisImage = (packNum>=0) ? gameImages[packNum] : R.drawable.ic_icon_premium;
 
             if (packNum == -10){
-                cluesUsedString = "clues_used_premium_%d";
                 gamesUnlockedString = "games_unlocked_premium";
-                scoreString = "score_premium_%d";
+                truePosition = -10 - position;
             }
 
             // Display game name
             gameTag.setText(String.format(Locale.US,"%s  ", gameNames[position+gameOffset].toUpperCase()));
 
             // Display the number of clues spent on this level
-            int clueUseCount = mainLog.getInt(String.format(Locale.US, cluesUsedString, position+gameOffset), 0);
+            int clueUseCount = mainLog.getInt(String.format(Locale.US, "clues_used_%d", truePosition), 0);
             if (clueUseCount > 0)
                 cluesUsed.setVisibility(View.VISIBLE);
             else
@@ -208,7 +201,7 @@ public class GameGrid extends RecyclerView.Adapter<GameViewHolder> {
             else {
                 wordCard.setCardBackgroundColor(view.getContext().getResources().getColor(R.color.colorAccent));
                 arrowButton.setImageResource(R.drawable.ic_arrow);
-                String scoreDisplayString = mainLog.getString(String.format(Locale.US, scoreString, position+gameOffset), "0");
+                String scoreDisplayString = mainLog.getString(String.format(Locale.US, "score_%d", truePosition), "0");
                 score.setText(view.getContext().getString(R.string.game_display_score, scoreDisplayString));
             }
         }

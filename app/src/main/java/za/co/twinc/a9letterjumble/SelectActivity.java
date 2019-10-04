@@ -109,7 +109,29 @@ public class SelectActivity extends AppCompatActivity {
                             firstInPack += packCounts[i];
                         if (pos == -1){
                             boolean isNewsletter = mainLog.getBoolean("isNewsletter", false);
-                            if (!isNewsletter){
+                            boolean isPremium = mainLog.getBoolean("premium", false);
+
+                            if (isPremium && !isNewsletter){
+                                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                                builder.setTitle(R.string.premium_pack)
+                                        .setMessage(R.string.gold_message_premium)
+                                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+                                                // Unlock the pack for premium
+                                                getApplicationContext().getSharedPreferences(MainActivity.MAIN_PREFS,0)
+                                                        .edit()
+                                                        .putBoolean("isNewsletter", true)
+                                                        .apply();
+                                                currentPack = -10;
+                                                showAnimation = true;
+                                                initGameSelect(currentPack);
+                                            }
+                                        })
+                                        .create()
+                                        .show();
+                            }
+                            else if (!isNewsletter){
                                 mySounds.play(view.getContext(), R.raw.reject);
                                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                                 builder.setTitle(R.string.gold_locked)
@@ -243,6 +265,8 @@ public class SelectActivity extends AppCompatActivity {
         final boolean isPremium = pack==-10;
         if (!isPremium) {
             gameNames = this.getResources().getStringArray(R.array.gameNames);
+            gameList = this.getResources().getStringArray(R.array.games);
+            numGames = gameList.length;
             gamesUnlocked = mainLog.getInt("games_unlocked", 0);
         }
         else {

@@ -24,10 +24,12 @@ public class GridAdapter extends BaseAdapter{
     final private Context mContext;
     private String word;
     private int count;
+    private boolean centreTint;
     private ArrayList<Boolean> itemClickable = new ArrayList<> ();
 
-    GridAdapter(Context c, String jumbleWord) {
+    GridAdapter(Context c, String jumbleWord, boolean centreMandatory) {
         mContext = c;
+        centreTint = centreMandatory;
         word = jumbleWord.toUpperCase();
         count = word.length();
         for(int j=0;j<count;j++)
@@ -53,19 +55,19 @@ public class GridAdapter extends BaseAdapter{
             itemClickable.set(j, true);
     }
 
-    void shuffleLetters(boolean isChallenge){
+    void shuffleLetters(){
         List<Character> characters = new ArrayList<>();
         for(char c:word.toCharArray()){
             characters.add(c);
         }
         Character centreChar = 'a';
-        if (!isChallenge)
+        if (centreTint)
             centreChar = characters.remove(4);
         StringBuilder output = new StringBuilder(getCount());
         while(characters.size()!=0) {
             int randPicker = (int) (Math.random() * characters.size());
             output.append(characters.remove(randPicker));
-            if (!isChallenge && output.length()==4)
+            if (centreTint && output.length()==4)
                 output.append(centreChar);
         }
         word = output.toString();
@@ -102,7 +104,7 @@ public class GridAdapter extends BaseAdapter{
         // Set the following attributes here so that they are refreshed when changes are made
         textV.setText(String.valueOf(word.charAt(position)));
         if (isEnabled(position)) {
-            if (position == 4 && getCount() == 9) {
+            if (position == 4 && centreTint) {
                 textV.setBackground(mContext.getResources().getDrawable(R.drawable.button_round_accent));
                 textV.setTextColor(mContext.getResources().getColor(android.R.color.black));
             } else {
@@ -112,7 +114,7 @@ public class GridAdapter extends BaseAdapter{
         }
         else {
             textV.setTextColor(mContext.getResources().getColor(R.color.background));
-            if (position == 4 && getCount() == 9)
+            if (position == 4 && centreTint)
                 textV.setBackground(mContext.getResources().getDrawable(R.drawable.button_round_grey));
         }
 

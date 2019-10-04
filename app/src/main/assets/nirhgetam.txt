@@ -94,3 +94,4 @@ gratin;in cooking, a dish that has a thin layer of cheese and often breadcrumbs 
 rehang;hang (something) again or differently.
 hegira;a journey by a large group to escape from a hostile environment.
 mintage;act or process of minting coins.
+retag;to tag (something) again.

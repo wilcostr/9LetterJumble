@@ -187,6 +187,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/prompt_no_words"
                         android:textColor="@android:color/white"
+                        android:fontFamily="monospace"
                         android:textSize="@dimen/text_16" />
                 </ScrollView>
             </android.support.v7.widget.CardView>

@@ -131,6 +131,8 @@
     <string name="gold_locked">Level pack locked</string>
     <string name="gold_message">In Gold Rush, levels have no middle letter requirement.
                                 \n\nOnly available to premium players and email newsletter subscribers.</string>
+    <string name="gold_message_premium">In Gold Rush, levels have no middle letter requirement.
+                                \n\nThanks for supporting us by going premium!</string>
     <string name="subscribe_message">Hit SUBSCRIBE below then come back with the unlock code.</string>
     <string name="subscribe_subject">9LJ newsletter signup</string>
     <string name="subscribe_body">Do not edit the subject or add anything to this email.
@@ -138,6 +140,7 @@
     <string name="unlock">unlock</string>
     <string name="invalid_code">Invalid code</string>
     <string name="gold_unlocked">Premium level pack unlocked</string>
+    <string name="premium_pack">Premium pack</string>
 
     <string name="clue_tip_title">Score</string>
     <string name="clue_tip_description">Find 15 words to gain your first clue token</string>

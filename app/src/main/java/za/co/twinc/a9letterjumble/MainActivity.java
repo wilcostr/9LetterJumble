@@ -112,10 +112,6 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
 
         SharedPreferences mainLog = getSharedPreferences(MainActivity.MAIN_PREFS, 0);
 
-        mainLog.edit()
-                .putBoolean("isNewsletter", false)
-                .apply();
-
         // Show onboarding the first time you open the game
         if (mainLog.getBoolean("show_intro", true)){
             Intent startIntro = new Intent(this, IntroActivity.class);

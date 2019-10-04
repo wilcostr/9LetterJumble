@@ -122,3 +122,4 @@ rand;the basic monetary unit of South Africa.
 gouda;a flat round cheese with a yellow rind.
 rands;the basic monetary unit of South Africa (plural).
 unaged;not subjected to an aging process.
+ragu;a sauce typically made with minced meat, onions, tomato puree, and red wine, and served with pasta.

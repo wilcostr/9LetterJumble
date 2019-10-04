@@ -66,3 +66,5 @@ ague;malaria or another illness involving fever and shivering.
 gurn;pull a grotesque face.
 gaunter;(of a person) lean and haggard, especially because of suffering, hunger, or age (comparative adj).
 guano;the excrement of seabirds and bats, used as fertilizer.
+ragu;a sauce typically made with minced meat, onions, tomato puree, and red wine, and served with pasta.
+retag;to tag (something) again.

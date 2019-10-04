@@ -24,7 +24,6 @@ import android.support.v7.widget.CardView;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.TextWatcher;
-import android.text.style.TabStopSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,7 +89,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
     private int score;
     private Stack<Integer> buttonStack;
 
-    private boolean isChallenge, smartSorting;
+    private boolean isChallenge, isGold, smartSorting;
     private String challengeSolution;
     private TextView textTimer;
     private CountDownTimer countDownTimer;
@@ -128,6 +127,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         Intent startGameIntent = getIntent();
         gameNum = startGameIntent.getIntExtra("gameNum",0);
         isChallenge = gameNum == -1;
+        isGold = gameNum <= -10;
 
         // Initialise banner and MobileAds
         AdView adView = findViewById(R.id.adView);
@@ -260,7 +260,8 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
 
         GridView gridView = findViewById(R.id.grid);
-        gridAdapter = new GridAdapter(this, gameLetters);
+        gridAdapter = new GridAdapter(this, gameLetters, !(isChallenge || isGold));
+
         gridView.setAdapter(gridAdapter);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -418,7 +419,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
     public void onButtonShuffleClick(View v){
         mySounds.playClick(this);
-        gridAdapter.shuffleLetters(isChallenge);
+        gridAdapter.shuffleLetters();
         onButtonBackspaceLongClick();
 
         // Rotate the shuffle button
@@ -584,13 +585,15 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         }
 
         // Check for middle letter
-        char requiredChar = gameLetters.toUpperCase().charAt(4);
-        if (guess.toString().indexOf(requiredChar) < 0){
-            Snackbar.make(findViewById(R.id.game_content), getString(R.string.game_traditional_guess, requiredChar),
-                    Snackbar.LENGTH_SHORT).show();
-            // Play a sound
-            mySounds.play(this, R.raw.reject);
-            return;
+        if (!isGold) {
+            char requiredChar = gameLetters.toUpperCase().charAt(4);
+            if (guess.toString().indexOf(requiredChar) < 0) {
+                Snackbar.make(findViewById(R.id.game_content), getString(R.string.game_traditional_guess, requiredChar),
+                        Snackbar.LENGTH_SHORT).show();
+                // Play a sound
+                mySounds.play(this, R.raw.reject);
+                return;
+            }
         }
 
         // Check for wrong guess
@@ -985,6 +988,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         // Quick return if we are playing an old level with newly added words
         if (getIntFromPrefs(gamesUnlocked, 0) > gameNumLocal)
             return;
+
         saveIntToPrefs(gamesUnlocked, gameNumLocal + 1);
 
         // Return if this is the last available level
