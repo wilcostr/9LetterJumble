@@ -677,7 +677,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         int unlockRequirement = wordsDict.size()/2;
         if (wordsDict.size()%2 > 0)
             unlockRequirement++;
-        if (score == unlockRequirement)
+        if (score >= unlockRequirement)
             unlockNext();
 
         wordsIn.add(word.toString());
@@ -752,7 +752,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
         for (int i=0; i<list.size(); i++){
             //String word = list.get(i) + "\t";
             String word = list.get(i);
-            while (word.length()<9) word = word + " ";
+            while (word.length()<9) word = word + "\u00A0";
             list.set(i, word);
         }
 
@@ -985,7 +985,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
             gameNumLocal = abs(gameNum + 10);
             gamesUnlocked = "games_unlocked_premium";
         }
-        // Quick return if we are playing an old level with newly added words
+        // Quick return if already unlocked
         if (getIntFromPrefs(gamesUnlocked, 0) > gameNumLocal)
             return;
 
@@ -997,7 +997,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
         // Build a dialog to congratulate the player on unlocking the next level
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        String unlockMessage = getString(R.string.unlocked_message, gameNameList[gameNum+1]);
+        String unlockMessage = getString(R.string.unlocked_message, gameNameList[gameNumLocal+1]);
 
         // Encourage the player to finish levels
         if (gameNum == 0)
