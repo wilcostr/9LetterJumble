@@ -122,7 +122,7 @@
     	<item>8</item>
     	<item>8</item>
     	<item>8</item>
-    	<item>8</item>
+    	<item>8</item>    	
     </integer-array>
 
     <string-array name="gamesPremium">
@@ -130,6 +130,7 @@
     	<item>eccnithal</item>
     	<item>cosalting</item>
     	<item>rotnivdep</item>
+    	<item>rawgomren</item>
     </string-array>
     
     <string-array name="gameNamesPremium">
@@ -137,6 +138,10 @@
     	<item>Helium</item>
     	<item>Lithium</item>
     	<item>Beryllium</item>
+    	<item>Boron</item>
+    	<!--<item>Carbon<item>   -->
+    	<!--<item>Nitrogen<item>   -->
+    	<!--<item>Oxygen<item>   -->    	    	
     </string-array>
     
     <string-array name="levelPacksPremium">
@@ -144,7 +149,7 @@
     </string-array>
     
     <integer-array name="levelPackCountsPremium">
-    	<item>4</item>
+    	<item>5</item>
     </integer-array>
 
 </resources>

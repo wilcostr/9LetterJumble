@@ -758,7 +758,7 @@ public class GameActivity extends AppCompatActivity implements RewardedVideoAdLi
 
         // Remove brackets around list and comma separation
         String ret = list.toString();
-        ret = ret.replace(", ", " ");
+        ret = ret.replace(", ", "\u0020");
         ret = ret.substring(1, ret.length() - 1);
 
         return new SpannableString(ret);

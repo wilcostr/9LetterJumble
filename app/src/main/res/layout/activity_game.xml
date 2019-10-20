@@ -173,6 +173,8 @@
                         android:layout_height="wrap_content"
                         android:text="@string/prompt_no_words"
                         android:fontFamily="monospace"
+                        android:breakStrategy="simple"
+                        android:hyphenationFrequency="none"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/text_16" />
                 </ScrollView>

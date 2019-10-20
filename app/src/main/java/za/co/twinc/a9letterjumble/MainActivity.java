@@ -487,7 +487,7 @@ public class MainActivity extends AppCompatActivity implements BillingProvider {
         try {
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(getAssets().open(fileName)));
-            reader.skip(16L*num);
+            reader.skip(16L*(num%488));
 
             String[] temp = reader.readLine().trim().split(";");
             word = temp[0].trim();
