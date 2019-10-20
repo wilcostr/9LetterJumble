@@ -213,4 +213,5 @@ cols;the lowest point of a ridge or saddle between two peaks, typically providin
 cist;an ancient coffin or burial chamber made from stone or a hollowed tree.
 loci;the most important area or point with which something is associated (plural).
 iota;an extremely small amount.
+gnostic;of, relating to, or possessing knowledge, esp esoteric spiritual knowledge.
 iotas;an extremely small amount (plural).

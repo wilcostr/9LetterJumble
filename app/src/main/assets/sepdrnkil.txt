@@ -86,4 +86,5 @@ diners;a person who is eating, typically a customer in a restaurant (plural).
 rein;a long, narrow strap attached at one end to a horse's bit, typically used in pairs to guide or check a horse in riding or driving.
 pilsner;a lager beer with a strong hop flavour.
 kris;a Malay or Indonesian dagger with a wavy-edged blade.
-skirl;the sound of (the chanter of) a bagpipe.
+lisper;a speaker who lisps.
+skirl;the sound of a bagpipe.

@@ -56,3 +56,4 @@ areal;of, relating to, or involving an area.
 recut;remove further or different material from (a film or screenplay).
 curlew;large migratory shorebirds of the sandpiper family.
 rale;a rapid series of short loud sounds (as might be heard with a stethoscope in some types of respiratory disorders).
+caret;a cursor on a screen that shows where text should be entered.

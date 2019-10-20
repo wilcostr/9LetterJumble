@@ -14,7 +14,7 @@ feat;an achievement that requires great courage, skill, or strength.
 life;the condition that distinguishes animals and plants from inorganic matter, including the capacity for growth, reproduction, functional activity, and continual change preceding death.
 fibulae;the outer and usually smaller of the two bones between the knee and the ankle (plural).
 befit;be appropriate for - suited.
-felt;a kind of cloth made by rolling and pressing wool or another suitable textile accompanied by the application of moisture or heat, which causes the constituent fibres to mat together to create a smooth surface.
+felt;a kind of cloth made by rolling and pressing wool which causes the constituent fibres to mat together to create a smooth surface.
 filet;French spelling of fillet, used especially in the names of French or French-sounding dishes.
 fuel;material such as coal, gas, or oil that is burned to produce heat or power.
 fable;a short story, typically with animals as characters, conveying a moral.
@@ -26,3 +26,4 @@ left;on, towards, or relating to the side of a human body or of a thing which is
 feta;a white salty Greek cheese made from the milk of ewes or goats.
 fault;an unattractive or unsatisfactory feature, especially in a piece of work or in a person's character.
 fetal;relating to a fetus.
+tubful;the amount that a tub will hold.

@@ -155,3 +155,6 @@ argent;the heraldic color silver or white.
 clanger;a conspicuous mistake whose effects seem to reverberate.
 enteral;of or relating to or inside the intestines.
 retag;to tag (something) again.
+tern;any of numerous aquatic birds of a subfamily related to the gulls but usually having a more slender body.
+legate;a person who is the official representative of another person, especially the Pope's official representative in a country. 
+eaglet;a young eagle.

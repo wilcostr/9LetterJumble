@@ -43,3 +43,4 @@ tome;a book, especially a large, heavy, scholarly one.
 admit;confess to be true or to be the case.
 edam;a yellow pressed cheese of Dutch origin usually made in flattened balls and often coated with red wax.
 moated;of a fortified place (such as a castle) that is surrounded by a deep and wide trench that is usually filled with water.
+meta;referring to itself or to the conventions of its genre. Self-referential.

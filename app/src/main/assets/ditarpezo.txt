@@ -83,7 +83,7 @@ road;a wide way leading from one place to another, especially one with a special
 tore;pull (something) apart or to pieces with force (past tense).
 aired;express (an opinion or grievance) publicly.
 ratio;the quantitative relation between two amounts showing the number of times one value contains or is contained within the other.
-rote;memorization by repetition.
+rote;memorisation by repetition.
 pare;trim (something) by cutting away its outer edges.
 drop;let or make (something) fall vertically.
 repaid;past and past participle of repay.
@@ -103,4 +103,5 @@ trepid;timid by nature or revealing timidity.
 tier;each in a series of rows or levels of a structure placed one above the other.
 protea;a tropical African shrub having alternate rigid leaves and dense colorful flower heads resembling cones.
 tare;the weight of a vehicle without its cargo, passengers, etc.
-port;sweet dark-red dessert wine originally from Portugal
+port;sweet dark-red dessert wine originally from Portugal.
+prized;highly valued.

@@ -154,3 +154,4 @@ tripe;the first or second stomach of a cow or other ruminant used as food.
 prion;(microbiology) an infectious protein particle similar to a virus but lacking nucleic acid.
 ovine;relating to or resembling sheep.
 portend;indicate by signs.
+tern;any of numerous aquatic birds of a subfamily related to the gulls but usually having a more slender body.

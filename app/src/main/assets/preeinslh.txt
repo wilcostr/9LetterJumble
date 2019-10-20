@@ -77,3 +77,5 @@ shrine;a place regarded as holy because of its associations with a divinity or a
 pilers;one whose work is piling materials or products for storage, transportation, or processing (plural).
 resile;someone or something that withdraws from an agreement or retracts from a stated position.
 reship;place on a ship again or transfer to another ship.
+pensile;hanging, suspended.
+lisper;a speaker who lisps.

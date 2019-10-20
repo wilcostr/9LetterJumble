@@ -58,3 +58,4 @@ rights;that which is morally correct, just, or honourable (plural).
 rial;a basic monetary unit of some Middle Eastern countries.
 rials;a basic monetary unit of some Middle Eastern countries (plural).
 athirst;having a strong eager desire.
+largish;somewhat large.

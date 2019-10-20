@@ -76,3 +76,4 @@ ornate;marked by elaborate rhetoric and elaborated with decorative details.
 rhea;a large flightless bird of South American grasslands, resembling a small ostrich with greyish-brown plumage.
 brat;a child, typically one that is badly behaved.
 rare;(of an event, situation, or condition) not occurring very often.
+tern;any of numerous aquatic birds of a subfamily related to the gulls but usually having a more slender body.

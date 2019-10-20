@@ -73,28 +73,9 @@ dongles;a small piece of hardware that connects to another device to provide it 
 noise;a sound, especially one that is loud or unpleasant or that causes disturbance.
 loins;the part of the body on both sides of the spine between the lowest (false) ribs and the hipbones (plural).
 lodes;a vein of metal ore in the earth (plural).
-lidos;a public open-air swimming pool or bathing beach (plural).
-loge;a private box or enclosure in a theater.
-alongside;close to the side of.
-snog;kiss and cuddle amorously.
-lido;a public open-air swimming pool or bathing beach.
 longed;have a strong wish or desire (past tense).
 lingo;a foreign language or local dialect.
 ogled;stare at in a lecherous manner (past tense).
-soda;carbonated water (originally made with sodium bicarbonate).
-nosed;having a nose or projecting part of a specified kind.
-aloe;a succulent plant, typically having a rosette of toothed fleshy leaves and bell-shaped or tubular flowers on long stems.
-sloe;another term for blackthorn.
-dong;sound made by a brass bell, when rung.
-diagnose;identify the nature of (an illness or other problem) by examination of the symptoms.
-legions;a unit of 3,000–6,000 men in the ancient Roman army (plural).
-dole;benefit paid by the government to the unemployed.
-sidelong;directed to or from one side.
-goalie;informal term for goaltender or goalkeeper.
-onside;(of a player, especially in soccer, rugby, or hockey) occupying a position where playing the ball or puck is allowed.
-lesion;a region in an organ or tissue that has suffered damage through injury or disease, such as a wound, ulcer, abscess, tumor, etc.
-anodes;the positively charged electrode by which the electrons leave a device (plural).
-noels;Christmas, especially as a refrain in carols and on Christmas cards (plural).
 aeon;an indefinite and very long period of time, often a period exaggerated for humorous or rhetorical effect.
 lingoes;a foreign language or local dialect (plural) (both possible spellings accepted).
 lingos;a foreign language or local dialect (plural) (both possible spellings accepted).
@@ -132,6 +113,25 @@ ions;an atom or molecule with a net electric charge due to the loss or gain of o
 insole;a removable sole worn in a shoe for warmth, as a deodorizer, or to improve the fit.
 dons;put on (an item of clothing) (third person).
 sago;edible starch that is obtained from a palm and is a staple food in parts of the tropics.
+soda;carbonated water (originally made with sodium bicarbonate).
+diagnose;identify the nature of (an illness or other problem) by examination of the symptoms.
+legions;a unit of 3,000–6,000 men in the ancient Roman army (plural).
+dole;benefit paid by the government to the unemployed.
+sidelong;directed to or from one side.
+goalie;informal term for goaltender or goalkeeper.
+onside;(of a player, especially in soccer, rugby, or hockey) occupying a position where playing the ball or puck is allowed.
+lesion;a region in an organ or tissue that has suffered damage through injury or disease, such as a wound, ulcer, abscess, tumor, etc.
+nosed;having a nose or projecting part of a specified kind.
+aloe;a succulent plant, typically having a rosette of toothed fleshy leaves and bell-shaped or tubular flowers on long stems.
+sloe;another term for blackthorn.
+lidos;a public open-air swimming pool or bathing beach (plural).
+loge;a private box or enclosure in a theater.
+alongside;close to the side of.
+snog;kiss and cuddle amorously.
+lido;a public open-air swimming pool or bathing beach.
+dong;sound made by a brass bell, when rung.
+anodes;the positively charged electrode by which the electrons leave a device (plural).
+noels;Christmas, especially as a refrain in carols and on Christmas cards (plural).
 dingo;a wild or half-domesticated dog with a sandy-colored coat, found in Australia. It is believed to have been introduced by early Aboriginal immigrants.
 legion;a unit of 3,000–6,000 men in the ancient Roman army.
 loading;placing a cargo, weight, or stress on something
